@@ -1,0 +1,51 @@
+\documentclass[11pt, twocolumn, aps]{revtex4-2}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{hyperref}
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{amsmath, amsthm, amssymb, mathtools}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+
+
+\fancyhf{}
+\fancyheadoffset{-0.001\textwidth}
+\pagestyle{fancy}
+\setlength{\textwidth}{7in}
+\setlength{\evensidemargin}{-0.2in}
+\setlength{\oddsidemargin}{-0.2in}
+\setlength{\headheight}{14pt}
+%\setlength{\headwidth}{6in}
+\setlength{\topmargin}{-0.5in}
+\setlength{\textheight}{8.4in}
+%  \setlength{\textfloatsep}{11pt}
+
+
+\begin{document}
+
+\title{Quantum Scrambling Review*}
+
+\author{Samuel A. Hopkins}
+\affiliation{Level 7 MSci. Laboratory, Department of Physics, University of Bristol.}
+\date{\today}
+
+\input{ch_files/scramb_abstract.tex}
+\maketitle
+
+\tableofcontents
+
+\fancyhead[L]{\textit{Samuel A. Hopkins}}
+\fancyhead[R]{A Review on Quantum Scrambling}
+\input{ch_files/scramb_intro.tex}
+
+\input{ch_files/scramb_theory.tex}
+
+\newpage
+
+\bibliographystyle{plain}
+\bibliography{scramb_biblio.bib}
+
+\end{document}
