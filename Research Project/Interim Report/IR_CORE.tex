@@ -1,0 +1,27 @@
+\documentclass[11pt, twocolumn]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{amsmath, amsfonts, amsthm, amssymb, mathtools}
+\usepackage{fancyhdr}
+
+\begin{document}
+
+\input{title.tex}
+
+\onecolumn
+\tableofcontents
+\newpage
+\twocolumn
+
+\input{intro.tex}
+\input{theory.tex}
+\input{approaches.tex}
+
+\bibliographystyle{plain}
+\bibliography{Bibliography.bib}
+\end{document}
