@@ -5,4 +5,5 @@
 \tocdepth@restore 
 \contentsline {section}{\numberline {I}INTRODUCTION}{1}{}
 \contentsline {section}{\numberline {II}Theory}{1}{}
-\contentsline {section}{\numberline {}References}{1}{}
+\contentsline {subsection}{\numberline {A}Quantum Information and Circuits}{1}{}
+\contentsline {subsection}{\numberline {B}Operator Scrambling and Spreading}{2}{}

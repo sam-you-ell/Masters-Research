@@ -1,2 +1,71 @@
 \section{Theory}
-Whta is scrambling.
+\subsection{Quantum Information and Circuits}
+\vspace{-0.15in}
+Quantum Information and Quantum Computation is built upon the concept of quantum bits (qubits for short),
+represented as a computational basis state of either $|0\rangle$ or $|1\rangle$. With this, the
+quantum state of a system can be completely specified by writing the state as a linear combination,
+$|\psi\rangle = \alpha |0\rangle + \beta |1\rangle$, where $\alpha, \beta$ are complex numbers.
+This is easily extended to multi-party quantum systems of $n$ qubits. Then we may write computational
+basis states as strings of qubits using the tensor product;
+\[|x_1\rangle \otimes |x_2\rangle \otimes ... \otimes |x_n\rangle \equiv |x_1 x_2... x_n \rangle. \]
+
+The dynamics of such systems can be represented via quantum circuits, made up of quantum logic gates acting
+upon the qubits of a system. Analogous to a classical computer which comprised of logic gates that act upon
+bit-strings of information. In contrast however, quantum logic gates are formed of linear operators, often
+written in matrix form. An important set of such gates is the Pauli gates, equivalent to the set of Pauli
+matrices, $P \equiv \{X, Y, Z\}$ for which $X, Y \text{ and } Z$ are defined as;
+\begin{align*}
+    X = \begin{bmatrix}
+            0 & 1 \\
+            1 & 0
+        \end{bmatrix},
+     &  &
+    Y = \begin{bmatrix}
+            0  & i \\
+            -i & 0
+        \end{bmatrix}
+     &  &
+    Z = \begin{bmatrix}
+            1 & 0  \\
+            0 & -1
+        \end{bmatrix}
+\end{align*}
+These gates are all one-qubit gates, as they only act upon a single qubit. Another important one-qubit gate is
+known as the Hadamard, $H$, which maps computational basis states to a superposition of computational basis states,
+written explicitly in it's action;
+\begin{align*}
+    H |0\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}}, \\
+    H |1\rangle = \frac{|0\rangle - |1\rangle}{\sqrt{2}},
+\end{align*}
+or in matrix form;
+\begin{equation*}
+    H = \frac{1}{\sqrt{2}} \begin{bmatrix}
+        1 & 1  \\
+        1 & -1
+    \end{bmatrix}
+\end{equation*}
+
+
+
+
+
+
+
+%PAULI GROUP DISCUSSION 
+% The Pauli group on 1-qubit consists of the Pauli matrices and the Identity matrix under multiplicative factors;
+% \begin{equation*}
+%     G_1 \equiv \{ \pm I, \pm iI, \pm X, \pm iX \pm Y, \pm iY, \pm Z, \pm iZ\},
+% \end{equation*}
+% Where $\{X, Y, Z\}$ is the set of Pauli matrices, written in matrix form as;
+
+% Extending to $n$ qubits involves taking tensor products of the matrices, such that $G_n$ consists of all
+% $n$-fold tensor products of Pauli matrices, with the additional multiplicative factors to close the group.
+% The Pauli group is important in quantum computation models as it allows us to describe many more quantum states
+% using a construction known as \textit{Stabilizer Formalism} which will be visited when discussing the 
+% Clifford group and it's corresponding .
+
+
+
+
+
+\subsection{Operator Scrambling and Spreading}

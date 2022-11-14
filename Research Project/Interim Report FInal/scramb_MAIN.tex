@@ -1,4 +1,4 @@
-\documentclass[11pt, twocolumn, aps]{revtex4-2}
+\documentclass[11pt, twocolumn, aps, nobalancelastpage]{revtex4-2}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -8,7 +8,7 @@
 \usepackage{tikz}
 \usepackage{amsmath, amsthm, amssymb, mathtools}
 \usepackage{fancyhdr}
-\usepackage{lipsum}
+
 
 
 \fancyhf{}
@@ -21,7 +21,7 @@
 %\setlength{\headwidth}{6in}
 \setlength{\topmargin}{-0.5in}
 \setlength{\textheight}{8.4in}
-%  \setlength{\textfloatsep}{11pt}
+%\setlength*{\textfloatsep}{4pt}
 
 
 \begin{document}
@@ -43,9 +43,9 @@
 
 \input{ch_files/scramb_theory.tex}
 
-\newpage
+\clearpage
 
-\bibliographystyle{plain}
-\bibliography{scramb_biblio.bib}
+\bibliographystyle{ieeetr}
+\bibliography{Quantum Scrambling.bib}
 
 \end{document}
