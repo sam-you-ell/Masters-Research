@@ -9,11 +9,20 @@ This is easily extended to multi-party quantum systems of $n$ qubits. Then we ma
 basis states as strings of qubits using the tensor product;
 \[|x_1\rangle \otimes |x_2\rangle \otimes ... \otimes |x_n\rangle \equiv |x_1 x_2... x_n \rangle. \]
 
-The dynamics of such systems can be represented via quantum circuits, made up of quantum logic gates acting
-upon the qubits of a system. Analogous to a classical computer which comprised of logic gates that act upon
-bit-strings of information. In contrast however, quantum logic gates are formed of linear operators, often
-written in matrix form. An important set of such gates is the Pauli gates, equivalent to the set of Pauli
-matrices, $P \equiv \{X, Y, Z\}$ for which $X, Y \text{ and } Z$ are defined as;
+The evolution and dynamics of such systems can be represented via quantum circuits, made up of quantum logic gates acting
+upon the qubits of a system. Analogous to a classical computer which is comprised of logic gates that act upon
+bit-strings of information. In contrast, quantum logic gates are formed of linear operators acting 
+on qubits, often represented in matrix form. This allows us to decompose a complicated unitary evolution into a 
+sequence of linear operators acting on one or more qubits, to be understood more clearly. A common practice is to create 
+diagrams of such evolutions, with each quantum gate having their own symbol, analogous to circuit diagrams in classical
+computation, allowing the creation of complicated quantum circuitry that can be directly mapped to a string of linear 
+operators acting on a set of qubits. Some example gate representations can be seen in fig 1
+
+
+\input{ch_files/pauli_gates.tex}
+
+An important set of such gates are the Pauli gates, equivalent 
+to the set of Pauli matrices, $P \equiv \{X, Y, Z\}$ for which $X, Y \text{ and } Z$ are defined as;
 \begin{align*}
     X = \begin{bmatrix}
             0 & 1 \\
@@ -45,6 +54,47 @@ or in matrix form;
     \end{bmatrix}
 \end{equation*}
 
+The Hadamard is widey utilised to create entanglement in circuits to generate states that cannot be written in product form. For example, if we prepare the state
+$|{\bm\psi}_1\rangle_ = \frac{|00\rangle + |11\rangle}{\sqrt{2}}$. We cannot write this as 
+\begin{align*}
+    |{\bm\psi}_1\rangle =& \left[ \alpha_0 |0\rangle + \beta_0|1\rangle\right] \otimes \left[\alpha_1 |0\rangle + \beta_1|1\rangle\right] \\
+    =& \alpha_0\beta_0 |00\rangle + \alpha_0\beta_1|01\rangle + \alpha_1\beta_0|10\rangle + \alpha_1\beta_1|11\rangle
+\end{align*}
+since the $\alpha_0$ or $\beta_1$ must be zero in order to ensure the $|01\rangle$, $|10\rangle$ vanish. However, this would make the coefficients of the $|00\rangle$ 
+or $|11\rangle$ terms zero, breaking the equality. Thus, $|{\bm\psi}_1\rangle$ is said to be entangled. This defines a general condition for state to be entangled.
+
+
+
+
+
+
+
+\subsection{Clifford Circuits and Stabilizer Formalism}
+A classical computer with $n$ bits, has $2^n$ possible ways of arranging those bits into a binary vector, forming a $n$-dimensional state space.
+This is different to the case in quantum computation. A $n$-qubit system is described by a complex vector, with $2^n$ components, forming a $2^n$ dimensional
+Hilbert space due to the presence of entangled states. This makes quantum computation intractable in classical computation with polynomial effort, making it difficult 
+to classically simulate and understand 
+
+
+
+comprised
+unitary operators from the Clifford group, namely the Hadamard, CNOT (Controlled-Not) and the S (phase) gate. In matrix form, these gates are defined as,
+
+\begin{align*}
+    CNOT = 
+    \renewcommand{\arraystretch}{0.75}
+    \begin{bmatrix}
+        1 & 0 & 0 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 0 & 1 \\
+        0 & 0 & 1 & 0 
+    \end{bmatrix}, 
+    && S = 
+    \begin{bmatrix}
+        1 & 0 \\
+        0 & e^{i\frac{\pi}{2}}
+    \end{bmatrix}
+\end{align*}
 
 
 

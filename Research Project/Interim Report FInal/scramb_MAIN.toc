@@ -6,4 +6,5 @@
 \contentsline {section}{\numberline {I}INTRODUCTION}{1}{}
 \contentsline {section}{\numberline {II}Theory}{1}{}
 \contentsline {subsection}{\numberline {A}Quantum Information and Circuits}{1}{}
-\contentsline {subsection}{\numberline {B}Operator Scrambling and Spreading}{2}{}
+\contentsline {subsection}{\numberline {B}Clifford Circuits and Stabilizer Formalism}{2}{}
+\contentsline {subsection}{\numberline {C}Operator Scrambling and Spreading}{2}{}
