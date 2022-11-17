@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex scramb_MAIN"] 1668689943 "scramb_MAIN.aux" "scramb_MAIN.bbl" "scramb_MAIN" 1668692898
+["bibtex scramb_MAIN"] 1668723125 "scramb_MAIN.aux" "scramb_MAIN.bbl" "scramb_MAIN" 1668723127
   "C:/Users/sam-h/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/ieeetr.bst" 1291864344 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
   "QuantumScrambling.bib" 1668689678 16523 e3a87e6f214db96da8b7d1df0ff93366 ""
-  "scramb_MAIN.aux" 1668692898 1542 b1d01e941884489486b561a5a160b768 "pdflatex"
-  "scramb_MAINNotes.bib" 1668692897 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "scramb_MAIN.aux" 1668723127 1542 cf514f5c40368d9d8dd07037b14ec12e "pdflatex"
+  "scramb_MAINNotes.bib" 1668723127 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "scramb_MAIN.bbl"
   "scramb_MAIN.blg"
-["pdflatex"] 1668692896 "c:/Users/sam-h/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/scramb_MAIN.tex" "scramb_MAIN.pdf" "scramb_MAIN" 1668692898
+["pdflatex"] 1668723125 "c:/Users/sam-h/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/scramb_MAIN.tex" "scramb_MAIN.pdf" "scramb_MAIN" 1668723127
   "C:/Users/sam-h/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1668683407 97205 3fb51b557d06aae17c4f86c5a0b69e11 ""
   "C:/Users/sam-h/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1000.pk" 1668261806 25420 c58c43b961a55227103d4760b14c0199 ""
   "C:/Users/sam-h/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk" 1639851091 31952 722e29531e8671b3efc1aa91f79a2bb1 ""
@@ -214,11 +214,11 @@
   "ch_files/pauli_gates.tex" 1668687721 685 8227cbaf323e30c9335c0cf99801ec2e ""
   "ch_files/scramb_abstract.tex" 1668341959 59 8a3e5a9a6dd1767a2d1dbce2784d6032 ""
   "ch_files/scramb_intro.tex" 1668343460 24 8867f3320fcea3a5320587fad9e77765 ""
-  "ch_files/scramb_theory.tex" 1668692895 6222 f7baa6dc2c49bb4ac3bfe5da2681e588 ""
-  "scramb_MAIN.aux" 1668692898 1542 b1d01e941884489486b561a5a160b768 "pdflatex"
-  "scramb_MAIN.bbl" 1668689943 158 c22f0e3eb499f8496ff082049735d3a8 "bibtex scramb_MAIN"
+  "ch_files/scramb_theory.tex" 1668723121 6304 38edd12fc57ef56302e5a594b2205a1b ""
+  "scramb_MAIN.aux" 1668723127 1542 cf514f5c40368d9d8dd07037b14ec12e "pdflatex"
+  "scramb_MAIN.bbl" 1668723125 158 c22f0e3eb499f8496ff082049735d3a8 "bibtex scramb_MAIN"
   "scramb_MAIN.tex" 1668687721 1218 7672929593a599e324fc9d150dc38d47 ""
-  "scramb_MAIN.toc" 1668692898 533 b84e980a1d39b8e96b7867b7f0c0600f "pdflatex"
+  "scramb_MAIN.toc" 1668723127 533 b84e980a1d39b8e96b7867b7f0c0600f "pdflatex"
   (generated)
   "scramb_MAIN.aux"
   "scramb_MAIN.log"

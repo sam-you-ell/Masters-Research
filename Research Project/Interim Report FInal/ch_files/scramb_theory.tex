@@ -42,10 +42,18 @@ to the set of Pauli matrices, $P \equiv \{X, Y, Z\}$ for which $X, Y \text{ and 
         \end{bmatrix}
 \end{align}
 
-These gates are all one-qubit gates, as they only act upon a single qubit and are sometimes called elementary gates.
+These gates are all one-qubit gates, as they only act upon a single qubit and are also called elementary gates.
 The simplest elementary gate is that of the Identity operator (or matrix), $I$, from which, an algebra
 can be formed with the Pauli matrices. Notably, the set of Pauli matrices along with the identity form
-a group known as the Pauli group, $P_n$, defined as
+a group known as the Pauli group, $P_n$, defined as the $4^n$ $n$-qubit tensor products of the Pauli matrices (\ref{PauliMatrices}) and the
+Identity matrix, $I$, with multiplicative factors, $\pm 1$ and $\pm i$ to ensure a legitimate group is formed.
+For clarity, consider the Pauli group on 1-qubit, $P_1$;
+\begin{equation}
+    P_1 \equiv \{ \pm I, \pm iI, \pm X, \pm iX \pm Y, \pm iY, \pm Z, \pm iZ\},
+\end{equation}
+From this, another group of interest can be defined, namely the Clifford group, $C_n$,
+
+
 
 Another important one-qubit gate is
 known as the Hadamard, $H$, which maps computational basis states to a superposition of computational basis states,
@@ -105,12 +113,6 @@ a set of universal set of quantum gates.
 It is useful to extend the gate set to a group, to exploit mathematical techniques from group theory.
 In this case the set of operators $\{H, CNOT, S\}$ generate the Clifford group $C_n$. The group, $C_n$,
 is defined as the set of operators (also called unitaries) that normalise the Pauli group, $P_n$. Where
-$P_n$ is defined as the $4^n$ $n$-qubit tensor products of the Pauli matrices (\ref{PauliMatrices}) and the
-Identity matrix, $I$, with multiplicative factors, $\pm 1$ and $\pm i$ to ensure a legitimate group is formed.
-For clarity, consider the Pauli group on 1-qubit, $P_1$;
-\begin{equation}
-    P_1 \equiv \{ \pm I, \pm iI, \pm X, \pm iX \pm Y, \pm iY, \pm Z, \pm iZ\},
-\end{equation}
-
+$P_n$ is defined
 
 
