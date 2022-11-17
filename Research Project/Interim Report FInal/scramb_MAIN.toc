@@ -7,4 +7,4 @@
 \contentsline {section}{\numberline {II}Background Theory}{1}{}
 \contentsline {subsection}{\numberline {A}Quantum Information and Circuits}{1}{}
 \contentsline {subsection}{\numberline {B}Clifford Circuits and Stabilizer Formalism}{2}{}
-\contentsline {section}{\numberline {}References}{3}{}
+\contentsline {section}{\numberline {}References}{4}{}
