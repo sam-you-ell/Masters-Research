@@ -42,8 +42,8 @@ to the set of Pauli matrices, $P \equiv \{X, Y, Z\}$ for which $X, Y \text{ and 
         \end{bmatrix}
 \end{align}
 
-These gates are all one-qubit gates, as they only act upon a single qubit and are also called elementary gates.
-The simplest elementary gate is that of the Identity operator (or matrix), $I$, from which, an algebra
+These gates are all one-qubit gates, as they only act upon a single qubit.
+The simplest gate is that of the Identity operator (or matrix), $I$, from which, an algebra
 can be formed with the Pauli matrices. Notably, the set of Pauli matrices along with the identity form
 a group known as the Pauli group, $P_n$, defined as the $4^n$ $n$-qubit tensor products of the Pauli matrices (\ref{PauliMatrices}) and the
 Identity matrix, $I$, with multiplicative factors, $\pm 1$ and $\pm i$ to ensure a legitimate group is formed.
@@ -51,12 +51,9 @@ For clarity, consider the Pauli group on 1-qubit, $P_1$;
 \begin{equation}
     P_1 \equiv \{ \pm I, \pm iI, \pm X, \pm iX \pm Y, \pm iY, \pm Z, \pm iZ\},
 \end{equation}
-From this, another group of interest can be defined, namely the Clifford group, $C_n$,
+From this, another group of interest can be defined, namely the Clifford group, $C_n$, for which the elements are the Hadamard, Controlled-Not and Phase operators.
 
-
-
-Another important one-qubit gate is
-known as the Hadamard, $H$, which maps computational basis states to a superposition of computational basis states,
+The Hadamard, $H$, maps computational basis states to a superposition of computational basis states,
 written explicitly in it's action;
 \begin{align*}
     H |0\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}}, \\
@@ -69,10 +66,30 @@ or in matrix form;
         1 & -1
     \end{bmatrix}
 \end{equation*}
+Controlled-Not, $CNOT$,  is a two-qubit gate. One qubit acts as a control for an operation to be perfomed
+on the other qubit. It's matrix representation is
+\begin{align}
+    \label{CNOT}
+    CNOT =
+    \renewcommand{\arraystretch}{0.75}
+    \begin{bmatrix}
+        1 & 0 & 0 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 0 & 1 \\
+        0 & 0 & 1 & 0
+    \end{bmatrix}
+\end{align}
+The Phase gate, denoted $S$ is defined as,
+\begin{align*}
+    \begin{bmatrix}
+        1 & 0                  \\
+        0 & e^{i\frac{\pi}{2}}
+    \end{bmatrix}
+\end{align*}
 
-The Hadamard, along with the CNOT (\refeq{CNOT}) gate is used to create entanglement in circuits to
-generate states that cannot be written in product form. For example, if we prepare the state
-$|{\bm\psi}_1\rangle_ = \frac{|00\rangle + |11\rangle}{\sqrt{2}}$. We cannot write this as
+The CNOT gate is used to create entanglement in circuits to
+generate states that cannot be written in product form. For example, if we prepare a Bell state
+$|{\bm\phi}^{+}\rangle_ = \frac{|00\rangle + |11\rangle}{\sqrt{2}}$. We cannot write this as
 \begin{align*}
     |{\bm\psi}_1\rangle = & \left[ \alpha_0 |0\rangle + \beta_0|1\rangle\right] \otimes \left[\alpha_1 |0\rangle + \beta_1|1\rangle\right] \\
     =                     & \alpha_0\beta_0 |00\rangle + \alpha_0\beta_1|01\rangle + \alpha_1\beta_0|10\rangle + \alpha_1\beta_1|11\rangle
@@ -90,22 +107,7 @@ product form and is said to be entangled. This defines a general condition for a
 A notable family of circuits are known as \textit{Clifford circuits}. These are circuits comprised only of unitary operators
 from the Clifford group, namely the Hadamard, CNOT (Controlled-Not) and the S (phase) gate. In matrix form, these gates are defined as,
 
-\begin{align}
-    \label{CNOT}
-    CNOT =
-    \renewcommand{\arraystretch}{0.75}
-    \begin{bmatrix}
-        1 & 0 & 0 & 0 \\
-        0 & 1 & 0 & 0 \\
-        0 & 0 & 0 & 1 \\
-        0 & 0 & 1 & 0
-    \end{bmatrix},
-     &  & S =
-    \begin{bmatrix}
-        1 & 0                  \\
-        0 & e^{i\frac{\pi}{2}}
-    \end{bmatrix}
-\end{align}
+
 Quantum circuits made only of Clifford gates are said to be \textit{classically simulable}, that is, circuits of this construction can be efficiently
 simulated on a classical computer with polynomial effort via the Gottesman-Knill theorem \cite{knillGottesman}. For this reason, Clifford gates do not form
 a set of universal set of quantum gates.

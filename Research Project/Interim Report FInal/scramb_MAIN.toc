@@ -6,5 +6,8 @@
 \contentsline {section}{\numberline {I}INTRODUCTION}{1}{}
 \contentsline {section}{\numberline {II}Background Theory}{1}{}
 \contentsline {subsection}{\numberline {A}Quantum Information and Circuits}{1}{}
-\contentsline {subsection}{\numberline {B}Clifford Circuits and Stabilizer Formalism}{2}{}
+\contentsline {subsection}{\numberline {B}Clifford Circuits and Stabilizer Formalism}{3}{}
+\contentsline {section}{\numberline {III}Operator Scrambling}{3}{}
+\contentsline {subsection}{\numberline {A}Operator Entanglement}{3}{}
+\contentsline {section}{\numberline {IV}Further Research}{3}{}
 \contentsline {section}{\numberline {}References}{4}{}
