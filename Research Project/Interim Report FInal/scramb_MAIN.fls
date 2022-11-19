@@ -828,6 +828,8 @@ INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cme
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbsy10.tfm
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmbsy8.tfm
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmbsy6.tfm
+OUTPUT scramb_MAIN.pdf
+INPUT C:\Users\sam-h\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT .\ch_files\pauli_gates.tex
 INPUT ch_files\pauli_gates.tex
 INPUT .\ch_files\pauli_gates.tex
@@ -851,9 +853,11 @@ INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cme
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmbsy5.tfm
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0800.tfm
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0600.tfm
-OUTPUT scramb_MAIN.pdf
-INPUT C:\Users\sam-h\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1095.tfm
+INPUT .\ch_files\scramb_literature.tex
+INPUT ch_files\scramb_literature.tex
+INPUT .\ch_files\scramb_literature.tex
+INPUT ch_files\scramb_literature.tex
 INPUT .\scramb_MAIN.bbl
 INPUT scramb_MAIN.bbl
 INPUT .\scramb_MAIN.bbl
@@ -871,6 +875,8 @@ INPUT C:\Users\sam-h\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecr
 INPUT C:\Users\sam-h\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
 INPUT C:\Users\sam-h\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
 INPUT C:\Users\sam-h\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
+INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
@@ -879,8 +885,6 @@ INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
-INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmib10.pfb
-INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmib10.pfb
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb

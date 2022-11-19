@@ -1,23 +1,27 @@
 \section{Background Theory}
 \subsection{Quantum Information and Circuits}
 \vspace{-0.15in}
-Quantum Information and Quantum Computation is built upon the concept of quantum bits (qubits for short),
-represented as a computational basis state of either $|0\rangle$ or $|1\rangle$. With this, the
-quantum state of a system can be completely specified by writing the state as a linear combination,
-$|\psi\rangle = \alpha |0\rangle + \beta |1\rangle$, where $\alpha, \beta$ are complex numbers.
-This is easily extended to multi-party quantum systems of $n$ qubits. Then we may write computational
-basis states as strings of qubits using the tensor product;
+Quantum Information is built upon the concept of quantum bits (qubits for short), represented as a linear
+combination of states in the standard basis,
+$|\psi\rangle = \alpha |0\rangle + \beta |1\rangle$, where $\alpha, \beta$ are complex probability amplitudes
+and the vectors, $|0\rangle$, $|1\rangle$ are the computational basis states that form the standard basis.
 
+This is easily extended to multi-party or composite systems of $n$ qubits. The total Hilbert space, $\cal{H}$ of
+such a system is defined as the tensor product of $n$ subsystem Hilbert Spaces,
+\begin{equation}
+    {\cal{H}} = \otimes_n {\cal{H}}_n = {\cal{H}}_{n-1} \otimes {\cal{H}}_{n-2} \otimes \dots \otimes {\cal{H}}_0
+\end{equation}
+Then we may write the computational basis states of this system, as strings of qubits, using the tensor product \cite{nielsen_chuang_2010};
 \[|x_1\rangle \otimes |x_2\rangle \otimes ... \otimes |x_n\rangle \equiv |x_1 x_2... x_n \rangle. \]
 
 The evolution and dynamics of such systems can be represented via quantum circuits, made up of quantum logic gates acting
 upon the qubits of a system. Analogous to a classical computer which is comprised of logic gates that act upon
 bit-strings of information. In contrast, quantum logic gates are linear operators acting
 on qubits, often represented in matrix form. This allows us to decompose a complicated unitary evolution into a
-sequence of linear transformations on one or more qubits. A common practice is to create
+sequence of linear transformations. A common practice is to create
 diagrams of such evolutions, with each quantum gate having their own symbol, analogous to circuit diagrams in classical
-computation, allowing the creation of complicated quantum circuitry that can be directly mapped to a string of linear
-operators acting on a set of qubits. Some example gate symbols can be seen in Fig. \ref{Paulis}.
+computation, allowing the creation of complicated quantum circuitry that can be directly mapped to a sequence of linear
+operators acting on a one or more qubits. Some example gate symbols can be seen in Fig. \ref{Paulis}.
 
 
 \input{ch_files/pauli_gates.tex}
@@ -44,14 +48,25 @@ to the set of Pauli matrices, $P \equiv \{X, Y, Z\}$ for which $X, Y \text{ and 
 
 These gates are all one-qubit gates, as they only act upon a single qubit.
 The simplest gate is that of the Identity operator (or matrix), $I$, from which, an algebra
-can be formed with the Pauli matrices. Notably, the set of Pauli matrices along with the identity form
-a group known as the Pauli group, $P_n$, defined as the $4^n$ $n$-qubit tensor products of the Pauli matrices (\ref{PauliMatrices}) and the
+can be formed with the Pauli matrices. Satisfying the following relations:
+\begin{align}
+    XY = iZ  &  & YZ = iX  &  & ZX = iY  \\
+    YX = -iZ &  & ZY = -iX &  & XZ = -iY
+\end{align}
+\begin{align}
+    X^2 = Y^2 = Z^2 = I
+\end{align}
+
+Notably, the set of Pauli matrices and the identity form
+the Pauli group, ${\cal P}_n$, defined as the $4^n$ $n$-qubit tensor products of the Pauli matrices (\ref{PauliMatrices}) and the
 Identity matrix, $I$, with multiplicative factors, $\pm 1$ and $\pm i$ to ensure a legitimate group is formed.
-For clarity, consider the Pauli group on 1-qubit, $P_1$;
+For clarity, consider the Pauli group on 1-qubit, ${\cal P}_1$;
 \begin{equation}
-    P_1 \equiv \{ \pm I, \pm iI, \pm X, \pm iX \pm Y, \pm iY, \pm Z, \pm iZ\},
+    {\cal P}_1 \equiv \{ \pm I, \pm iI, \pm X, \pm iX \pm Y, \pm iY, \pm Z, \pm iZ\},
 \end{equation}
-From this, another group of interest can be defined, namely the Clifford group, $C_n$, for which the elements are the Hadamard, Controlled-Not and Phase operators.
+From this, another group of interest can be defined, namely the Clifford group, ${\cal C}_n$, defined as the
+set of operators (also called unitaries) that normalise the Pauli group. The elements of this group are the
+Hadamard, Controlled-Not and Phase operators.
 
 The Hadamard, $H$, maps computational basis states to a superposition of computational basis states,
 written explicitly in it's action;
@@ -66,7 +81,7 @@ or in matrix form;
         1 & -1
     \end{bmatrix}
 \end{equation*}
-Controlled-Not, $CNOT$,  is a two-qubit gate. One qubit acts as a control for an operation to be perfomed
+Controlled-Not ($CNOT$) is a two-qubit gate. One qubit acts as a control for an operation to be perfomed
 on the other qubit. It's matrix representation is
 \begin{align}
     \label{CNOT}
@@ -79,42 +94,55 @@ on the other qubit. It's matrix representation is
         0 & 0 & 1 & 0
     \end{bmatrix}
 \end{align}
-The Phase gate, denoted $S$ is defined as,
+The Phase operator, denoted $S$ is defined as,
 \begin{align*}
+    S =
     \begin{bmatrix}
         1 & 0                  \\
         0 & e^{i\frac{\pi}{2}}
     \end{bmatrix}
 \end{align*}
 
-The CNOT gate is used to create entanglement in circuits to
+The CNOT operator is often used to create entanglement in circuits to
 generate states that cannot be written in product form. For example, if we prepare a Bell state
-$|{\bm\phi}^{+}\rangle_ = \frac{|00\rangle + |11\rangle}{\sqrt{2}}$. We cannot write this as
+$|{\bm\Phi}^{+}\rangle_ = \frac{|00\rangle + |11\rangle}{\sqrt{2}}$. We cannot write this as
 \begin{align*}
-    |{\bm\psi}_1\rangle = & \left[ \alpha_0 |0\rangle + \beta_0|1\rangle\right] \otimes \left[\alpha_1 |0\rangle + \beta_1|1\rangle\right] \\
+    |{\bm\Phi}^+\rangle = & \left[ \alpha_0 |0\rangle + \beta_0|1\rangle\right] \otimes \left[\alpha_1 |0\rangle + \beta_1|1\rangle\right] \\
     =                     & \alpha_0\beta_0 |00\rangle + \alpha_0\beta_1|01\rangle + \alpha_1\beta_0|10\rangle + \alpha_1\beta_1|11\rangle
 \end{align*}
 since the $\alpha_0$ or $\beta_1$ must be zero in order to ensure the $|01\rangle$, $|10\rangle$ vanish.
 However, this would make the coefficients of the $|00\rangle$
-or $|11\rangle$ terms zero, breaking the equality. Thus, $|{\bm\psi}_1\rangle$ cannot be written in
+or $|11\rangle$ terms zero, breaking the equality. Thus, $|{\bm\Phi}^+\rangle$ cannot be written in
 product form and is said to be entangled. This defines a general condition for a arbitrary state to be entangled.
-
-
 \subsection{Clifford Circuits and Stabilizer Formalism}
-% A classical computer with $n$ bits, has $2^n$ possible ways of arranging those bits into a binary vector, forming a $n$-dimensional state space.
-% This is different to the case in quantum computation. A $n$-qubit system is described by a complex state vector in a $2^n$ dimensional
-% Hilbert space due to the presence of entangled states. This leads to a large n
-A notable family of circuits are known as \textit{Clifford circuits}. These are circuits comprised only of unitary operators
-from the Clifford group, namely the Hadamard, CNOT (Controlled-Not) and the S (phase) gate. In matrix form, these gates are defined as,
+
+Quantum circuits comprised of only quantum gates from the Clifford group are known as \textit{Clifford Circuits}.
+This family of circuits is of considerable interest as they are said to be classically simulable, that is,
+circuits of this construction can be efficiently simulated on a classical computer with polynomial
+effort via the Gottesman-Knill theorem \cite{knillGottesman}. For this reason, Clifford gates do not form
+a set of universal quantum gates, meaning a universal quantum computer cannot be constructed using a set
+of Clifford gates. A set of universal quantum gates allows for any unitary operation to be approximated to
+arbitrary accuracy by a quantum circuit, constructed using only the original set of gates.
+
+\textit{Stabilizer Formalism}. An arbitrary, pure quantum state, $|\psi\rangle$ is \textit{stabilized} by
+a unitary operator \footnote{I will call Unitary operators, Unitaries to be in line with literature and for the sake of word count},
+$U$ if $|\psi\rangle$  is an eigenvector of $U$, with eigenvalue 1, satisfying:
+\begin{equation}
+    U|\psi\rangle = |\psi\rangle
+\end{equation}
+The key idea here is that the quantum state can be described in terms of the unitaries that stabilize it, instead of the state itself.
+This is more appealing, as mathematical techniques from group theory are able to be exploited to more
+compactly describe the dynamics of unitary evolutions.
+
+\subsection{Free-Fermion Circuits}
 
 
-Quantum circuits made only of Clifford gates are said to be \textit{classically simulable}, that is, circuits of this construction can be efficiently
-simulated on a classical computer with polynomial effort via the Gottesman-Knill theorem \cite{knillGottesman}. For this reason, Clifford gates do not form
-a set of universal set of quantum gates.
 
-It is useful to extend the gate set to a group, to exploit mathematical techniques from group theory.
-In this case the set of operators $\{H, CNOT, S\}$ generate the Clifford group $C_n$. The group, $C_n$,
-is defined as the set of operators (also called unitaries) that normalise the Pauli group, $P_n$. Where
-$P_n$ is defined
+
+
+
+
+
+
 
 
