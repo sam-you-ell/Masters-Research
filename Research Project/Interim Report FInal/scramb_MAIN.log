@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.17)  19 NOV 2022 17:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.17)  19 NOV 2022 23:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -669,19 +669,19 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
  (C:\Users\sam-h\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{C:/Users/sam-h/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (ch_files/pauli_gates.tex) [2]) (ch_files/scramb_literature.tex) [3] (scramb_MAIN.bbl) [4] (scramb_MAIN.aux) ) 
+) [1{C:/Users/sam-h/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (ch_files/pauli_gates.tex) [2] [3]) (ch_files/scramb_literature.tex) [4] (scramb_MAIN.bbl) [5] (scramb_MAIN.aux) ) 
 Here is how much of TeX's memory you used:
- 22828 strings out of 478659
- 465941 string characters out of 2845919
- 783100 words of memory out of 3000000
- 40486 multiletter control sequences out of 15000+600000
+ 22832 strings out of 478659
+ 466096 string characters out of 2845919
+ 782115 words of memory out of 3000000
+ 40490 multiletter control sequences out of 15000+600000
  422057 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,20n,133p,1268b,1343s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\sam-h\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\sam-h\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\sam-h\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\sam-h\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\sam-h\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\sam-h\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on scramb_MAIN.pdf (4 pages, 189720 bytes).
+Output written on scramb_MAIN.pdf (5 pages, 200163 bytes).
 PDF statistics:
- 331 PDF objects out of 1000 (max. 8388607)
+ 344 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{schumacher_westmoreland_2010}
+B.~Schumacher and M.~Westmoreland, {\em Quantum Processes Systems, and
+  Information}.
+\newblock Cambridge University Press, 2010.
+
 \bibitem{nielsen_chuang_2010}
 M.~A. Nielsen and I.~L. Chuang, {\em Quantum Computation and Quantum
   Information: 10th Anniversary Edition}.
@@ -8,8 +13,8 @@ M.~A. Nielsen and I.~L. Chuang, {\em Quantum Computation and Quantum
 \bibitem{knillGottesman}
 D.~Gottesman, ``The heisenberg representation of quantum computers,'' 1998.
 
-\bibitem{Note1}
-I will call Unitary operators, Unitaries to be in line with literature and for
-  the sake of word count.
+\bibitem{PhysRevA.70.052328}
+S.~Aaronson and D.~Gottesman, ``Improved simulation of stabilizer circuits,''
+  {\em Phys. Rev. A}, vol.~70, p.~052328, Nov 2004.
 
 \end{thebibliography}
