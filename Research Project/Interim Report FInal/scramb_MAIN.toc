@@ -5,10 +5,11 @@
 \tocdepth@restore 
 \contentsline {section}{\numberline {I}INTRODUCTION}{1}{}
 \contentsline {section}{\numberline {II}Background Theory}{1}{}
-\contentsline {subsection}{\numberline {A}Quantum Information and Circuits}{1}{}
-\contentsline {subsection}{\numberline {B}Clifford Circuits and Stabilizer Formalism}{3}{}
-\contentsline {subsection}{\numberline {C}Free-Fermion Circuits}{4}{}
-\contentsline {section}{\numberline {III}Operator Scrambling}{4}{}
-\contentsline {subsection}{\numberline {A}Operator Entanglement}{4}{}
-\contentsline {section}{\numberline {IV}Further Research}{4}{}
-\contentsline {section}{\numberline {}References}{5}{}
+\contentsline {subsection}{\numberline {A}Quantum Information and Computing}{1}{}
+\contentsline {section}{\numberline {III}Classically Simulable Quantum Circuits}{3}{}
+\contentsline {subsection}{\numberline {A}Clifford Circuits and Stabilizer Formalism}{3}{}
+\contentsline {subsection}{\numberline {B}Free-Fermion Circuits}{4}{}
+\contentsline {section}{\numberline {IV}Operator Scrambling}{5}{}
+\contentsline {subsection}{\numberline {A}Operator Entanglement}{5}{}
+\contentsline {section}{\numberline {V}Further Research}{5}{}
+\contentsline {section}{\numberline {}References}{6}{}

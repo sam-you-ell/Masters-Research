@@ -801,10 +801,10 @@ INPUT .\ch_files\scramb_intro.tex
 INPUT ch_files\scramb_intro.tex
 INPUT .\ch_files\scramb_intro.tex
 INPUT ch_files\scramb_intro.tex
-INPUT .\ch_files\scramb_theory.tex
-INPUT ch_files\scramb_theory.tex
-INPUT .\ch_files\scramb_theory.tex
-INPUT ch_files\scramb_theory.tex
+INPUT .\ch_files\scramb_background.tex
+INPUT ch_files\scramb_background.tex
+INPUT .\ch_files\scramb_background.tex
+INPUT ch_files\scramb_background.tex
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
@@ -854,6 +854,12 @@ INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cme
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0800.tfm
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0600.tfm
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1095.tfm
+INPUT .\ch_files\scramb_classicalcircuits.tex
+INPUT ch_files\scramb_classicalcircuits.tex
+INPUT .\ch_files\scramb_classicalcircuits.tex
+INPUT ch_files\scramb_classicalcircuits.tex
+INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1095.tfm
+INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcti1095.tfm
 INPUT .\ch_files\scramb_literature.tex
 INPUT ch_files\scramb_literature.tex
 INPUT .\ch_files\scramb_literature.tex
@@ -863,6 +869,10 @@ INPUT scramb_MAIN.bbl
 INPUT .\scramb_MAIN.bbl
 INPUT scramb_MAIN.bbl
 INPUT scramb_MAIN.aux
+INPUT C:\Users\sam-h\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcti1095.pk
+INPUT C:\Users\sam-h\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcti1095.pk
+INPUT C:\Users\sam-h\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk
+INPUT C:\Users\sam-h\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk
 INPUT C:\Users\sam-h\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk
 INPUT C:\Users\sam-h\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk
 INPUT C:\Users\sam-h\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk
@@ -879,6 +889,8 @@ INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmex8.pfb
+INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmex8.pfb
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
@@ -893,5 +905,7 @@ INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy6.pfb
+INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy6.pfb
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Users\sam-h\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb

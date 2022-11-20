@@ -1,0 +1,126 @@
+\section{Classically Simulable Quantum Circuits}
+%Maybe some introduction, short sentence on what classical simulability is.
+\subsection{Clifford Circuits and Stabilizer Formalism}
+
+Quantum circuits comprised of only quantum gates from the Clifford group are known as \textit{Clifford Circuits}.
+This family of circuits are of considerable interest due to their classical simulability, that is,
+circuits of this construction can be efficiently simulated on a classical computer with polynomial
+effort via the Gottesman-Knill theorem. For this reason, Clifford gates do not form
+a set of universal quantum gates, meaning a universal quantum computer cannot be constructed using a set
+of Clifford gates. A set of universal quantum gates allows for any unitary operation to be approximated to
+arbitrary accuracy by a quantum circuit, constructed using only the original set of gates. Clifford
+circuits are also known as Stabilizer circuits.
+
+\textit{Stabilizer Formalism}. An arbitrary, pure quantum state, $|\psi\rangle$ is \textit{stabilized} by
+a unitary operator, $S$ if $|\psi\rangle$  is an eigenvector of $S$, with eigenvalue 1, satisfying:
+\begin{equation}
+    S|\psi\rangle = |\psi\rangle
+\end{equation}
+The key idea here is that the quantum state can be described in terms of the unitaries that stabilize it, instead of the state itself.
+This is due to $|\psi\rangle$ being the unique state that is stabilized by $S$. \cite{PhysRevA.70.052328}
+This can be seen from considering the Pauli matrices, and the unique states they stabilize. In the one-qubit case these are
+the $+1$ eigenstates of the pauli matrices (omitting normalisation factors);
+\begin{align}
+     & X(|0\rangle + |1\rangle) = |0\rangle + |1\rangle   \\
+     & Y(|0\rangle + i|1\rangle) = |0\rangle + i|1\rangle \\
+     & Z|0\rangle = |0\rangle
+\end{align}
+
+If given a group or subgroup of unitaries, $\cal U$, the vector space, $V$, of $n$ qubit states is
+stabilized by $\cal U$ if every element of $V$ is stable under action from every element of $\cal U$.
+This description is more appealing, as we can exploit mathematical techniques from group theory to
+describe quantum states and vector spaces. More precisely, the group $\cal U$ can be described using it's
+generators. In general, a set of elements  $g_1, \dots, g_d$ of a group, $\cal G$, generate the group
+if every element of $\cal G$ can be written as a product of elements from the set of generators,
+$g_1, \dots, g_d$, such that ${\cal G} \coloneqq \langle g_1, \dots, g_d\rangle$. For example,
+consider the group ${\cal U} \equiv \{ I, Z_1Z_2, Z_2Z_3, Z_1Z_3\}$. ${\cal U}$ can be compactly written
+as ${\cal U} = \langle Z_1Z_2, Z_2Z_3 \rangle$, by recognising $(Z_1Z_2)^2 = I$ and
+$Z_1Z_3 = (Z_1Z_2)(Z_2Z_3)$.
+
+This allows for the description of a quantum state, and subsequently it's dynamics, in terms of the generators
+of a stabilizer group. To see how the dynamics of a state are represented in terms of generators, consider
+a stabilizer state under the action of an arbitrary unitary operator:
+\begin{align}
+    UM|\psi \rangle =  UMU^{\dagger}U|\psi\rangle
+\end{align}
+The state $|\psi \rangle$ is an eigenvector of $M$ if and only if, $U |\psi\rangle$ is an
+eigenvector of $UMU^{\dagger}$. Thus, the application of an unitary operator transforms
+$M \to UMU^{\dagger}$. Moreover, if the state $|\psi \rangle$ is stabilized by $M$, then the evolved
+state $U|\psi\rangle$ will be stabilized by $UMU^{\dagger}$. If $M$ is an element of a stabilizer group
+$\cal S$ such that $M_1, \dots, M_l$ generate $\cal S$, then $UM_1U^{\dagger}, \dots, UM_lU^{\dagger}$ must generate
+$U{\cal S}U^{\dagger}$. This implies that to compute the dynamics of a stabilizer, only the transformation of
+the generators needs to be considered \cite{fault-tolerantQC}. It is because of this,
+Clifford circuits are able to be efficiently classically simulated via the Gottesman-Knill theorem.
+\begin{theorem}[Gottesman-Knill Theorem \cite{knillGottesman}]
+
+    Given an $n$ qubit state $|\psi \rangle$, the following statements are equivalent:
+    \begin{itemize}
+        \item $|\psi \rangle$ can be obtained from $|0 \rangle^{\otimes n}$ by CNOT, Hadamard and phase gates only.
+        \item $|\psi \rangle$ is stabilized by exactly $2^n$ Pauli operators
+        \item $|\psi \rangle$ can be uniquely identified by the group of Pauli operators that
+              stabilize $|\psi \rangle$.
+    \end{itemize}
+    %possibility for discussion of bits
+    % Could also extend to qudits
+\end{theorem}
+
+\subsection{Free-Fermion Circuits}
+Another class of circuits that are classically simulable, are known as free-fermion circuits. These
+circuits were built from a special set of 2 qubit gates, acting on nearest neighbouring qubits, first
+introduced by Valiant \cite{Valiant2001QuantumCT} and later mapped onto a non-interacting fermion system
+by DiVincenzo and Terhal \cite{Terhal2001}.
+
+% INSERT TWO QUBIT GATE HERE ALONG WITH HAMILTONIANS
+
+The fermion system is setup as $n$ qubit computational
+basis states, $|x_0, \dots, x_{n-1}\rangle$ which are identified with $n$ local fermionic modes
+(LFM's), each of which having an occupation number $n_j = 0,1$ at the $j$-th mode. $n_j = 0$ corresponds
+to an unoccupied mode, while $n_j = 1$ corresponds to an occupied mode. The mapping of a qubit system (spin 1/2 system) onto
+a fermionic system is done via a Jordan-Wigner Transformation, such that the representation and dynamics of a quantum
+state are described using creation and annihilation operators from second quantization.
+The creation operator, $a_j^{\dagger}$ creates a fermion at mode $j$ (if the mode is unoccupied),
+whilst the annihilation operator, $a_j$ removes a fermion at site $j$ if the mode is occupied.
+In the case of fermions, these operators obey canonical anti-commutation relations:
+\begin{align}
+    \{a_j, a_k\} \equiv \{a_j^{\dagger}, a_k^{\dagger}\} = 0 &  & \{a_j, a_k^{\dagger}\} = \delta_{jk}I
+\end{align}
+The Hilbert space of such a system is called a Fock space, for which the basis vectors are Fock states,
+$|n_1, n_2, \dots n_l\rangle$. The elements of which, are the occupation number at each mode.
+The creation and annihilation operators act on Fock states in the following way:
+\begin{align*}
+    a_j^{\dagger} |\mathbf{n}\rangle = (-1)^{\sum^{j-1}_{m=0}}\delta_{n_j, 1}  |{\mathbf n}'\rangle \\
+    a_j |\mathbf{n}\rangle = (-1)^{\sum^{j-1}_{m=0}}\delta_{n_j, 0}  |{\mathbf n}'\rangle
+\end{align*}
+Where $ |{\mathbf n}\rangle = |n_1, \dots, n_j, \dots, n_l\rangle$ and $ |{\mathbf n}'\rangle = |n_1, \dots, n'_j, \dots, n_l\rangle$
+includes the updated occupation number at site $j$.
+Analagous to stabilizer states, an arbitrary Fock state, $|{\mathbf n}\rangle$, can be created from
+a vacuum state via creation operators,
+\begin{equation}
+    |{\mathbf n}\rangle = (a_1^{\dagger})^{n_1} (a_2^{\dagger})^{n_2} \dots (a_{l}^{\dagger})^{n_l}|{\mathbf 0}\rangle
+\end{equation}
+where $|{\mathbf 0}\rangle = |0,0,\dots,0\rangle$ is a vacuum state of size $l$. Then a number operator can be defined,
+$\hat{n}_j = c^{\dagger}_j c_j$, such that it's action on a Fock state returns the occupation number on site $j$.
+As previously mentioned, the Pauli operators can be mapped onto a non-interacting fermion system via
+the Jordan-Wigner transformation (JWT). In particular, the set of Pauli operators that act on the $j$th site,
+$\{X_j, Y_j, Z_j\}$, can be expressed in terms of the creation and annihlation operators by first defining
+the operators $\sigma^{\pm}_j = \frac{1}{2}(X_j \pm iY_j)$. Then in terms of the creation and annihilation
+operators:
+\begin{align}
+    \sigma^{+}_j = e^{i\pi\sum^{j-1}_{m = 0} a^{\dagger}_m a_m} a_j^{\dagger} \\
+    \sigma^{-}_j = e^{i\pi\sum^{j-1}_{m = 0} a^{\dagger}_m a_m} a_j
+\end{align}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

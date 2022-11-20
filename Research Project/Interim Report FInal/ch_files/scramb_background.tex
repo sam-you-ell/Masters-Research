@@ -1,5 +1,5 @@
 \section{Background Theory}
-\subsection{Quantum Information and Circuits}
+\subsection{Quantum Information and Computing}
 \vspace{-0.15in}
 Quantum Information is built upon the concept of quantum bits (qubits for short), represented as a linear
 combination of states in the standard basis,
@@ -64,8 +64,8 @@ For clarity, consider the Pauli group on 1-qubit, ${\cal P}_1$;
 \begin{equation}
     {\cal P}_1 \equiv \{ \pm I, \pm iI, \pm X, \pm iX \pm Y, \pm iY, \pm Z, \pm iZ\},
 \end{equation}
-From this, another group of interest can be defined, namely the Clifford group, ${\cal C}_n$, defined as the
-set of unitary operators (also called unitaries) that normalise the Pauli group. The elements of this group are the
+From this, another group of interest can be defined, namely the Clifford group, ${\cal C}_n$, defined as a
+subset of unitary operators that normalise the Pauli group \cite{orthogonalcodes}. The elements of this group are the
 Hadamard, Controlled-Not and Phase operators.
 
 The Hadamard, $H$, maps computational basis states to a superposition of computational basis states,
@@ -114,66 +114,3 @@ since the $\alpha_0$ or $\beta_1$ must be zero in order to ensure the $|01\rangl
 However, this would make the coefficients of the $|00\rangle$
 or $|11\rangle$ terms zero, breaking the equality. Thus, $|{\bm\Phi}^+\rangle$ cannot be written in
 product form and is said to be entangled. This defines a general condition for a arbitrary state to be entangled. \cite{nielsen_chuang_2010}
-\subsection{Clifford Circuits and Stabilizer Formalism}
-
-Quantum circuits comprised of only quantum gates from the Clifford group are known as \textit{Clifford Circuits}.
-This family of circuits is of considerable interest as they are classically simulable, that is,
-circuits of this construction can be efficiently simulated on a classical computer with polynomial
-effort via the Gottesman-Knill theorem \cite{knillGottesman}. For this reason, Clifford gates do not form
-a set of universal quantum gates, meaning a universal quantum computer cannot be constructed using a set
-of Clifford gates. A set of universal quantum gates allows for any unitary operation to be approximated to
-arbitrary accuracy by a quantum circuit, constructed using only the original set of gates.
-
-\textit{Stabilizer Formalism}. An arbitrary, pure quantum state, $|\psi\rangle$ is \textit{stabilized} by
-a unitary operator, $S$ if $|\psi\rangle$  is an eigenvector of $S$, with eigenvalue 1, satisfying:
-\begin{equation}
-    S|\psi\rangle = |\psi\rangle
-\end{equation}
-The key idea here is that the quantum state can be described in terms of the unitaries that stabilize it, instead of the state itself.
-This is due to $|\psi\rangle$ being the unique state that is stabilized by $U$. \cite{PhysRevA.70.052328}
-This can be seen from considering the Pauli matrices, and the unique states they stabilize. In the one-qubit case these are
-the $+1$ eigenstates of the pauli matrices;
-\begin{align}
-     & X(|0\rangle + |1\rangle) = |0\rangle + |1\rangle   \\
-     & Y(|0\rangle + i|1\rangle) = |0\rangle + i|1\rangle \\
-     & Z|0\rangle = |0\rangle
-\end{align}
-
-If given a group or subgroup of unitaries, $\cal U$, the vector space ,$V$, of $n$ qubit states is
-stabilized by $\cal U$ if every element of $V$ is stable under action from every element of $\cal U$.
-This description is more appealing, as we can exploit mathematical techniques from group theory to
-describe quantum states and vector spaces. More precisely, the group $\cal U$ can be described using it's
-generators. In general, a set of elements  $g_1, \dots, g_d$ of a group, $\cal G$, generate the group
-if every element of $\cal G$ can be written as a product of elements from the set of generators,
-$g_1, \dots, g_d$, such that ${\cal G} \coloneqq \langle g_1, \dots, g_d\rangle$. For example,
-consider the group ${\cal U} \equiv \{ I, Z_1Z_2, Z_2Z_3, Z_1Z_3\}$. ${\cal U}$ can be compactly written
-as ${\cal U} = \langle Z_1Z_2, Z_2Z_3 \rangle$, by recognising $(Z_1Z_2)^2 = I$ and
-$Z_1Z_3 = (Z_1Z_2)(Z_2Z_3)$.
-
-This allows for the description of a quantum state, and subsequently it's dynamics, by the generators
-of a stabilizer group. To see how the dynamics of a state are represented in terms of generators, consider
-a stabilizer state under the action of a unitary (gate in quantum circuit models):
-\begin{align}
-    U|\psi \rangle = US|\psi \rangle =  USU^{\dagger}U|\psi\rangle
-\end{align}
-Where $S$ is a generator from an arbitrary stabilizer group.
-It can be seen that the state, $U|\psi \rangle$ is then stabilized by $USU^{\dagger}$, implying the
-vector space evolved by $U$, is stabilized by the group $U{\cal S}U^{\dagger}$, which can be written
-in terms of its generators, $US_1U^{\dagger}, \dots, US_dU^{\dagger}$. Thus, only the change in the
-generators needs to be computed, instead of the change in the whole stabilizer group.
-
-%extremely powerful when you recognise clifford groups form this relation ships with pauli operators, cuts down the amplitudes significantly - this is what makes
-%clifford circuits classically simulable.
-
-\subsection{Free-Fermion Circuits}
-
-
-
-
-
-
-
-
-
-
-

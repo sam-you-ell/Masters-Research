@@ -5,16 +5,33 @@ B.~Schumacher and M.~Westmoreland, {\em Quantum Processes Systems, and
   Information}.
 \newblock Cambridge University Press, 2010.
 
+\bibitem{orthogonalcodes}
+A.~R. Calderbank, E.~M. Rains, P.~W. Shor, and N.~J.~A. Sloane, ``Quantum error
+  correction via codes over gf(4),'' 1996.
+
 \bibitem{nielsen_chuang_2010}
 M.~A. Nielsen and I.~L. Chuang, {\em Quantum Computation and Quantum
   Information: 10th Anniversary Edition}.
 \newblock Cambridge University Press, 2010.
 
-\bibitem{knillGottesman}
-D.~Gottesman, ``The heisenberg representation of quantum computers,'' 1998.
-
 \bibitem{PhysRevA.70.052328}
 S.~Aaronson and D.~Gottesman, ``Improved simulation of stabilizer circuits,''
   {\em Phys. Rev. A}, vol.~70, p.~052328, Nov 2004.
+
+\bibitem{fault-tolerantQC}
+D.~Gottesman, ``Theory of fault-tolerant quantum computation,'' {\em Physical
+  Review A}, vol.~57, pp.~127--137, jan 1998.
+
+\bibitem{knillGottesman}
+D.~Gottesman, ``The heisenberg representation of quantum computers,'' 1998.
+
+\bibitem{Valiant2001QuantumCT}
+L.~G. Valiant, ``Quantum computers that can be simulated classically in
+  polynomial time,'' in {\em STOC '01}, 2001.
+
+\bibitem{Terhal2001}
+B.~M. Terhal and D.~P. Divincenzo, ``{Classical simulation of
+  noninteracting-fermion quantum circuits Typeset using REVT E X 1},'' tech.
+  rep., 2001.
 
 \end{thebibliography}
