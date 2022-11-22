@@ -1,4 +1,79 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{Polkovnikov_2011}
+A.~Polkovnikov, K.~Sengupta, A.~Silva, and M.~Vengalattore, ``Nonequilibrium
+  dynamics of closed interacting quantum systems,'' {\em Reviews of Modern
+  Physics}, vol.~83, pp.~863--883, aug 2011.
+
+\bibitem{Calabrese_2009}
+P.~Calabrese and J.~Cardy, ``Entanglement entropy and conformal field theory,''
+  {\em Journal of Physics A: Mathematical and Theoretical}, vol.~42, p.~504005,
+  dec 2009.
+
+\bibitem{Jerusalem}
+D.~Harlow, ``Jerusalem lectures on black holes and quantum information,'' {\em
+  Rev. Mod. Phys.}, vol.~88, p.~015002, Feb 2016.
+
+\bibitem{Jensen_2016}
+K.~Jensen, ``Chaos in ${\mathrm{ads}}_{2}$ holography,'' {\em Physical Review
+  Letters}, vol.~117, sep 2016.
+
+\bibitem{https://doi.org/10.48550/arxiv.1802.01198}
+L.~Susskind, ``Why do things fall?,'' 2018.
+
+\bibitem{Sekino_2008}
+Y.~Sekino and L.~Susskind, ``Fast scramblers,'' {\em Journal of High Energy
+  Physics}, vol.~2008, pp.~065--065, oct 2008.
+
+\bibitem{ShenkerBlackHolesButterfly2014}
+S.~H. Shenker and D.~Stanford, ``Black holes and the butterfly effect,'' {\em
+  Journal of High Energy Physics}, 2014.
+
+\bibitem{Maldacena_2016}
+J.~Maldacena, S.~H. Shenker, and D.~Stanford, ``A bound on chaos,'' {\em
+  Journal of High Energy Physics}, vol.~2016, aug 2016.
+
+\bibitem{Khemani_2018}
+V.~Khemani, A.~Vishwanath, and D.~A. Huse, ``Operator spreading and the
+  emergence of dissipative hydrodynamics under unitary evolution with
+  conservation laws,'' {\em Physical Review X}, vol.~8, sep 2018.
+
+\bibitem{PhysRevX.8.021013}
+C.~W. von Keyserlingk, T.~Rakovszky, F.~Pollmann, and S.~L. Sondhi, ``Operator
+  hydrodynamics, otocs, and entanglement growth in systems without conservation
+  laws,'' {\em Phys. Rev. X}, vol.~8, p.~021013, Apr 2018.
+
+\bibitem{PhysRevX.8.031058}
+T.~Rakovszky, F.~Pollmann, and C.~W. von Keyserlingk, ``Diffusive hydrodynamics
+  of out-of-time-ordered correlators with charge conservation,'' {\em Phys.
+  Rev. X}, vol.~8, p.~031058, Sep 2018.
+
+\bibitem{Grozdanov_2018}
+S.~Grozdanov, K.~Schalm, and V.~Scopelliti, ``Black hole scrambling from
+  hydrodynamics,'' {\em Physical Review Letters}, vol.~120, jun 2018.
+
+\bibitem{Blake_2018}
+M.~Blake, H.~Lee, and H.~Liu, ``A quantum hydrodynamical description for
+  scrambling and many-body chaos,'' {\em Journal of High Energy Physics},
+  vol.~2018, oct 2018.
+
+\bibitem{PhysRevB.98.205136}
+Y.~Li, X.~Chen, and M.~P.~A. Fisher, ``Quantum zeno effect and the many-body
+  entanglement transition,'' {\em Phys. Rev. B}, vol.~98, p.~205136, Nov 2018.
+
+\bibitem{https://doi.org/10.48550/arxiv.2110.02988}
+Y.~Li, R.~Vasseur, M.~P.~A. Fisher, and A.~W.~W. Ludwig, ``Statistical
+  mechanics model for clifford random tensor networks and monitored quantum
+  circuits,'' 2021.
+
+\bibitem{Valiant2001QuantumCT}
+L.~G. Valiant, ``Quantum computers that can be simulated classically in
+  polynomial time,'' in {\em STOC '01}, 2001.
+
+\bibitem{Terhal2001}
+B.~M. Terhal and D.~P. Divincenzo, ``{Classical simulation of
+  noninteracting-fermion quantum circuits Typeset using REVT E X 1},'' tech.
+  rep., 2001.
 
 \bibitem{schumacher_westmoreland_2010}
 B.~Schumacher and M.~Westmoreland, {\em Quantum Processes Systems, and
@@ -25,13 +100,9 @@ D.~Gottesman, ``Theory of fault-tolerant quantum computation,'' {\em Physical
 \bibitem{knillGottesman}
 D.~Gottesman, ``The heisenberg representation of quantum computers,'' 1998.
 
-\bibitem{Valiant2001QuantumCT}
-L.~G. Valiant, ``Quantum computers that can be simulated classically in
-  polynomial time,'' in {\em STOC '01}, 2001.
-
-\bibitem{Terhal2001}
-B.~M. Terhal and D.~P. Divincenzo, ``{Classical simulation of
-  noninteracting-fermion quantum circuits Typeset using REVT E X 1},'' tech.
-  rep., 2001.
+\bibitem{DeFelice2019}
+G.~{De Felice}, A.~Hadzihasanovic, and K.~F. Ng, ``{A diagrammatic calculus of
+  fermionic quantum circuits},'' {\em Logical Methods in Computer Science},
+  vol.~15, no.~3, 2019.
 
 \end{thebibliography}

@@ -1,15 +1,17 @@
-\contentsline {title}{Quantum Scrambling Review*}{1}{}
+\contentsline {title}{A Review on Quantum Operator Scrambling within Classically Simulable Circuit Models}{1}{}
 \contentsline {abstract}{Abstract}{1}{}
 \tocdepth@munge 
 \contentsline {section}{\numberline {}Contents}{1}{}
 \tocdepth@restore 
-\contentsline {section}{\numberline {}INTRODUCTION}{1}{}
-\contentsline {section}{\numberline {}Background Theory}{1}{}
-\contentsline {subsection}{\numberline {}Quantum Information and Computing}{1}{}
-\contentsline {section}{\numberline {}Classically Simulable Quantum Circuits}{3}{}
-\contentsline {subsection}{\numberline {}Clifford Circuits and Stabilizer Formalism}{3}{}
-\contentsline {subsection}{\numberline {}Free-Fermion Circuits}{5}{}
-\contentsline {section}{\numberline {}Operator Scrambling}{6}{}
-\contentsline {subsection}{\numberline {}Operator Entanglement}{6}{}
-\contentsline {section}{\numberline {}Further Research}{6}{}
-\contentsline {section}{\numberline {}References}{7}{}
+\contentsline {section}{\numberline {I}INTRODUCTION}{1}{}
+\contentsline {section}{\numberline {II}Background Theory}{1}{}
+\contentsline {subsection}{\numberline {A}Quantum Information and Computing}{1}{}
+\contentsline {section}{\numberline {III}Classically Simulable Quantum Circuits}{3}{}
+\contentsline {subsection}{\numberline {A}Clifford Circuits and Stabilizer Formalism}{3}{}
+\contentsline {subsection}{\numberline {B}Non-interacting Fermi Circuits}{3}{}
+\contentsline {subsubsection}{\numberline {1}Fermionic Fock Space}{3}{}
+\contentsline {subsubsection}{\numberline {2}Fermionic Circuits}{4}{}
+\contentsline {section}{\numberline {IV}Operator Scrambling}{4}{}
+\contentsline {subsection}{\numberline {A}Operator Entanglement}{4}{}
+\contentsline {section}{\numberline {V}Further Research}{4}{}
+\contentsline {section}{\numberline {}References}{5}{}

@@ -64,44 +64,75 @@ Clifford circuits are able to be efficiently classically simulated via the Gotte
     % Could also extend to qudits
 \end{theorem}
 
-\subsection{Free-Fermion Circuits}
-Another class of circuits that are classically simulable, are known as free-fermion circuits. These
-circuits were built from a special set of 2 qubit gates, acting on nearest neighbouring qubits, first
-introduced by Valiant \cite{Valiant2001QuantumCT} and later mapped onto a non-interacting fermion system
-by DiVincenzo and Terhal \cite{Terhal2001}.
-
-% INSERT TWO QUBIT GATE HERE ALONG WITH HAMILTONIANS
-
-The fermion system is setup as $n$ qubit computational
-basis states, $|x_0, \dots, x_{n-1}\rangle$ which are identified with $n$ local fermionic modes
-(LFM's), each of which having an occupation number $n_j = 0,1$ at the $j$-th mode. $n_j = 0$ corresponds
-to an unoccupied mode, while $n_j = 1$ corresponds to an occupied mode. The mapping of a qubit system (spin 1/2 system) onto
-a fermionic system is done via a Jordan-Wigner Transformation, such that the representation and dynamics of a quantum
+\subsection{Non-interacting Fermi Circuits}
+\subsubsection{Fermionic Fock Space}
+Another class of circuits that are classically simulable, are known as non-interacting or free fermi circuits.
+These circuits are built from a fermionic Fock space formalism, where the basic units of information are local
+fermionic modes (LFMs). Each mode can be occupied or unoccupied in the same fashion as qubits, where
+a mode $j$ is associated with an occupation number, $n_j = 0$ (unoccupied mode) or $n_j = 1$ (occupied mode).
+The state space of a many-fermion system is the fermionic Fock space, ${\cal F} = {\cal H}_0 + {\cal H}_1$,
+where ${\cal H}_0$ and ${\cal H}_1$ correspond to subspaces of even and odd number of particles respectively.
+The natural basis vectors for a Fock space of $m$ LFMs are Fock states $|n_0, \dots, n_{m-1}\rangle$,
+where each element is the previously mentioned occupation number, $n_j$ at each site \cite{DeFelice2019}.
+This system is similar to the qubit set-up as the Hilbert space for $m$ LFMs is identified with the Hilbert space
+of $m$ qubits such that
+\begin{align*}
+    |n_1, \dots, n_{k-1}\rangle \equiv | n_0 \rangle \otimes | n_1 \rangle \otimes \dots \otimes | n_{m-1} \rangle, &  & n_j = 0,1
+\end{align*}
+where the RHS of the expression descibes a system of $m$ qubits. This allows a mapping of a qubit system (spin 1/2 system) onto
+a fermionic system via a Jordan-Wigner Transformation, such that the representation and dynamics of a quantum
 state are described using creation and annihilation operators from second quantization.
 The creation operator, $a_j^{\dagger}$ creates a fermion at mode $j$ (if the mode is unoccupied),
 whilst the annihilation operator, $a_j$ removes a fermion at site $j$ if the mode is occupied.
 In the case of fermions, these operators obey canonical anti-commutation relations:
 \begin{align}
-    \{a_j, a_k\} \equiv \{a_j^{\dagger}, a_k^{\dagger}\} = 0 &  & \{a_j, a_k^{\dagger}\} = \delta_{jk}I
+    \{a_i, a_j\} \equiv \{a_i^{\dagger}, a_j^{\dagger}\} = 0 &  & \{a_i, a_j^{\dagger}\} = \delta_{ij}I
 \end{align}
-The Hilbert space of such a system is called a Fock space, for which the basis vectors are Fock states,
-$|n_1, n_2, \dots n_l\rangle$. The elements of which, are the occupation number at each mode.
+The occupation number, $n_j$ is then the eigenvalue of the number operator, $\hat{n}_j = a^{\dagger}_j a_j$
 The creation and annihilation operators act on Fock states in the following way:
-\begin{align*}
-    a_j^{\dagger} |\mathbf{n}\rangle = (-1)^{\sum^{j-1}_{m=0}}\delta_{n_j, 1}  |{\mathbf n}'\rangle \\
-    a_j |\mathbf{n}\rangle = (-1)^{\sum^{j-1}_{m=0}}\delta_{n_j, 0}  |{\mathbf n}'\rangle
-\end{align*}
-Where $ |{\mathbf n}\rangle = |n_1, \dots, n_j, \dots, n_l\rangle$ and $ |{\mathbf n}'\rangle = |n_1, \dots, n'_j, \dots, n_l\rangle$
-includes the updated occupation number at site $j$.
-Analagous to stabilizer states, an arbitrary Fock state, $|{\mathbf n}\rangle$, can be created from
-a vacuum state via creation operators,
+\begin{widetext}
+    \begin{align*}
+        a_j^{\dagger} |n_0, \dots, n_j, \dots, n_{m-1}\rangle = (-1)^{\sum^{j-1}_{s=0}n_s}\delta_{n_j, 1}  |n_0, \dots, n_j', \dots, n_{m-1}\rangle \\
+        a_j |n_0, \dots, n_j, \dots, n_{m-1}\rangle = (-1)^{\sum^{j-1}_{s=0}n_s}\delta_{n_j, 0}  |n_0, \dots, n_j', \dots, n_{m-1}\rangle
+    \end{align*}
+\end{widetext}
+Where $n_j'$ is the updated occupation number at the $j$th site.
+To prepare an arbitrary Fock state, $|{\mathbf n}\rangle$, from a vacuum, $|{\mathbf 0}\rangle = |0,0,\dots,0\rangle$,
+with fermions occupying arbitrary positions, creation operators are labeled to act on specified modes:
+
 \begin{equation}
-    |{\mathbf n}\rangle = (a_1^{\dagger})^{n_1} (a_2^{\dagger})^{n_2} \dots (a_{l}^{\dagger})^{n_l}|{\mathbf 0}\rangle
+    |{\mathbf n}\rangle = a_{i_1}^{\dagger} a_{i_2}^{\dagger}\dots a_{i_m}^{\dagger}|{\mathbf 0}\rangle
 \end{equation}
-where $|{\mathbf 0}\rangle = |0,0,\dots,0\rangle$ is a vacuum state of size $l$. Then a number operator can be defined,
-$\hat{n}_j = c^{\dagger}_j c_j$, such that it's action on a Fock state returns the occupation number on site $j$.
-As previously mentioned, the Pauli operators can be mapped onto a non-interacting fermion system via
-the Jordan-Wigner transformation (JWT). In particular, the set of Pauli operators that act on the $j$th site,
+
+\subsubsection{Fermionic Circuits}
+A fermionic circuit is constructed from a sequence of elementary gates that mediate an interaction between
+modes $j$ and $k$, written as $U = e^{iH_g}$.$H_g$ is a general gate Hamiltonian:
+\begin{equation}\label{gateham}
+    H_g = b_{jj}a_j^{\dagger}a_j + b_{kk} a_{k}^{\dagger}a_{k} + b^{*}_{jk}a_k^{\dagger}a_j,
+\end{equation}
+where $b_{jj}, b_{jk}, b_{kk}$ are complex coefficients that form a hermitian matrix, $\mathbf b$.
+The circuit is constructed by defining the
+sequence of gates as $U = U_{\text{poly}(n)} \dots U_2 U_1$, such that the number of gates is no more than a
+polynomial in order to be simulated classically. Then considering the evolution of Fock state in a circuit, given that the
+circuit preserves the number of fermions ($U|{\mathbf 0}\rangle = |{\mathbf 0}\rangle  $), the state evolves as:
+\begin{align}
+    U a_j^{\dagger} |{\mathbf 0}\rangle = U a_j^{\dagger} U^{\dagger}U |{\mathbf 0}\rangle = U a_j^{\dagger} U^{\dagger} |{\mathbf 0}\rangle
+\end{align}
+Where $U$ acts by conjugation as
+\begin{equation}
+    U a_j^{\dagger} U^{\dagger} = \sum_s B_{is} a_s^{\dagger}
+\end{equation}
+and the matrix $B = \exp(i{\mathbf b})$ is defined from the previous coefficient matrix in Eq. (\refeq{gateham}).
+To compute the final state of the system, only the matrix $B$ needs evaluation, which is classically simulable if $U$ contains
+a polynomial number of gates \cite{Terhal2001}. More generally, if $U$ acts on an arbitrary Fock state, $|{\mathbf n}\rangle$, it's action
+is written as:
+\begin{align}
+    U |{\mathbf n}\rangle & = U a_{i_1}^{\dagger} a_{i_2}^{\dagger}\dots a_{i_m}^{\dagger}|{\mathbf 0}\rangle                                                    \\
+                          & = \sum_{j_1 \dots j_k} V_{i_1, j_1} \dots V_{i_k, j_k} a_{j_1}^{\dagger} a_{j_2}^{\dagger}\dots a_{j_k}^{\dagger}|{\mathbf 0}\rangle
+\end{align}
+Some simpler operators that act on Fock states, are the spin 1/2 Pauli operators, that are mapped onto a
+non-interacting fermion system via the Jordan Wigner Transformation (JWT).
+In particular, the set of Pauli operators that act on the $j$th mode,
 $\{X_j, Y_j, Z_j\}$, can be expressed in terms of the creation and annihlation operators by first defining
 the operators $\sigma^{\pm}_j = \frac{1}{2}(X_j \pm iY_j)$. Then in terms of the creation and annihilation
 operators:

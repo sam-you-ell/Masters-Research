@@ -1,10 +1,34 @@
 \section{INTRODUCTION}
-Understanding the evolution of quantum many-body systems presents challenging problems and has provided insightful results into diverse areas.
-Studying the dynamics of such systems is fundamentally a computational challenge due to the exponential growth of the Hilbert space with 
-the number of qubits. However, quantum dynamics can be efficiently simulated in particular quantum circuits which
-provide minimal models for a wide range of complex phenomena. Some examples of such quantum circuits are 
-Clifford circuits and non-interacting fermi circuits, which will be of principal interest in this review. These 
-circuits will form the playground in which to study the phenomena known as \textit{Quantum Scrambling}.
-Quantum Scrambling describes the process in local information encoded by a simple product operator becomes 'scrambled' by a 
-unitary time evolution amongst the large number of degrees of freedom in the system, such that the operator becomes a highly complicated sum 
-of product operators. 
+Understanding the evolution of quantum many-body systems presents challenging problems and has
+provided insightful results in condensed matter physics and quantum information \cite{Polkovnikov_2011}.
+Studying the dynamics of such systems is fundamentally
+a computational challenge due to the exponential growth of the Hilbert space with the number of
+qubits. However, quantum dynamics can be efficiently simulated in atypical quantum circuit models,
+which will be studied in hopes of understanding the spreading and scrambling of encoded local information.
+This process is known as quantum scrambling. More precisely, quantum scrambling describes the
+process in which local information encoded by a simple product operator, becomes 'scrambled' by a
+unitary time evolution amongst the large number of degrees of freedom in the system, such that, the
+operator becomes a highly complicated sum of product operators with no decoding protocol to recover
+the information. In recent years, the study of this scrambling process has yielded insightful
+results and new perspectives. These include new insights into black hole information and the
+AdS/CFT correspondence \cite{Calabrese_2009,Jerusalem,Jensen_2016,https://doi.org/10.48550/arxiv.1802.01198,Sekino_2008,ShenkerBlackHolesButterfly2014},
+quantum chaos, \cite{Maldacena_2016} and hydrodynamics in many-body systems \cite{Khemani_2018, PhysRevX.8.021013, PhysRevX.8.031058,Grozdanov_2018, Blake_2018}.
+
+In order to investigate this phenomenon, we turn to toy circuit models that can be analytically and
+numerical tractable, so that we can obtain a deeper understanding to apply to the generic cases of unitary
+evolution in many-body systems. As previously mentioned, some families of circuits are able to be efficiently
+simulated with polynomial effort on a classical computer. Two circuit models take the principal interest of
+this review, namely Clifford circuits and non-interacting fermi circuits. Clifford circuits and the Clifford
+group have played a key role in the study fault-tolerant quantum computing and, more recently, many-body physics via
+random Clifford unitaries \cite{PhysRevB.98.205136, https://doi.org/10.48550/arxiv.2110.02988}.
+This is due to their efficient simulability on classical computers, with no constraints on the amount of entanglement,
+allowing for the dynamics of large numbers of qubits to be studied via stabilizer states.
+
+Valiant \cite{Valiant2001QuantumCT} presented a new class of quantum circuits that can be simulated in
+polynomial time. This class of circuits was later identified and mapped onto a non-interacting fermion system, where the Hamiltonian
+describing the dynamics is quadratic in creation and annihilation operators. This particular fermion
+system was shown to be classically simulable by DiVincenzo and Terhal \cite{Terhal2001} as an extension of Valiant's findings.
+This model has also shown to exhibit
+
+
+
