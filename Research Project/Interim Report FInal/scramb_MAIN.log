@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.6)  21 NOV 2022 12:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.6)  22 NOV 2022 00:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -6,31 +6,30 @@ entering extended mode
 **"/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/scramb_MAIN.tex"
 (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/scramb_MAIN.tex
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-03-06> (/usr/local/texlive/2020/texmf-dist/tex/latex/revtex/revtex4-2.cls
-Document Class: revtex4-2 2019/01/18/14:29:48 4.2c (https://journals.aps.org/revtex/ for documentation)
- Copyright (c) 2019 American Physical Society.
+L3 programming layer <2020-03-06> (/usr/local/texlive/2020/texmf-dist/tex/latex/revtex/revtex4-1.cls
+Document Class: revtex4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for documentation)
+ Copyright (c) 2009 The American Physical Society.
  mailto:revtex@aps.org
  Licensed under the LPPL:
 http://www.ctan.org/tex-archive/macros/latex/base/lppl.txt
  Arthur Ogawa <arthur_ogawa at sbcglobal dot net>
- Based on work by David Carlisle <david at dcarlisle.demon.co.uk>Version (4.2c): Modified by Mark Doyle
- .
-ltxutil[2019/01/18/14:29:48 4.2c utilities package (portions licensed from W. E. Baxter web at superscript.com)]
-LaTeX Info: Redefining \@centercr on input line 315.
-Class revtex4-2 Info: Repairing broken LaTeX eqnarray on input line 365.
+ Based on work by David Carlisle <david at dcarlisle.demon.co.uk>.
+ltxutil[2010/07/25/20:33:00 4.1r utilities package (portions licensed from W. E. Baxter web at superscript.com)]
+LaTeX Info: Redefining \@centercr on input line 308.
+Class revtex4-1 Info: Repairing broken LaTeX eqnarray on input line 358.
 \eqncolsep=\skip47
-Class revtex4-2 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfootnote on input line 440.
-Class revtex4-2 Info: Repairing broken LateX \@sect on input line 762.
+Class revtex4-1 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfootnote on input line 433.
+Class revtex4-1 Info: Repairing broken LateX \@sect on input line 755.
 \intertabularlinepenalty=\count167
 \@tbpen=\count168
 \@arstrutbox@hline=\box45
-Class revtex4-2 Info: Repairing broken LaTeX \@xbitor on input line 1793.
-Class revtex4-2 Info: Making \typeout \long on input line 2053.
-ltxfront[2019/01/18/14:29:48 4.2c frontmatter package (AO,DPC,MD)]
+Class revtex4-1 Info: Repairing broken LaTeX \@xbitor on input line 1786.
+Class revtex4-1 Info: Making \typeout \long on input line 2046.
+ltxfront[2010/07/25/20:33:00 4.1r frontmatter package (AO,DPC)]
 \c@affil=\count169
 \c@collab=\count170
 \absbox=\box46
-ltxgrid[2019/01/18/14:29:48 4.2c page grid package (portions licensed from W. E. Baxter web at superscript.com)]
+ltxgrid[2010/07/25/20:33:00 4.1r page grid package (portions licensed from W. E. Baxter web at superscript.com)]
 \c@linecount=\count171
 \output@latex=\toks15
 \box@size@1=\box47
@@ -44,7 +43,7 @@ ltxgrid[2019/01/18/14:29:48 4.2c page grid package (portions licensed from W. E.
 \footsofar=\box54
 \pagegrid@col=\count172
 
-Class revtex4-2 Warning: Failed to recognize \@vspace, \@vspacer, \@no@pgbk, \@newline, and \\; no patches applied. Please get a more up-to-date class, .
+Class revtex4-1 Warning: Failed to recognize \@vspace, \@vspacer, \@no@pgbk, \@newline, and \\; no patches applied. Please get a more up-to-date class, .
 
 \c@part=\count173
 \c@section=\count174
@@ -63,18 +62,16 @@ Class revtex4-2 Warning: Failed to recognize \@vspace, \@vspacer, \@no@pgbk, \@n
 \@bibdataout=\write3
 \widetext@top=\box58
 \widetext@bot=\box59
-Class revtex4-2 Info: Selecting society aps on input line 7581.
-(/usr/local/texlive/2020/texmf-dist/tex/latex/revtex/aps4-2.rtx
-File: aps4-2 2019/01/18/14:29:48 4.2c (https://journals.aps.org/revtex/ for documentation)
-Class revtex4-2 Info: RevTeX society APS selected on input line 37.
+Class revtex4-1 Info: Selecting society aps on input line 7542.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/revtex/aps4-1.rtx
+File: aps4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for documentation)
+Class revtex4-1 Info: RevTeX society APS selected on input line 31.
 )
-
-Class revtex4-2 Warning: No journal specified, using default pra.
-
-Class revtex4-2 Info: APS journal PRA selected on input line 7584.
-(/usr/local/texlive/2020/texmf-dist/tex/latex/revtex/aps11pt4-2.rtx
-File: aps11pt4-2 2019/01/18/14:29:48 4.2c (https://journals.aps.org/revtex/ for documentation)
-Class revtex4-2 Info: RevTeX pointsize 11pt selected on input line 36.
+Class revtex4-1 Info: Selecting journal prl on input line 7544.
+Class revtex4-1 Info: APS journal PRL selected on input line 7545.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/revtex/aps11pt4-1.rtx
+File: aps11pt4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for documentation)
+Class revtex4-1 Info: RevTeX pointsize 11pt selected on input line 30.
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/textcase/textcase.sty
 Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/url/url.sty
@@ -87,10 +84,10 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count182
 )
-Class revtex4-2 Info: Repairing natbib's \BibitemShut on input line 7588.
- (/usr/local/texlive/2020/texmf-dist/tex/latex/revtex/revsymb4-2.sty
-Package: revsymb4-2 2019/01/18/14:29:48 4.2c (https://journals.aps.org/revtex/ for documentation)
-LaTeX Info: Redefining \REV@mathfrak on input line 125.
+Class revtex4-1 Info: Repairing natbib's \BibitemShut on input line 7549.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/revtex/revsymb4-1.sty
+Package: revsymb4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for documentation)
+LaTeX Info: Redefining \REV@mathfrak on input line 119.
 )) (/usr/local/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks17
@@ -588,10 +585,10 @@ See the caption package documentation for explanation.
 \sf@bottom=\skip78
 )
 \c@theorem=\count310
-Class revtex4-2 Info: Unrecognized LaTeX tabular. Please update this document class! (Proceeding with fingers crossed.) on input line 33.
-Class revtex4-2 Info: cite was not loaded (OK!) on input line 33.
-Class revtex4-2 Info: mcite was not loaded (OK!) on input line 33.
-Class revtex4-2 Info: multicol was not loaded (OK!) on input line 33.
+Class revtex4-1 Info: Unrecognized LaTeX tabular. Please update this document class! (Proceeding with fingers crossed.) on input line 33.
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 33.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 33.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 33.
  (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/scramb_MAIN.aux)
 \openout1 = `scramb_MAIN.aux'.
 
@@ -679,25 +676,29 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/ch_files/pauli_gates.tex) [2]) (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/ch_files/scramb_classicalcircuits.tex [3] [4]
+) [1{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/ch_files/pauli_gates.tex)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2]) (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/ch_files/scramb_classicalcircuits.tex [3] [4]
 Underfull \hbox (badness 2538) in paragraph at lines 93--98
 \T1/cmr/m/n/10.95 Where $\OMS/cmsy/m/n/10.95 j\OT1/cmr/bx/n/10.95 n\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 n[]; [] ; n[]; [] ; n[]\OMS/cmsy/m/n/10.95 i$ \T1/cmr/m/n/10.95 and $\OMS/cmsy/m/n/10.95 j\OT1/cmr/bx/n/10.95 n[]\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 =
  []
 
-) (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/ch_files/scramb_literature.tex) [5] (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/scramb_MAIN.bbl) [6] (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/scramb_MAIN.aux) ) 
+) (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/ch_files/scramb_literature.tex) [5] [6] (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/scramb_MAIN.bbl) [7] (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/scramb_MAIN.aux) ) 
 Here is how much of TeX's memory you used:
- 21586 strings out of 480608
- 429487 string characters out of 5903631
- 695212 words of memory out of 5000000
- 37036 multiletter control sequences out of 15000+600000
+ 21563 strings out of 480608
+ 429351 string characters out of 5903631
+ 688941 words of memory out of 5000000
+ 37012 multiletter control sequences out of 15000+600000
  552129 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,20n,112p,1274b,1334s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on "/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/scramb_MAIN.pdf" (6 pages, 285785 bytes).
+Output written on "/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/scramb_MAIN.pdf" (7 pages, 286954 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
+ 111 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

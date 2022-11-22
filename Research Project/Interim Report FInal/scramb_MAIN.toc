@@ -3,13 +3,13 @@
 \tocdepth@munge 
 \contentsline {section}{\numberline {}Contents}{1}{}
 \tocdepth@restore 
-\contentsline {section}{\numberline {I}INTRODUCTION}{1}{}
-\contentsline {section}{\numberline {II}Background Theory}{1}{}
-\contentsline {subsection}{\numberline {A}Quantum Information and Computing}{1}{}
-\contentsline {section}{\numberline {III}Classically Simulable Quantum Circuits}{3}{}
-\contentsline {subsection}{\numberline {A}Clifford Circuits and Stabilizer Formalism}{3}{}
-\contentsline {subsection}{\numberline {B}Free-Fermion Circuits}{4}{}
-\contentsline {section}{\numberline {IV}Operator Scrambling}{5}{}
-\contentsline {subsection}{\numberline {A}Operator Entanglement}{5}{}
-\contentsline {section}{\numberline {V}Further Research}{5}{}
-\contentsline {section}{\numberline {}References}{6}{}
+\contentsline {section}{\numberline {}INTRODUCTION}{1}{}
+\contentsline {section}{\numberline {}Background Theory}{1}{}
+\contentsline {subsection}{\numberline {}Quantum Information and Computing}{1}{}
+\contentsline {section}{\numberline {}Classically Simulable Quantum Circuits}{3}{}
+\contentsline {subsection}{\numberline {}Clifford Circuits and Stabilizer Formalism}{3}{}
+\contentsline {subsection}{\numberline {}Free-Fermion Circuits}{5}{}
+\contentsline {section}{\numberline {}Operator Scrambling}{6}{}
+\contentsline {subsection}{\numberline {}Operator Entanglement}{6}{}
+\contentsline {section}{\numberline {}Further Research}{6}{}
+\contentsline {section}{\numberline {}References}{7}{}
