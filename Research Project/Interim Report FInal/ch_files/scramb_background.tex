@@ -103,14 +103,22 @@ The Phase operator, denoted $S$ is defined as,
     \end{bmatrix}
 \end{align*}
 
-The CNOT operator is often used to create entanglement in circuits to
-generate states that cannot be written in product form. For example, if we prepare a Bell state
-$|{\bm\Phi}^{+}\rangle_ = \frac{|00\rangle + |11\rangle}{\sqrt{2}}$. We cannot write this as
+The CNOT operator is often used to generate entangled state. One such state is the maximally entangled 2-qubit state,
+called a Bell state, $|{\bm\Phi}^{+}\rangle_ = (|00\rangle + |11\rangle)/\sqrt{2}$. This is prepared
+from a $|00\rangle$ state, by applying a Hadamard to the first qubit, and subsequently a Controlled-Not gate:
+\begin{align}
+    H \otimes I |00\rangle = \left (\frac{|0\rangle + |1\rangle }{\sqrt{2}}\right )|0\rangle \\
+    CNOT \left (\frac{|0\rangle + |1\rangle }{\sqrt{2}}\right )|0\rangle = \frac{|00\rangle + |11\rangle}{\sqrt{2}}
+\end{align}
+The corresponding circuit representation of this preparation is given in Fig. \ref{Bellstate}.
+
+\input{ch_files/bell_state.tex}
+The output Bell state, is entangled and cannot be written in product form. For clarity, consider the following expression:
 \begin{align*}
-    |{\bm\Phi}^+\rangle = & \left[ \alpha_0 |0\rangle + \beta_0|1\rangle\right] \otimes \left[\alpha_1 |0\rangle + \beta_1|1\rangle\right] \\
-    =                     & \alpha_0\beta_0 |00\rangle + \alpha_0\beta_1|01\rangle + \alpha_1\beta_0|10\rangle + \alpha_1\beta_1|11\rangle
+    |{\bm\Phi}^+\rangle \not= & \left[ \alpha_0 |0\rangle + \beta_0|1\rangle\right] \otimes \left[\alpha_1 |0\rangle + \beta_1|1\rangle\right] \\
+    \not=                     & \alpha_0\beta_0 |00\rangle + \alpha_0\beta_1|01\rangle + \alpha_1\beta_0|10\rangle + \alpha_1\beta_1|11\rangle
 \end{align*}
-since the $\alpha_0$ or $\beta_1$ must be zero in order to ensure the $|01\rangle$, $|10\rangle$ vanish.
+the $\alpha_0$ or $\beta_1$ must be zero in order to ensure the $|01\rangle$, $|10\rangle$ vanish.
 However, this would make the coefficients of the $|00\rangle$
 or $|11\rangle$ terms zero, breaking the equality. Thus, $|{\bm\Phi}^+\rangle$ cannot be written in
 product form and is said to be entangled. This defines a general condition for a arbitrary state to be entangled. \cite{nielsen_chuang_2010}

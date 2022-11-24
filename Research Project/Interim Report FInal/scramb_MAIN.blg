@@ -9,45 +9,49 @@ Database file #1: scramb_MAINNotes.bib
 Database file #2: QuantumScrambling.bib
 Warning--empty institution in Terhal2001
 Warning--empty journal in knillGottesman
-You've used 24 entries,
+Warning--empty institution in Bravyi2000
+Warning--empty journal in Xu2022
+Warning--empty journal in Blake2020
+Warning--empty journal in Jozsa2008
+You've used 40 entries,
             1876 wiz_defined-function locations,
-            626 strings with 7183 characters,
-and the built_in function-call counts, 5058 in all, are:
-= -- 486
-> -- 213
+            709 strings with 9189 characters,
+and the built_in function-call counts, 8103 in all, are:
+= -- 757
+> -- 373
 < -- 0
-+ -- 81
-- -- 57
-* -- 338
-:= -- 740
-add.period$ -- 26
-call.type$ -- 24
-change.case$ -- 23
++ -- 140
+- -- 100
+* -- 576
+:= -- 1215
+add.period$ -- 42
+call.type$ -- 40
+change.case$ -- 40
 chr.to.int$ -- 0
-cite$ -- 26
-duplicate$ -- 284
-empty$ -- 473
-format.name$ -- 57
-if$ -- 1233
+cite$ -- 46
+duplicate$ -- 425
+empty$ -- 763
+format.name$ -- 100
+if$ -- 1939
 int.to.chr$ -- 0
-int.to.str$ -- 24
-missing$ -- 22
-newline$ -- 77
-num.names$ -- 24
-pop$ -- 81
+int.to.str$ -- 40
+missing$ -- 34
+newline$ -- 125
+num.names$ -- 40
+pop$ -- 136
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 201
+skip$ -- 286
 stack$ -- 0
-substring$ -- 168
-swap$ -- 115
+substring$ -- 272
+swap$ -- 150
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 39
-width$ -- 26
-write$ -- 217
-(There were 2 warnings)
+warning$ -- 6
+while$ -- 64
+width$ -- 42
+write$ -- 351
+(There were 6 warnings)

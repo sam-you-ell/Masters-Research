@@ -29,6 +29,11 @@ Y.~Sekino and L.~Susskind, ``Fast scramblers,'' {\em Journal of High Energy
 S.~H. Shenker and D.~Stanford, ``Black holes and the butterfly effect,'' {\em
   Journal of High Energy Physics}, 2014.
 
+\bibitem{Nozaki_2014}
+M.~Nozaki, T.~Numasawa, and T.~Takayanagi, ``Quantum entanglement of local
+  operators in conformal field theories,'' {\em Physical Review Letters},
+  vol.~112, mar 2014.
+
 \bibitem{Maldacena_2016}
 J.~Maldacena, S.~H. Shenker, and D.~Stanford, ``A bound on chaos,'' {\em
   Journal of High Energy Physics}, vol.~2016, aug 2016.
@@ -66,6 +71,10 @@ Y.~Li, R.~Vasseur, M.~P.~A. Fisher, and A.~W.~W. Ludwig, ``Statistical
   mechanics model for clifford random tensor networks and monitored quantum
   circuits,'' 2021.
 
+\bibitem{https://doi.org/10.48550/arxiv.2210.10129}
+T.~Farshi, J.~Richter, D.~Toniolo, A.~Pal, and L.~Masanes, ``Absence of
+  localization in two-dimensional clifford circuits,'' 2022.
+
 \bibitem{Valiant2001QuantumCT}
 L.~G. Valiant, ``Quantum computers that can be simulated classically in
   polynomial time,'' in {\em STOC '01}, 2001.
@@ -93,6 +102,11 @@ M.~A. Nielsen and I.~L. Chuang, {\em Quantum Computation and Quantum
 S.~Aaronson and D.~Gottesman, ``Improved simulation of stabilizer circuits,''
   {\em Phys. Rev. A}, vol.~70, p.~052328, Nov 2004.
 
+\bibitem{Calderbank_1997}
+A.~R. Calderbank, E.~M. Rains, P.~W. Shor, and N.~J.~A. Sloane, ``Quantum error
+  correction and orthogonal geometry,'' {\em Physical Review Letters}, vol.~78,
+  pp.~405--408, jan 1997.
+
 \bibitem{fault-tolerantQC}
 D.~Gottesman, ``Theory of fault-tolerant quantum computation,'' {\em Physical
   Review A}, vol.~57, pp.~127--137, jan 1998.
@@ -104,5 +118,55 @@ D.~Gottesman, ``The heisenberg representation of quantum computers,'' 1998.
 G.~{De Felice}, A.~Hadzihasanovic, and K.~F. Ng, ``{A diagrammatic calculus of
   fermionic quantum circuits},'' {\em Logical Methods in Computer Science},
   vol.~15, no.~3, 2019.
+
+\bibitem{Bravyi2000}
+S.~B. Bravyi, L.~D. Landau, and A.~Y. Kitaev, ``{Fermionic quantum
+  computation},'' tech. rep., 2000.
+
+\bibitem{Roberts_2015}
+D.~A. Roberts, D.~Stanford, and L.~Susskind, ``Localized shocks,'' {\em Journal
+  of High Energy Physics}, vol.~2015, mar 2015.
+
+\bibitem{Lieb:1972wy}
+E.~H. Lieb and D.~W. Robinson, ``{The finite group velocity of quantum spin
+  systems},'' {\em Commun. Math. Phys.}, vol.~28, pp.~251--257, 1972.
+
+\bibitem{Schuster_2022}
+T.~Schuster and N.~Y. Yao, ``Operator growth in open quantum systems,'' 2022.
+
+\bibitem{Xu2022}
+S.~Xu and B.~Swingle, ``{Scrambling Dynamics and Out-of-Time Ordered
+  Correlators in Quantum Many-Body Systems: a Tutorial},'' feb 2022.
+
+\bibitem{https://doi.org/10.48550/arxiv.1804.08655}
+X.~Chen and T.~Zhou, ``Operator scrambling and quantum chaos,'' 2018.
+
+\bibitem{Roberts_2018}
+D.~A. Roberts, D.~Stanford, and A.~Streicher, ``Operator growth in the {SYK}
+  model,'' {\em Journal of High Energy Physics}, vol.~2018, jun 2018.
+
+\bibitem{Nahum_2017}
+A.~Nahum, J.~Ruhman, S.~Vijay, and J.~Haah, ``Quantum entanglement growth under
+  random unitary dynamics,'' {\em Physical Review X}, vol.~7, jul 2017.
+
+\bibitem{Nahum_2018}
+A.~Nahum, S.~Vijay, and J.~Haah, ``Operator spreading in random unitary
+  circuits,'' {\em Physical Review X}, vol.~8, apr 2018.
+
+\bibitem{Blake2020}
+M.~Blake and N.~Linden, ``{Quantum circuits with classically simulable operator
+  scrambling},'' feb 2020.
+
+\bibitem{Page_1993}
+D.~N. Page, ``Average entropy of a subsystem,'' {\em Physical Review Letters},
+  vol.~71, pp.~1291--1294, aug 1993.
+
+\bibitem{Prosen_2007}
+T.~Prosen and I.~Pi{\v{z}}orn, ``Operator space entanglement entropy in a
+  transverse ising chain,'' {\em Physical Review A}, vol.~76, sep 2007.
+
+\bibitem{Jozsa2008}
+R.~Jozsa and A.~Miyake, ``{Matchgates and classical simulation of quantum
+  circuits},'' apr 2008.
 
 \end{thebibliography}

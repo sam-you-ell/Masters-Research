@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.17)  22 NOV 2022 23:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.17)  24 NOV 2022 03:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -574,42 +574,57 @@ See the caption package documentation for explanation.
 \c@lotdepth=\count322
 \sf@top=\skip76
 \sf@bottom=\skip77
+) (C:\Users\sam-h\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip78
+\multirow@cntb=\count323
+\multirow@dima=\skip79
+\bigstrutjot=\dimen293
+) (C:\Users\sam-h\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen294
+\ar@mcellbox=\box83
+\extrarowheight=\dimen295
+\NC@list=\toks48
+\extratabsurround=\skip80
+\backup@length=\skip81
+\ar@cellbox=\box84
 )
-\c@theorem=\count323
-Class revtex4-2 Info: Unrecognized LaTeX tabular. Please update this document class! (Proceeding with fingers crossed.) on input line 33.
-Class revtex4-2 Info: cite was not loaded (OK!) on input line 33.
-Class revtex4-2 Info: mcite was not loaded (OK!) on input line 33.
-Class revtex4-2 Info: multicol was not loaded (OK!) on input line 33.
+\c@theorem=\count324
+Class revtex4-2 Info: Unrecognized array package. Please update this document class! (Proceeding with fingers crossed.) on input line 35.
+Class revtex4-2 Info: cite was not loaded (OK!) on input line 35.
+Class revtex4-2 Info: mcite was not loaded (OK!) on input line 35.
+Class revtex4-2 Info: multicol was not loaded (OK!) on input line 35.
  (scramb_MAIN.aux)
 \openout1 = `scramb_MAIN.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
  (C:\Users\sam-h\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count324
-\scratchdimen=\dimen293
-\scratchbox=\box83
-\nofMPsegments=\count325
-\nofMParguments=\count326
-\everyMPshowfont=\toks48
-\MPscratchCnt=\count327
-\MPscratchDim=\dimen294
-\MPnumerator=\count328
-\makeMPintoPDFobject=\count329
-\everyMPtoPDFconversion=\toks49
+\scratchcounter=\count325
+\scratchdimen=\dimen296
+\scratchbox=\box85
+\nofMPsegments=\count326
+\nofMParguments=\count327
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count328
+\MPscratchDim=\dimen297
+\MPnumerator=\count329
+\makeMPintoPDFobject=\count330
+\everyMPtoPDFconversion=\toks50
 ) (C:\Users\sam-h\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -656,35 +671,55 @@ Package caption Info: End \AtBeginDocument code.
 \openout3 = `scramb_MAINNotes.bib'.
 
 (ch_files/scramb_abstract.tex)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
  (C:\Users\sam-h\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
  (C:\Users\sam-h\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (scramb_MAIN.toc)
 \tf@toc=\write5
 \openout5 = `scramb_MAIN.toc'.
 
- (ch_files/scramb_intro.tex) (ch_files/scramb_background.tex [1{C:/Users/sam-h/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (ch_files/pauli_gates.tex)) (ch_files/scramb_classicalcircuits.tex [2]
+ (ch_files/scramb_intro.tex) (ch_files/scramb_background.tex [1{C:/Users/sam-h/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (ch_files/pauli_gates.tex) [2] (ch_files/bell_state.tex)) (ch_files/scramb_classicalcircuits.tex
 Underfull \hbox (badness 3601) in paragraph at lines 58--59
  []$\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 i$ \OT1/cmr/m/it/10 can be ob-tained from $\OMS/cmsy/m/n/10 j\OT1/cmr/m/n/10 0\OMS/cmsy/m/n/10 i[]$ \OT1/cmr/m/it/10 by CNOT,
  []
 
-[3]) (ch_files/scramb_literature.tex) [4] (scramb_MAIN.bbl) [5] (scramb_MAIN.aux) ) 
+[3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 178--180
+\OT1/cmr/m/n/10 Majorana fermion op-er-a-tors sat-isfy the anti-
+ []
+
+) (ch_files/scramb_literature.tex [5]
+Underfull \hbox (badness 8113) in paragraph at lines 58--67
+\OT1/cmr/m/n/10 These three super-operators form the gate set
+ []
+
+
+Underfull \hbox (badness 6348) in paragraph at lines 58--67
+\OMS/cmsy/m/n/10 f[]\OML/cmm/m/it/10 ; []; []\OMS/cmsy/m/n/10 g$\OT1/cmr/m/n/10 , which gen-er-ates en-tan-gle-ment
+ []
+
+[6]) [7] (scramb_MAIN.bbl
+Underfull \hbox (badness 1616) in paragraph at lines 123--125
+ []\OT1/cmr/m/n/9 S. B. Bravyi, L. D. Lan-dau, and A. Y. Ki-taev,
+ []
+
+[8]) [9] (scramb_MAIN.aux) ) 
 Here is how much of TeX's memory you used:
- 22639 strings out of 478659
- 465001 string characters out of 2845919
- 790909 words of memory out of 3000000
- 40304 multiletter control sequences out of 15000+600000
+ 23015 strings out of 478659
+ 473600 string characters out of 2845919
+ 792726 words of memory out of 3000000
+ 40671 multiletter control sequences out of 15000+600000
  414507 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,20n,133p,1268b,1343s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\sam-h\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1000.pk><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on scramb_MAIN.pdf (5 pages, 285271 bytes).
+ 85i,20n,133p,1268b,1400s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\sam-h\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1000.pk><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/sam-h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on scramb_MAIN.pdf (9 pages, 324388 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
+ 145 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,86 @@
 \section{Operator Scrambling}
-\subsection{Operator Entanglement}
+\subsection{Operator Spreading}
 
-One of the key papers originally investigated, was that of Blake and linden's where they showed
+As previously mentioned, quantum scrambling is the process in which local information
+encoded by a simple product operator is rapidly spread over a large number of degrees of freedom via a unitary time evolution.
+The information becomes highly non-local and the initial simple product operator becomes a complicated sum of product
+operators. To give picture of operator spreading consider a local operator,
+$O_j$, which has support on either one site or a finite region of sites, so that it acts like the Identity on
+sites without support. The simplest local operator would be a Pauli operator acting on a single site, $j$, e.g
+$O_j \equiv X_j$. Then the evolution of
+$O_j$, is given, in the heisenberg picture, by $O_j(t) = U^{\dagger}(t)O_jU(t)$, where $U(t)$ is some unitary time evolution
+operator. Following this evolution, the local operator with minimal support, $O_j$ has evolved to $O_j(t)$ with support over a
+large region of sites \cite{Khemani_2018}. Operators that grow in this way, will spread ballistically \cite{Roberts_2015, Lieb:1972wy, Schuster_2022} and are often
+characterised by the out-of-time ordered correlator (OTOC) \cite{Xu2022} and the square-commutator\cite{Blake_2018}. This also gives an
+intuitive picture of operator spreading, with the squared commutator defined as
+\begin{equation}
+    C(t) = \langle [O(t), W_i][O(t), W_i]^{\dagger}\rangle
+\end{equation}
+where $W_i$ is a static local operator at site $i$\cite{https://doi.org/10.48550/arxiv.1804.08655}. Then at $t=0$, $O(t)$
+acts on a single site or a finite region of sites, such that it commutes with the static operator, $V_i$ and $C(t) = 0$.
+Once the operator spreads, and becomes more non-local, the commutator increases as it's support overlaps with $V_i$.
+
+
+\subsection{Entanglement Growth in Operator Space}
+Under a generic unitary evolution, we expect an initially simple product operator, for example, a Pauli string, $O = P_1, \dots, P_n$
+to evolve into a linear superposition of Pauli strings \cite{Roberts_2018, Nahum_2017}. This entanglement growth corresponds to
+an exponential increase in the possible number of Pauli strings, requiring the use of stabilizer states from Clifford circuits.
+However, since Clifford unitaries only map products of Pauli operators to products of Pauli operators, a Pauli string
+will remain unentangled \cite{Nahum_2018}. Despite this, the scrambling behaviour can be recovered, by the construction
+of \textit{super-Clifford operators}, whilst remaining classically simulable as shown by Blake and Linden \cite{Blake2020}.
+
+\subsubsection{Blake and Linden's Construction}
+Blake and Linden introduce a family of circuits that exhibit scrambling on the space spanned by Pauli operators.
+They present a gate-set of 'super-clifford operators' that generate a near-maximal amount of operator entanglement
+within the Pauli operator space, called super-clifford circuits, when under time-evolution. These super-clifford operators
+remain classically simulable, via an extension of stabilisers to operator space, called 'super-stabilisers'.
+Super-Clifford operators 'act' on Pauli operators, via conjugation in the Heisenberg picture. Namely,
+the first super-Clifford operator in the Gate set is denoted as ${\mathbf Z.H}$, which is identical to
+conjugation by a Phase gate, $T$;
+\begin{align}\label{phasegate}
+    T^{\dagger} X T = \frac{X - Y}{\sqrt{2}} &  & T^{\dagger} Y T = \frac{X + Y}{\sqrt{2}}
+\end{align}
+Following this, the operators, $X$ and $Y$ can be changed to a state-like representation, with
+$X$ denoted as $[{\mathbf 0}\rangle$ and $Y$ denoted as $[{\mathbf 1}\rangle$.
+The second gate in the set of super-Clifford operators, is the {\bf SWAP} gate,
+\begin{equation}
+    \text{\bf SWAP} [{\mathbf 01}\rangle = [{\mathbf 10}\rangle
+\end{equation}
+formed from the regular 2-qubit SWAP gate, that swaps two nearest neighbour qubits. It conjugates
+Pauli operators in the following way:
+\begin{equation}
+    \text{SWAP}^{\dagger} X_1Y_2 \text{SWAP} = Y_1X_2
+\end{equation}
+The third gate, denoted $\bf C3$, acts as a combination of controlled-$\text{\bf Y}$ super-operators,
+\begin{align}
+    {\bf C3} [000\rangle=  {\bf CY}_{12}{\bf CY}_{13} [000\rangle = [000\rangle \\
+    {\bf C3} [100\rangle=  {\bf CY}_{12}{\bf CY}_{13} [100\rangle = -[111\rangle
+\end{align}
+These three super-operators form the gate set $\{ {\bf SWAP}, {\bf Z.H}, {\bf C3}\}$, which generates entanglement
+through unitary evolution in operator space, as this gate set maps Pauli strings to a linear superposition of Pauli strings.
+Even though the a simple string of Pauli operators can evolve into a sum of potentially exponential operator strings,
+the dynamics can be computed classically by extending the formalism of stabilizer states to operator space.
+Following this, Blake and Linden showed that the gate set was capable of generating near-maximal amounts
+of entanglement (slightly less than the Page value \cite{Page_1993}) among Pauli strings on a chain of 120 qubits,
+quantified by the von Neumann entropy. This was only shown for operators with global support, and therefore
+shows no notion of operator spreading or entanglement growth in local operators.
+
+\subsubsection{Scrambling in Free-Fermi Circuits}
+As previously mentioned, a spin 1/2 or qubit, system can be mapped onto a fermionic system via a Jordan Wigner
+transformation, with the introduction of Majorana fermion operators. The evolution of Majorana fermion Operators
+has been shown to exhibit operator entanglement growth by Prosen and Pi\v{z}orn \cite{Prosen_2007} by mapping an Ising spin-1/2
+system onto a Majorana fermion representation. Further efforts from now on will be directed towards simulating
+non-interacting fermion systems and computing the entanglement entropy so that the dynamics of local operator spreading
+and entanglement growth can be fully investigated.
+
+\section{Further Direction}
+Further research will be directed towards free-fermion systems and how to simulate them. This will be carried out
+by writing a python program to simulate random unitary circuits and computing the entanglement entropy. We will first
+reproduce Blake and Linden's results for the $N = 120$ qubits case of super-Clifford evolution, and then go on to
+simulate free-fermion circuits to confirm a non-trivial operator scrambling. Following this, the idea of combining
+Clifford and non-interacting fermion circuits will be explored to investigate if any amplification of the
+scrambling occurs \cite{Jozsa2008}, along with relaxing the condition of nearest-neighbour interactions, by using
+long-ranged gates.
+
+
+
