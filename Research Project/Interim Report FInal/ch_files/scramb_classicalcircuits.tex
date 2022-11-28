@@ -3,17 +3,19 @@
 \subsection{Clifford Circuits and Stabilizer Formalism}
 
 Quantum circuits comprised of only quantum gates from the Clifford group are known as \textit{Clifford Circuits}.
-This family of circuits are of considerable interest due to their classical simulability, that is,
+This family of circuits are of considerable interest due to their classical simulability and ability to 
+showcase complex phenomena \cite{doi:10.1063/5.0054863}, that is,
 circuits of this construction can be efficiently simulated on a classical computer with polynomial
 effort via the Gottesman-Knill theorem. For this reason, Clifford gates do not form
-a set of universal quantum gates, meaning a universal quantum computer cannot be constructed using a set
-of Clifford gates. A set of universal quantum gates allows for any unitary operation to be approximated to
+a set of universal quantum gates, meaning a universal quantum computer cannot be constructed using only
+ Clifford unitaries. A set of universal quantum gates allows for any unitary operation to be approximated to
 arbitrary accuracy by a quantum circuit, constructed using only the original set of gates.
 
-\textit{Stabilizer Formalism}. An arbitrary, pure quantum state, $|\psi\rangle$ is \textit{stabilized} by
-a unitary operator, $S$ if $|\psi\rangle$  is an eigenvector of $S$, with eigenvalue 1, satisfying:
+\subsubsection{Stabilizer Formalism}
+An arbitrary, pure quantum state, $|\psi\rangle$ is \textit{stabilized} by
+a unitary operator, $M$ if $|\psi\rangle$  is an eigenvector of $M$, with eigenvalue 1, satisfying:
 \begin{equation}
-    S|\psi\rangle = |\psi\rangle
+    M|\psi\rangle = |\psi\rangle
 \end{equation}
 It will be convinient to utilise the language of stabilizers, to define an initial state by the operators that stabilize it
 \cite{PhysRevA.70.052328}.
@@ -25,13 +27,13 @@ the $+1$ eigenstates of the pauli matrices (omitting normalisation factors);
      & Z|0\rangle = |0\rangle
 \end{align}
 
-If given a group or subgroup of unitaries, $\cal U$, the vector space, $V$, of $n$ qubit states is
-stabilized by $\cal U$ if every element of $V$ is stable under action from every element of $\cal U$.
+If given a group or subgroup of unitaries, $\cal U$, the vector space, $V_n$, of $n$ qubit states is
+stabilized by $\cal U$ if every element of $V_n$ is stable under action from every element of $\cal U$.
 This description is more appealing, as we can exploit mathematical techniques from group theory to
-describe quantum states and vector spaces. More precisely, the group $\cal U$ can be described using it's
+describe quantum states and vector spaces. In particular, a group $\cal U$ can be described using it's
 generators. In general, a set of elements  $g_1, \dots, g_d$ of a group, $\cal G$, generate the group
-if every element of $\cal G$ can be written as a product of elements from the set of generators \cite{Calderbank_1997},
-$g_1, \dots, g_d$, such that ${\cal G} \coloneqq \langle g_1, \dots, g_d\rangle$.
+if every element of $\cal G$ can be written as a product of elements from the set of generators,
+$g_1, \dots, g_d$, such that ${\cal G}$ is expressed as ${\cal G} \coloneqq \langle g_1, \dots, g_d\rangle$ \cite{Calderbank_1997}.
 %  For example,
 % consider the group ${\cal U} \equiv \{ I, Z_1Z_2, Z_2Z_3, Z_1Z_3\}$. ${\cal U}$ can be compactly written
 % as ${\cal U} = \langle Z_1Z_2, Z_2Z_3 \rangle$, by recognising $(Z_1Z_2)^2 = I$ and
@@ -72,13 +74,13 @@ and can be specified by a binary vector,
     \vec{v} = (v_{1_x},  v_{1_z}, \dots, v_{N_x}, v_{N_z}).
 \end{equation}
 Thus, conjugation by Clifford unitaries on $S$, corresponds to local updates in $\vec{v}$.
-*EXAMPLES*
-The operation of Clifford unitaries on Pauli operators is shown in Table.
 
-\begin{center}
+The operation of Clifford unitaries on Pauli operators by conjuagtion is shown in Table \ref{table:1}.
+\begin{table}[h!]
+    \centering
     \begin{tabular}{ ||c|c|| }
         \hline
-        Unitary                 & Operation        \\
+        Clifford Unitary              & Operation        \\
         \hline\hline
         \multirow{4}{3em}{CNOT} & $X_1 \to X_1X_2$ \\
                                 & $X_2 \to X_2$    \\
@@ -88,27 +90,29 @@ The operation of Clifford unitaries on Pauli operators is shown in Table.
         \multirow{2}{1em}{H}    & $X \to Z$        \\
                                 & $Z\to X$         \\
         \hline
-        \multirow{2}{1em}{S}    & $X \to X$        \\
+        \multirow{2}{0.9em}{S}    & $X \to X$        \\
                                 & $Z \to -Z$       \\
         \hline
     \end{tabular}
-\end{center}
+    \caption{Action of Unitary operators from the Clifford group on Pauli operators by conjuagation.}
+    \label{table:1}
+\end{table}
 
 
 \subsection{Non-interacting Fermi Circuits}
 \subsubsection{Fermionic Fock Space}
 Another class of circuits that are classically simulable, are known as non-interacting or free fermi circuits.
-These circuits are built from a fermionic Fock space formalism, where the basic units of information are local
+These circuits are derived from a fermionic Fock space formalism, where the basic units of information are local
 fermionic modes (LFMs). Each mode can be occupied or unoccupied in the same fashion as qubits, where
 a mode $j$ is associated with an occupation number, $n_j = 0$ (unoccupied mode) or $n_j = 1$ (occupied mode).
-The state space of a many-fermion system is the fermionic Fock space, ${\cal F} = {\cal H}_0 + {\cal H}_1$,
+The state space of a many-fermion system is the fermionic Fock space, ${\cal F} = {\cal H}_0 \oplus {\cal H}_1$,
 where ${\cal H}_0$ and ${\cal H}_1$ correspond to subspaces of even and odd number of particles respectively.
 The natural basis vectors for a Fock space of $m$ LFMs are Fock states $|n_0, \dots, n_{m-1}\rangle$,
 where each element is the previously mentioned occupation number, $n_j$ at each site \cite{DeFelice2019}.
 This system is similar to the qubit set-up as the Hilbert space for $m$ LFMs is identified with the Hilbert space
 of $m$ qubits such that
 \begin{align*}
-    |n_1, \dots, n_{k-1}\rangle \equiv | n_0 \rangle \otimes | n_1 \rangle \otimes \dots \otimes | n_{m-1} \rangle, &  & n_j = 0,1
+    |n_0, \dots, n_{m-1}\rangle \equiv | n_0 \rangle \otimes | n_1 \rangle \otimes \dots \otimes | n_{m-1} \rangle, &  & n_j = 0,1
 \end{align*}
 where the RHS of the expression descibes a system of $m$ qubits. This allows a mapping of a qubit system (spin 1/2 system) onto
 a fermionic system via a Jordan-Wigner Transformation, such that the representation and dynamics of a quantum
@@ -137,14 +141,14 @@ with fermions occupying arbitrary positions, creation operators are labeled to a
 
 \subsubsection{Fermionic Circuits}
 A fermionic circuit is constructed from a sequence of elementary gates that mediate an interaction between
-modes $j$ and $k$, written as $U = e^{iH_g}$.$H_g$ is a general gate Hamiltonian:
+modes $j$ and $k$, written as $U = e^{iH_g}$. Where $H_g$ is a general gate Hamiltonian:
 \begin{equation}\label{gateham}
     H_g = b_{jj}a_j^{\dagger}a_j + b_{kk} a_{k}^{\dagger}a_{k} + b^{*}_{jk}a_k^{\dagger}a_j,
 \end{equation}
 where $b_{jj}, b_{jk}, b_{kk}$ are complex coefficients that form a hermitian matrix, $\mathbf b$.
 The circuit is constructed by defining the
-sequence of gates as $U = U_{\text{poly}(n)} \dots U_2 U_1$, such that the number of gates is no more than a
-polynomial in order to be simulated classically. Then considering the evolution of Fock state in a circuit, given that the
+sequence of gates as $U = U_{(n)} \dots U_2 U_1$, such that the number of gates, $n$ is no more than 
+polynomial in $n$ in order to be simulated classically. Then considering the evolution of Fock state in a circuit, given that the
 circuit preserves the number of fermions ($U|{\mathbf 0}\rangle = |{\mathbf 0}\rangle  $), the state evolves as:
 \begin{align}
     U a_j^{\dagger} |{\mathbf 0}\rangle = U a_j^{\dagger} U^{\dagger}U |{\mathbf 0}\rangle = U a_j^{\dagger} U^{\dagger} |{\mathbf 0}\rangle
@@ -159,7 +163,7 @@ a polynomial number of gates \cite{Terhal2001}. More generally, if $U$ acts on a
 is written as:
 \begin{align}
     U |{\mathbf n}\rangle & = U a_{i_1}^{\dagger} a_{i_2}^{\dagger}\dots a_{i_m}^{\dagger}|{\mathbf 0}\rangle                                                    \\
-                          & = \sum_{j_1 \dots j_k} V_{i_1, j_1} \dots V_{i_k, j_k} a_{j_1}^{\dagger} a_{j_2}^{\dagger}\dots a_{j_k}^{\dagger}|{\mathbf 0}\rangle
+                          & = \sum_{j_1 \dots j_k} B_{i_1, j_1} \dots B_{i_k, j_k} a_{j_1}^{\dagger} a_{j_2}^{\dagger}\dots a_{j_k}^{\dagger}|{\mathbf 0}\rangle
 \end{align}
 Some simpler operators that act on Fock states, are the spin 1/2 Pauli operators, that are mapped onto a
 non-interacting fermion system via the Jordan Wigner Transformation (JWT).
@@ -171,7 +175,7 @@ operators:
     \sigma^{+}_j = e^{i\pi\sum^{j-1}_{m = 0} a^{\dagger}_m a_m} a_j^{\dagger} \\
     \sigma^{-}_j = e^{i\pi\sum^{j-1}_{m = 0} a^{\dagger}_m a_m} a_j
 \end{align}
-A transform of the creation and annihilation operators can also be made, to define the Majorana
+The inverse transformation can also be made, to define the Majorana
 fermion operators that effectively split each LFM into halves \cite{Bravyi2000};
 \begin{align}
     c_{2j} = a_j + a_j^{\dagger} &  & c_{2j+1} = \frac{a_j - a_j^{\dagger}}{i}
@@ -180,11 +184,11 @@ Majorana fermion operators satisfy the anti-commutation relation;
 \begin{equation}
     \{c_j, c_k\} = 2\delta_{jk}
 \end{equation}
-The majorana fermion operators may also be expressed in terms of Pauli operators,
+and therefore can be expressed in terms of Pauli operators,
 \begin{align}
     c_{2j} = X_j \prod^{j-1}_{k=0} Z_k &  & c_{2j + 1} = Y_j \prod^{j-1}_{k=0} Z_k
 \end{align}
-where the term $\prod^{j-1}_{k=0} Z_k$ is called a Jordan Wigner transformation string.
+where the term $\prod^{j-1}_{k=0} Z_k$ is called a Jordan Wigner string.
 
 
 

@@ -34,9 +34,17 @@ M.~Nozaki, T.~Numasawa, and T.~Takayanagi, ``Quantum entanglement of local
   operators in conformal field theories,'' {\em Physical Review Letters},
   vol.~112, mar 2014.
 
+\bibitem{Calabrese_2005}
+P.~Calabrese and J.~Cardy, ``Evolution of entanglement entropy in
+  one-dimensional systems,'' {\em Journal of Statistical Mechanics: Theory and
+  Experiment}, vol.~2005, p.~P04010, apr 2005.
+
 \bibitem{Maldacena_2016}
 J.~Maldacena, S.~H. Shenker, and D.~Stanford, ``A bound on chaos,'' {\em
   Journal of High Energy Physics}, vol.~2016, aug 2016.
+
+\bibitem{https://doi.org/10.48550/arxiv.1412.6087}
+S.~H. Shenker and D.~Stanford, ``Stringy effects in scrambling,'' 2014.
 
 \bibitem{Khemani_2018}
 V.~Khemani, A.~Vishwanath, and D.~A. Huse, ``Operator spreading and the
@@ -56,11 +64,6 @@ T.~Rakovszky, F.~Pollmann, and C.~W. von Keyserlingk, ``Diffusive hydrodynamics
 \bibitem{Grozdanov_2018}
 S.~Grozdanov, K.~Schalm, and V.~Scopelliti, ``Black hole scrambling from
   hydrodynamics,'' {\em Physical Review Letters}, vol.~120, jun 2018.
-
-\bibitem{Blake_2018}
-M.~Blake, H.~Lee, and H.~Liu, ``A quantum hydrodynamical description for
-  scrambling and many-body chaos,'' {\em Journal of High Energy Physics},
-  vol.~2018, oct 2018.
 
 \bibitem{PhysRevB.98.205136}
 Y.~Li, X.~Chen, and M.~P.~A. Fisher, ``Quantum zeno effect and the many-body
@@ -97,6 +100,12 @@ A.~R. Calderbank, E.~M. Rains, P.~W. Shor, and N.~J.~A. Sloane, ``Quantum error
 M.~A. Nielsen and I.~L. Chuang, {\em Quantum Computation and Quantum
   Information: 10th Anniversary Edition}.
 \newblock Cambridge University Press, 2010.
+
+\bibitem{doi:10.1063/5.0054863}
+T.~Farshi, D.~Toniolo, C.~E. Gonzalez-Guillen, A.~M. Alhambra, and L.~Masanes,
+  ``Mixing and localization in random time-periodic quantum circuits of
+  clifford unitaries,'' {\em Journal of Mathematical Physics}, vol.~63, no.~3,
+  p.~032201, 2022.
 
 \bibitem{PhysRevA.70.052328}
 S.~Aaronson and D.~Gottesman, ``Improved simulation of stabilizer circuits,''
@@ -137,6 +146,11 @@ T.~Schuster and N.~Y. Yao, ``Operator growth in open quantum systems,'' 2022.
 \bibitem{Xu2022}
 S.~Xu and B.~Swingle, ``{Scrambling Dynamics and Out-of-Time Ordered
   Correlators in Quantum Many-Body Systems: a Tutorial},'' feb 2022.
+
+\bibitem{Blake_2018}
+M.~Blake, H.~Lee, and H.~Liu, ``A quantum hydrodynamical description for
+  scrambling and many-body chaos,'' {\em Journal of High Energy Physics},
+  vol.~2018, oct 2018.
 
 \bibitem{https://doi.org/10.48550/arxiv.1804.08655}
 X.~Chen and T.~Zhou, ``Operator scrambling and quantum chaos,'' 2018.

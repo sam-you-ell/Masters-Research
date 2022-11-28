@@ -1,23 +1,23 @@
 \section{Background Theory}
 \subsection{Quantum Information and Computing}
 \vspace{-0.15in}
-Quantum Information is built upon the concept of quantum bits (qubits for short), represented as a linear
+Quantum Information and Computation is built upon the concept of quantum bits (qubits for short), represented as a linear
 combination of states in the standard basis,
 $|\psi\rangle = \alpha |0\rangle + \beta |1\rangle$, where $\alpha, \beta$ are complex probability amplitudes
 and the vectors, $|0\rangle$, $|1\rangle$ are the computational basis states that form the standard basis.
 
-This is easily extended to multi-party or composite systems of $n$ qubits. The total Hilbert space, $\cal{H}$ of
-such a system is defined as the tensor product of $n$ subsystem Hilbert Spaces,
+This is extended to multi-party or composite systems of $n$ qubits via the tensor product. The total Hilbert space, $\cal{H}$ of
+a many-body system is defined as the tensor product of $n$ subsystem Hilbert Spaces,
 \begin{equation}
     {\cal{H}} = \otimes_n {\cal{H}}_n = {\cal{H}}_{n-1} \otimes {\cal{H}}_{n-2} \otimes \dots \otimes {\cal{H}}_0
 \end{equation}
-Then we may write the computational basis states of this system, as strings of qubits, using the tensor product \cite{schumacher_westmoreland_2010};
+The computational basis states of this system, are tensor products of qubit states, often written as a string \cite{schumacher_westmoreland_2010},
 \[|x_1\rangle \otimes |x_2\rangle \otimes ... \otimes |x_n\rangle \equiv |x_1 x_2... x_n \rangle. \]
 
-The evolution and dynamics of such systems can be represented via quantum circuits, made up of quantum logic gates acting
+The evolution and dynamics of many-body systems can be represented via quantum circuits, constructed from a set of quantum logic gates acting
 upon the qubits of a system. Analogous to a classical computer which is comprised of logic gates that act upon
 bit-strings of information. In contrast, quantum logic gates are linear operators acting
-on qubits, often represented in matrix form. This allows us to decompose a complicated unitary evolution into a
+on qubits, often represented in matrix form. This allows for the decomposition of a unitary evolution into a
 sequence of linear transformations. A common practice is to create
 diagrams of such evolutions, with each quantum gate having their own symbol, analogous to circuit diagrams in classical
 computation, allowing the creation of complicated quantum circuitry that can be directly mapped to a sequence of linear
@@ -46,9 +46,9 @@ to the set of Pauli matrices, $P \equiv \{X, Y, Z\}$ for which $X, Y \text{ and 
         \end{bmatrix}
 \end{align}
 
-These gates are all one-qubit gates, as they only act upon a single qubit.
-The simplest gate is that of the Identity operator (or matrix), $I$, from which, an algebra
-can be formed with the Pauli matrices. Satisfying the following relations:
+These gates are all one-qubit gates, as they only act upon a single qubit. 
+Together withthe Identity operator, $I$, the Pauli matrices form an algebra .
+Satisfying the following relations:
 \begin{align}
     XY = iZ  &  & YZ = iX  &  & ZX = iY  \\
     YX = -iZ &  & ZY = -iX &  & XZ = -iY
@@ -82,7 +82,8 @@ or in matrix form;
     \end{bmatrix}
 \end{equation*}
 Controlled-Not ($CNOT$) is a two-qubit gate. One qubit acts as a control for an operation to be perfomed
-on the other qubit. It's matrix representation is
+on the other qubit. 
+It's matrix representation is
 \begin{align}
     \label{CNOT}
     CNOT =
@@ -103,7 +104,7 @@ The Phase operator, denoted $S$ is defined as,
     \end{bmatrix}
 \end{align*}
 
-The CNOT operator is often used to generate entangled state. One such state is the maximally entangled 2-qubit state,
+The CNOT operator is often used to an generate entangled state. One such state is the maximally entangled 2-qubit state,
 called a Bell state, $|{\bm\Phi}^{+}\rangle_ = (|00\rangle + |11\rangle)/\sqrt{2}$. This is prepared
 from a $|00\rangle$ state, by applying a Hadamard to the first qubit, and subsequently a Controlled-Not gate:
 \begin{align}
@@ -113,12 +114,12 @@ from a $|00\rangle$ state, by applying a Hadamard to the first qubit, and subseq
 The corresponding circuit representation of this preparation is given in Fig. \ref{Bellstate}.
 
 \input{ch_files/bell_state.tex}
-The output Bell state, is entangled and cannot be written in product form. For clarity, consider the following expression:
+The output Bell state, cannot be written in product form. That is, the state cannot be written as,
 \begin{align*}
-    |{\bm\Phi}^+\rangle \not= & \left[ \alpha_0 |0\rangle + \beta_0|1\rangle\right] \otimes \left[\alpha_1 |0\rangle + \beta_1|1\rangle\right] \\
-    \not=                     & \alpha_0\beta_0 |00\rangle + \alpha_0\beta_1|01\rangle + \alpha_1\beta_0|10\rangle + \alpha_1\beta_1|11\rangle
+    |{\bm\Phi}^+\rangle = & \left[ \alpha_0 |0\rangle + \beta_0|1\rangle\right] \otimes \left[\alpha_1 |0\rangle + \beta_1|1\rangle\right] \\
+    =                     & \alpha_0\beta_0 |00\rangle + \alpha_0\beta_1|01\rangle + \alpha_1\beta_0|10\rangle + \alpha_1\beta_1|11\rangle
 \end{align*}
-the $\alpha_0$ or $\beta_1$ must be zero in order to ensure the $|01\rangle$, $|10\rangle$ vanish.
+since the $\alpha_0$ or $\beta_1$ must be zero in order to ensure the $|01\rangle$, $|10\rangle$ vanish.
 However, this would make the coefficients of the $|00\rangle$
 or $|11\rangle$ terms zero, breaking the equality. Thus, $|{\bm\Phi}^+\rangle$ cannot be written in
-product form and is said to be entangled. This defines a general condition for a arbitrary state to be entangled. \cite{nielsen_chuang_2010}
+product form and is said to be entangled. This defines a general condition for a arbitrary state to be entangled \cite{nielsen_chuang_2010}.

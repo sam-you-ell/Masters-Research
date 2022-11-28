@@ -14,6 +14,7 @@
 \usepackage{subfig}
 \usepackage{multirow}
 \usepackage{array}
+\usepackage{hyperref}
 \newtheorem{theorem}{Theorem}
 
 
@@ -34,19 +35,25 @@
 
 \begin{document}
 
-\title{A Review on Quantum Operator Scrambling within Classically Simulable Circuit Models}
+\title{A Review on Quantum Scrambling within Classically Simulable Circuit Models}
 
-\author{Samuel A. Hopkins$^1$}
+\author{Samuel A. Hopkins$^{1*}$}
 \affiliation{$^1$H. H. Wills Physics Laboratory, University of Bristol, Bristol, BS8 1TL, UK}
 \date{\today}
+\thanks{Email: cn19407@bristol.ac.uk\\
+Supervisor: Stephen R. Clark\\
+Word Count: 2904
+}
 
-\input{ch_files/scramb_abstract.tex}
+
+
+% \input{ch_files/scramb_abstract.tex}
 \maketitle
 
 \tableofcontents
 
 \fancyhead[L]{\textit{Samuel A. Hopkins}}
-\fancyhead[R]{A Review on Quantum Scrambling}
+\fancyhead[R]{Quantum Scrambling Review}
 \input{ch_files/scramb_intro.tex}
 
 \input{ch_files/scramb_background.tex}
@@ -54,7 +61,6 @@
 \input{ch_files/scramb_literature.tex}
 
 
-\clearpage
 
 \bibliographystyle{ieeetr}
 \bibliography{QuantumScrambling.bib}

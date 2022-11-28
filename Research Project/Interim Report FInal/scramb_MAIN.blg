@@ -1,9 +1,6 @@
-This is BibTeX, Version 0.99d
+This is BibTeX, Version 0.99d (TeX Live 2020)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: scramb_MAIN.aux
-Reallocating 'name_of_file' (item size: 1) to 17 items.
-Reallocating 'name_of_file' (item size: 1) to 22 items.
-Reallocating 'name_of_file' (item size: 1) to 7 items.
 The style file: ieeetr.bst
 Database file #1: scramb_MAINNotes.bib
 Database file #2: QuantumScrambling.bib
@@ -13,45 +10,45 @@ Warning--empty institution in Bravyi2000
 Warning--empty journal in Xu2022
 Warning--empty journal in Blake2020
 Warning--empty journal in Jozsa2008
-You've used 40 entries,
+You've used 43 entries,
             1876 wiz_defined-function locations,
-            709 strings with 9189 characters,
-and the built_in function-call counts, 8103 in all, are:
-= -- 757
-> -- 373
+            726 strings with 9718 characters,
+and the built_in function-call counts, 8859 in all, are:
+= -- 833
+> -- 406
 < -- 0
-+ -- 140
-- -- 100
-* -- 576
-:= -- 1215
-add.period$ -- 42
-call.type$ -- 40
-change.case$ -- 40
++ -- 152
+- -- 109
+* -- 619
+:= -- 1315
+add.period$ -- 45
+call.type$ -- 43
+change.case$ -- 43
 chr.to.int$ -- 0
-cite$ -- 46
-duplicate$ -- 425
-empty$ -- 763
-format.name$ -- 100
-if$ -- 1939
+cite$ -- 49
+duplicate$ -- 470
+empty$ -- 827
+format.name$ -- 109
+if$ -- 2133
 int.to.chr$ -- 0
-int.to.str$ -- 40
-missing$ -- 34
-newline$ -- 125
-num.names$ -- 40
-pop$ -- 136
+int.to.str$ -- 43
+missing$ -- 36
+newline$ -- 134
+num.names$ -- 43
+pop$ -- 147
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 286
+skip$ -- 331
 stack$ -- 0
-substring$ -- 272
-swap$ -- 150
+substring$ -- 296
+swap$ -- 176
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 6
-while$ -- 64
-width$ -- 42
-write$ -- 351
+while$ -- 69
+width$ -- 45
+write$ -- 379
 (There were 6 warnings)

@@ -1,0 +1,18 @@
+\BOOKMARK [0][-]{section*.1}{A Review on Quantum Scrambling within Classically Simulable Circuit Models}{}% 1
+\BOOKMARK [1][-]{section*.2}{Contents}{section*.1}% 2
+\BOOKMARK [1][-]{section*.3}{INTRODUCTION}{section*.1}% 3
+\BOOKMARK [1][-]{section*.4}{Background Theory}{section*.1}% 4
+\BOOKMARK [2][-]{section*.5}{Quantum Information and Computing}{section*.4}% 5
+\BOOKMARK [1][-]{section*.8}{Classically Simulable Quantum Circuits}{section*.1}% 6
+\BOOKMARK [2][-]{section*.9}{Clifford Circuits and Stabilizer Formalism}{section*.8}% 7
+\BOOKMARK [3][-]{section*.10}{Stabilizer Formalism}{section*.9}% 8
+\BOOKMARK [2][-]{section*.12}{Non-interacting Fermi Circuits}{section*.8}% 9
+\BOOKMARK [3][-]{section*.13}{Fermionic Fock Space}{section*.12}% 10
+\BOOKMARK [3][-]{section*.14}{Fermionic Circuits}{section*.12}% 11
+\BOOKMARK [1][-]{section*.15}{Operator Scrambling}{section*.1}% 12
+\BOOKMARK [2][-]{section*.16}{Operator Spreading}{section*.15}% 13
+\BOOKMARK [2][-]{section*.17}{Entanglement Growth in Operator Space}{section*.15}% 14
+\BOOKMARK [3][-]{section*.18}{Blake and Linden's Construction}{section*.17}% 15
+\BOOKMARK [3][-]{section*.19}{Scrambling in Free-Fermi Circuits}{section*.17}% 16
+\BOOKMARK [1][-]{section*.20}{Further Direction}{section*.1}% 17
+\BOOKMARK [1][-]{section*.21}{References}{section*.1}% 18
