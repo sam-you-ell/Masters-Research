@@ -9,7 +9,7 @@ and the vectors, $|0\rangle$, $|1\rangle$ are the computational basis states tha
 This is extended to multi-party or composite systems of $n$ qubits via the tensor product. The total Hilbert space, $\cal{H}$ of
 a many-body system is defined as the tensor product of $n$ subsystem Hilbert Spaces,
 \begin{equation}
-    {\cal{H}} = \otimes_n {\cal{H}}_n = {\cal{H}}_{n-1} \otimes {\cal{H}}_{n-2} \otimes \dots \otimes {\cal{H}}_0
+    {\cal{H}} = \otimes_n {\cal{H}}_n = {\cal{H}}_{1} \otimes {\cal{H}}_{2} \otimes \dots \otimes {\cal{H}}_n.
 \end{equation}
 The computational basis states of this system, are tensor products of qubit states, often written as a string \cite{schumacher_westmoreland_2010},
 \[|x_1\rangle \otimes |x_2\rangle \otimes ... \otimes |x_n\rangle \equiv |x_1 x_2... x_n \rangle. \]
@@ -27,7 +27,7 @@ operators acting on a one or more qubits. Some example gate symbols can be seen 
 \input{ch_files/pauli_gates.tex}
 
 The gates shown in Fig. \ref{Paulis} are known as the Pauli operators, equivalent
-to the set of Pauli matrices, $P \equiv \{X, Y, Z\}$ for which $X, Y \text{ and } Z$ are defined in their matrix representation as;
+to the set of Pauli matrices, $P \equiv \{X, Y, Z\}$ for which $X, Y \text{ and } Z$ are defined in their matrix representation as
 \begin{align}
     \label{PauliMatrices}
     X = \begin{bmatrix}
@@ -38,23 +38,23 @@ to the set of Pauli matrices, $P \equiv \{X, Y, Z\}$ for which $X, Y \text{ and 
     Y = \begin{bmatrix}
             0  & i \\
             -i & 0
-        \end{bmatrix}
+        \end{bmatrix},
      &  &
     Z = \begin{bmatrix}
             1 & 0  \\
             0 & -1
-        \end{bmatrix}
+        \end{bmatrix},
 \end{align}
 
-These gates are all one-qubit gates, as they only act upon a single qubit. 
-Together withthe Identity operator, $I$, the Pauli matrices form an algebra .
-Satisfying the following relations:
+These gates are all one-qubit gates, as they only act upon a single qubit.
+Together with the Identity operator, $I$, the Pauli matrices form an algebra .
+Satisfying the following relations
 \begin{align}
-    XY = iZ  &  & YZ = iX  &  & ZX = iY  \\
-    YX = -iZ &  & ZY = -iX &  & XZ = -iY
+    XY = iZ,  &  & YZ = iX,  &  & ZX = iY,  \\
+    YX = -iZ, &  & ZY = -iX, &  & XZ = -iY,
 \end{align}
 \begin{align}
-    X^2 = Y^2 = Z^2 = I
+    X^2 = Y^2 = Z^2 = I.
 \end{align}
 
 Notably, the set of Pauli matrices and the identity form
@@ -65,7 +65,8 @@ For clarity, consider the Pauli group on 1-qubit, ${\cal P}_1$;
     {\cal P}_1 \equiv \{ \pm I, \pm iI, \pm X, \pm iX \pm Y, \pm iY, \pm Z, \pm iZ\},
 \end{equation}
 From this, another group of interest can be defined, namely the Clifford group, ${\cal C}_n$, defined as a
-subset of unitary operators that normalise the Pauli group \cite{orthogonalcodes}. The elements of this group are the
+subset of unitary operators that normalise the Pauli group \cite{orthogonalcodes} *INSERT CLIFFORD GROUP DEFINITION*.
+The elements of this group are the
 Hadamard, Controlled-Not and Phase operators.
 
 The Hadamard, $H$, maps computational basis states to a superposition of computational basis states,
@@ -82,7 +83,7 @@ or in matrix form;
     \end{bmatrix}
 \end{equation*}
 Controlled-Not ($CNOT$) is a two-qubit gate. One qubit acts as a control for an operation to be perfomed
-on the other qubit. 
+on the other qubit.
 It's matrix representation is
 \begin{align}
     \label{CNOT}
@@ -93,7 +94,7 @@ It's matrix representation is
         0 & 1 & 0 & 0 \\
         0 & 0 & 0 & 1 \\
         0 & 0 & 1 & 0
-    \end{bmatrix}
+    \end{bmatrix}.
 \end{align}
 The Phase operator, denoted $S$ is defined as,
 \begin{align*}
@@ -101,12 +102,12 @@ The Phase operator, denoted $S$ is defined as,
     \begin{bmatrix}
         1 & 0                  \\
         0 & e^{i\frac{\pi}{2}}
-    \end{bmatrix}
+    \end{bmatrix}.
 \end{align*}
 
 The CNOT operator is often used to an generate entangled state. One such state is the maximally entangled 2-qubit state,
 called a Bell state, $|{\bm\Phi}^{+}\rangle_ = (|00\rangle + |11\rangle)/\sqrt{2}$. This is prepared
-from a $|00\rangle$ state, by applying a Hadamard to the first qubit, and subsequently a Controlled-Not gate:
+from a $|00\rangle$ state, by applying a Hadamard to the first qubit, and subsequently a Controlled-Not gate
 \begin{align}
     H \otimes I |00\rangle = \left (\frac{|0\rangle + |1\rangle }{\sqrt{2}}\right )|0\rangle \\
     CNOT \left (\frac{|0\rangle + |1\rangle }{\sqrt{2}}\right )|0\rangle = \frac{|00\rangle + |11\rangle}{\sqrt{2}}

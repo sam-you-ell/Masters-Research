@@ -1,6 +1,9 @@
-This is BibTeX, Version 0.99d (TeX Live 2020)
+This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: scramb_MAIN.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+Reallocating 'name_of_file' (item size: 1) to 7 items.
 The style file: ieeetr.bst
 Database file #1: scramb_MAINNotes.bib
 Database file #2: QuantumScrambling.bib
@@ -12,7 +15,7 @@ Warning--empty journal in Blake2020
 Warning--empty journal in Jozsa2008
 You've used 43 entries,
             1876 wiz_defined-function locations,
-            726 strings with 9718 characters,
+            726 strings with 9693 characters,
 and the built_in function-call counts, 8859 in all, are:
 = -- 833
 > -- 406
