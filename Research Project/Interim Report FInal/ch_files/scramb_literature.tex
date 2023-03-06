@@ -14,7 +14,7 @@ large region of sites \cite{Khemani_2018}. Operators that grow in this way, will
 characterised by the out-of-time ordered correlator (OTOC) \cite{Xu2022} and the square-commutator\cite{Blake_2018}. This also gives an
 intuitive picture of operator spreading, with the squared commutator defined as
 \begin{equation}
-    C(t) = \langle [O(t), W_i][O(t), W_i]^{\dagger}\rangle
+  C(t) = \langle [O(t), W_i][O(t), W_i]^{\dagger}\rangle
 \end{equation}
 where $W_i$ is a static local operator at site $i$ \cite{https://doi.org/10.48550/arxiv.1804.08655}. Then at $t=0$, $O(t)$
 acts on a single site or a finite region of sites, such that it commutes with the static operator, $W_i$ and $C(t) = 0$.
@@ -23,7 +23,8 @@ Once the operator spreads, and becomes more non-local, the commutator increases 
 \subsection{Entanglement Growth in Operator Space}
 Under a generic unitary evolution, we expect an initially simple product operator, for example, a Pauli string, $O = P_1, \dots, P_n$
 to evolve into a linear superposition of Pauli strings \cite{Roberts_2018, Nahum_2017}. This entanglement growth corresponds to
-an exponential increase in the possible number of Pauli strings, requiring the use of stabilizer states from Clifford circuits.
+an exponential increase in the possible number of Pauli strings, requiring the use of stabilizer states from Clifford circuits *INSERT
+CLASSICAL COMPLEXITY OF QUANTUM CIRCUITS*.
 However, since Clifford unitaries only map products of Pauli operators to products of Pauli operators, a Pauli string
 will remain unentangled \cite{Nahum_2018}. Despite this, the scrambling behaviour can be recovered, by the construction
 of \textit{super-Clifford operators}, whilst remaining classically simulable as shown by Blake and Linden \cite{Blake2020}.
@@ -37,32 +38,32 @@ Super-Clifford operators 'act' on Pauli operators, via conjugation in the Heisen
 The first super-Clifford operator in the Gate set is denoted as ${\bf Z.H}$, which is identified with a on Pauli operators
 conjugation by a Phase gate, $T$;
 \begin{align}\label{phasegate}
-    T^{\dagger} X T = \frac{X - Y}{\sqrt{2}} &  & T^{\dagger} Y T = \frac{X + Y}{\sqrt{2}}
+  T^{\dagger} X T = \frac{X - Y}{\sqrt{2}}, &  & T^{\dagger} Y T = \frac{X + Y}{\sqrt{2}}.
 \end{align}
 Following this, the operators, $X$ and $Y$ can be changed to a state-like representation, with
-$X$ denoted as $[{\mathbf 0}\rangle$ and $Y$ denoted as $[{\mathbf 1}\rangle$. Then the action of $\bf Z.H$ 
+$X$ denoted as $[{\mathbf 0}\rangle$ and $Y$ denoted as $[{\mathbf 1}\rangle$. Then the action of $\bf Z.H$
 can be written as,
 \begin{align}
-    {\bf Z.H}[{\bf 0}\rangle = \frac{[{\bf 0}\rangle - [{\bf 1}\rangle}{\sqrt{2}} \\
-    {\bf Z.H}[{\bf 1}\rangle = \frac{[{\bf 0}\rangle + [{\bf 1}\rangle}{\sqrt{2}} 
+  {\bf Z.H}[{\bf 0}\rangle = \frac{[{\bf 0}\rangle - [{\bf 1}\rangle}{\sqrt{2}}, \\
+  {\bf Z.H}[{\bf 1}\rangle = \frac{[{\bf 0}\rangle + [{\bf 1}\rangle}{\sqrt{2}}.
 \end{align}
 The second gate in the set of super-Clifford operators, is the {\bf SWAP} gate,
 \begin{equation}
-    \text{\bf SWAP} [{\bf 01}\rangle = [{\bf 10}\rangle
+  \text{\bf SWAP} [{\bf 01}\rangle = [{\bf 10}\rangle,
 \end{equation}
 formed from the regular 2-qubit SWAP gate, that swaps two nearest neighbour qubits. It conjugates
-Pauli operators in the following way:
+Pauli operators in the following way
 \begin{equation}
-    \text{SWAP}^{\dagger} X_1Y_2 \text{SWAP} = Y_1X_2
+  \text{SWAP}^{\dagger} X_1Y_2 \text{SWAP} = Y_1X_2.
 \end{equation}
 The third gate, denoted $\bf C3$, acts as a combination of controlled-$\text{\bf Y}$ super-operators,
 \begin{align}
-    {\bf C3} [{\bf 000}\rangle=  {\bf CY}_{12}{\bf CY}_{13} [{\bf000}\rangle = [{\bf 000}\rangle \\
-    {\bf C3} [{\bf 100}\rangle=  {\bf CY}_{12}{\bf CY}_{13} [{\bf100}\rangle = -[{\bf 111}\rangle
+  {\bf C3} [{\bf 000}\rangle=  {\bf CY}_{12}{\bf CY}_{13} [{\bf000}\rangle = [{\bf 000}\rangle, \\
+  {\bf C3} [{\bf 100}\rangle=  {\bf CY}_{12}{\bf CY}_{13} [{\bf100}\rangle = -[{\bf 111}\rangle.
 \end{align}
 These three super-operators form the gate set $\{ {\bf SWAP}, {\bf Z.H}, {\bf C3}\}$, which generates entanglement
 through unitary evolution in operator space, as this gate set maps Pauli strings to a linear superposition of Pauli strings.
-Even though the a simple string of Pauli operators can evolve into a sum of potentially exponential operator strings,
+Despite the fact a simple string of Pauli operators can evolve into a sum of potentially exponential operator strings,
 the dynamics can be computed classically by extending the formalism of stabilizer states to operator space.
 Following this, Blake and Linden showed that the gate set was capable of generating near-maximal amounts
 of entanglement (slightly less than the Page value \cite{Page_1993}) among Pauli strings on a chain of 120 qubits,
