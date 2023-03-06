@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex scramb_MAIN"] 1669290054 "scramb_MAIN.aux" "scramb_MAIN.bbl" "scramb_MAIN" 1669290179
+["bibtex scramb_MAIN"] 1669290054 "scramb_MAIN.aux" "scramb_MAIN.bbl" "scramb_MAIN" 1675021792
   "/usr/local/texlive/2020/texmf-dist/bibtex/bst/base/ieeetr.bst" 1292289607 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
   "QuantumScrambling.bib" 1669286152 33390 5913d17c1090c90130a20e26971b954a ""
   "scramb_MAIN.aux" 1669290178 7732 3803566018818c87d91afd50a57e49e6 "pdflatex"
   "scramb_MAINNotes.bib" 1669290177 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
-  "scramb_MAIN.blg"
   "scramb_MAIN.bbl"
-["pdflatex"] 1669290176 "/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/scramb_MAIN.tex" "/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/scramb_MAIN.pdf" "scramb_MAIN" 1669290179
+  "scramb_MAIN.blg"
+["pdflatex"] 1669290176 "/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/scramb_MAIN.tex" "/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/scramb_MAIN.pdf" "scramb_MAIN" 1675021792
   "/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/scramb_MAIN.aux" 1669290178 7732 3803566018818c87d91afd50a57e49e6 ""
   "/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/scramb_MAIN.tex" 1669290176 1506 d1f99fdbf800d54bf2b23e7f9fc0e8b5 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -256,11 +256,11 @@
   "scramb_MAIN.tex" 1669290176 1506 d1f99fdbf800d54bf2b23e7f9fc0e8b5 ""
   "scramb_MAIN.toc" 1669290178 1580 1535a9035733426a2fe424b72b457d0f "pdflatex"
   (generated)
-  "/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/scramb_MAIN.log"
-  "scramb_MAIN.log"
-  "scramb_MAIN.pdf"
-  "scramb_MAINNotes.bib"
   "scramb_MAIN.aux"
   "scramb_MAIN.out"
-  "/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/scramb_MAIN.pdf"
   "scramb_MAIN.toc"
+  "/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/scramb_MAIN.log"
+  "/Users/samuelhopkins/Documents/GitHub/Masters-Research/Research Project/Interim Report FInal/scramb_MAIN.pdf"
+  "scramb_MAINNotes.bib"
+  "scramb_MAIN.log"
+  "scramb_MAIN.pdf"
