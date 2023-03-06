@@ -32,7 +32,7 @@ def creation(L: int, site: int):
     Method explained in code.
     """
     matrix = lil_matrix((2**L, 2**L))
-    input_basis = basis(L, False)
+    input_basis = basis(L, True)
     output_basis = np.zeros((2**L, L))
     c = np.zeros(L)
     c[site] = 1
@@ -57,28 +57,51 @@ def creation(L: int, site: int):
 # checking anti-commutation relations
 
 
-def anti_commutator(matrix1, matrix2):
+def anti_commutator(matrix1, matrix2, majorana):
     """
     function to check if creation/annihilation operators obey the correct (fermionic) canonical
     anti-commutation rules, i.e {a_i, a_j} = {a_i^dag, a_j^dag} = 0 and {a_i, a_j^dag} = delta_ij
     Function takes two matrices and returns the matrix after applying the anti-commutator operation.
     """
-
-    return (np.matmul(matrix1.toarray(), matrix2.toarray()) + np.matmul(matrix2.toarray(), matrix1.toarray())) % 2
+    if majorana is True:
+        return (np.matmul(matrix1.toarray(), matrix2.toarray()) + np.matmul(matrix2.toarray(), matrix1.toarray()))
+    else:
+        return (np.matmul(matrix1.toarray(), matrix2.toarray()) + np.matmul(matrix2.toarray(), matrix1.toarray())) % 2
     # return ((matrix1.multiply(matrix2)) + x * (matrix2.multiply(matrix1))).toarray()
 
 
-N = 2
-a_dag_1 = creation(N, 0)
-a_dag_2 = creation(N, 1)
-a_1 = creation(N, 0).transpose()
-print(a_dag_1.toarray())
-# print(a_1.toarray())
-# print(a_dag_1.toarray())
-# print(commutator(a_1, a_dag_1))
+def majorana(L, j, even):
+    """
+    Defining the majorana operators for even and odd sectors. Even sector is indexed by 2j while odd
+    sector is indexed by 2j+1
+    """
+    return creation(L, j) + creation(L, j).transpose() if even is True else 1j*(creation(L, j).transpose() - creation(L, j))
+
+
+# define some hamiltonians,
+################
+# Checking Commutation Relations
+# N = 3
+# a_dag_1 = creation(N, 0)
+# a_dag_2 = creation(N, 1)
+# a_1 = creation(N, 0).transpose()
+# # print(a_dag_1.toarray())
+# c_2 = majorana(N, 1, True)
+
+# c_3 = majorana(N, 1, False)
+# # print(c_3.toarray())
+
+# # print(anti_commutator(c_2, c_3))
+
+
+# # print(a_1.toarray())
+# # print(a_dag_1.toarray())
+# # doesnt give right anti commutation relation. I'm not sure why
+# print(anti_commutator(a_dag_2, a_1, False))
 
 
 #################
+
 
 # print(Data[str(basis(m)[2])])
 # idx = np.arange(2**L)
