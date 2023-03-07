@@ -9,12 +9,15 @@ import matplotlib.pyplot as plt
 def checkmatrix(N):
     """
     Function sets up the check matrix, for the simplest case, will likely need to change so I can
-    specify a string. 
+    specify a string.
     """
     return sparse.diags([0, 1, 0], [-1, 0, 1], shape=(N, 2*N)).toarray()
     # X = np.zeros((N, N))
     # Z = sparse.diags([0, 1, 0], [-1, 0, 1], shape=(N, N)).toarray()
     # return np.concatenate((X, Z), axis=1)
+    # c = np.zeros((N, 2*N))
+    # c[3, 3] = 1
+    # return c
 
 
 def Tgate(matrix, q):
@@ -33,61 +36,110 @@ def Tgate(matrix, q):
 def C3gate(matrix, q, control):
     N = len(matrix)
 
-    if control == q:
-        pass
-    elif control == q+1:
-        matrix[[q, q+1]] = matrix[[q+1, q]]
-    elif control == q+2:
-        matrix[[q, q+2]] = matrix[[q+2, q]]
+    # if control == q:
+    #     pass
+    # elif control == q+1:
+    #     matrix[[q, q+1]] = matrix[[q+1, q]]
+    # elif control == q+2:
+    #     matrix[[q, q+2]] = matrix[[q+2, q]]
 
     xvec = matrix[:, :N]
     zvec = matrix[:, N: 2*N]
-    zvec[q] = (zvec[q] + xvec[q+1] + zvec[q+1] + xvec[q+2] + zvec[q+2]) % 2
-    xvec[q+1] = (xvec[q] + xvec[q+1]) % 2
-    zvec[q+1] = (zvec[q+1] + xvec[q]) % 2
-    xvec[q+2] = (xvec[q] + xvec[q+2]) % 2
-    zvec[q+2] = (zvec[q+2] + xvec[q]) % 2
+    zvec[q] = (zvec[q] + xvec[q+1] +
+               zvec[q+1] + xvec[q+2] + zvec[q+2])
+    xvec[q+1] = (xvec[q] + xvec[q+1])
+    zvec[q+1] = (zvec[q+1] + xvec[q])
+    xvec[q+2] = (xvec[q] + xvec[q+2])
+    zvec[q+2] = (zvec[q+2] + xvec[q])
 
-    matrix[:, :N] = xvec
-    matrix[:, N: 2*N] = zvec
+    matrix[:, :N] = xvec % 2
+    matrix[:, N: 2*N] = zvec % 2
 
-    if control == q:
-        pass
-    elif control == q+1:
-        matrix[[q+1, q]] = matrix[[q, q+1]]
-    elif control == q+2:
-        matrix[[q+2, q]] = matrix[[q, q+2]]
+    # if control == q:
+    #     pass
+    # elif control == q+1:
+    #     matrix[[q+1, q]] = matrix[[q, q+1]]
+    # elif control == q+2:
+    #     matrix[[q+2, q]] = matrix[[q, q+2]]
 
     return matrix
 
 
+def getCutStabilizers(binaryMatrix, cut):
+    """
+        - Purpose: Return only the part of the binary matrix that corresponds to the qubits we want to consider for a bipartition.
+        - Inputs:
+            - binaryMatrix (array of size (N, 2N)): The binary matrix for the stabilizer generators.
+            - cut (integer): Location for the cut.
+        - Outputs:
+            - cutMatrix (array of size (N, 2cut)): The binary matrix for the cut on the left.
+    """
+    N = len(binaryMatrix)
+    cutMatrix = np.zeros((N, 2*cut))
+
+    cutMatrix[:, :cut] = binaryMatrix[:, :cut]
+    cutMatrix[:, cut:] = binaryMatrix[:, N:N+cut]
+
+    return cutMatrix
+
+
 def randomcircuit(matrix, timesteps):
-    S_A = np.zeros(timesteps)
+
     N = len(matrix)
-    p = 30
+    S_A = np.zeros(timesteps)
+    qubits = list(range(N))
     for i in range(timesteps):
         # print(matrix, 'initial:')
-        qubits = list(range(N))
-        k = random.sample(qubits, 1)[0]
-        Tgate(matrix, k)
-
+        q = random.sample(qubits, 1)[0]
+        Tgate(matrix, q)
         del qubits[N-2:N]
-
-        j = random.sample(qubits, 1)[0]
-        control = random.sample([j, j+1, j+2], 1)[0]
-        C3gate(matrix, j, control)
-        submatrix = matrix[:, 0:N]
-        S_A[i] = matrix_rank(submatrix, tol=1)
+        control, target = random.sample(qubits, 2)
+        C3gate(matrix, target, control)
+        submatrix = getCutStabilizers(matrix, round(N/2))
+        S_A[i] = matrix_rank(submatrix) - 60
     return matrix, S_A
 
 
-testmatrix = checkmatrix(120)
-print(testmatrix.shape)
+def CNOT(q, matrix):
+    N = len(matrix)
+    xvec = matrix[:, :N]
+    zvec = matrix[:, N: 2*N]
 
-timesteps = range(10000)
-entr = randomcircuit(testmatrix, 10000)[1]
+    xvec[q] += (xvec[q+1])
+    xvec[q+1] = (xvec[q+1])
+    zvec[q] = zvec[q]
+    zvec[q+1] += zvec[q]
+    matrix[:, :N] = xvec % 2
+    matrix[:, N: 2*N] = zvec % 2
 
-# print(randomcircuit(testmatrix, 2000)[1])
+    return matrix
 
-plt.plot(timesteps, entr)
+
+def randomclifford(matrix, timesteps):
+    N = len(matrix)
+    S_A = -1 * round(N/2) * np.ones(timesteps)
+    qubits = list(range(N))
+    for i in range(timesteps):
+        j = random.sample(qubits, 1)[0]
+        choice = random.sample([1, 2], 1)[0]
+        if choice == 1:
+            Tgate(matrix, j)
+        elif choice == 2:
+            del qubits[N-1:N]
+            CNOT(j, matrix)
+        S_A[i] += matrix_rank(matrix[:, N:])
+    return matrix, S_A
+
+
+L = 120
+timesteps = 10000
+testmatrix = checkmatrix(L)
+
+
+# output = randomcircuit(testmatrix, timesteps)[1]
+
+# print(testmatrix)
+# # print(matrix_rank(testmatrix[0:round(L/2), :]))
+output = randomcircuit(testmatrix, timesteps)[1]
+plt.plot(range(timesteps), output)
 plt.show()

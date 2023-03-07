@@ -1,5 +1,6 @@
 import numpy as np
 from scipy.sparse import csr_matrix, identity, kron, lil_matrix
+from scipy.stats import unitary_group
 
 
 def basis(L: int, flip: bool):
@@ -78,10 +79,11 @@ def majorana(L, j, even):
     return creation(L, j) + creation(L, j).transpose() if even is True else 1j*(creation(L, j).transpose() - creation(L, j))
 
 
+# print(-1j*np.matmul(majorana(2, 1, False).toarray(), majorana(2, 1, True).toarray()))
 # define some hamiltonians,
 ################
 # Checking Commutation Relations
-# N = 3
+N = 3
 # a_dag_1 = creation(N, 0)
 # a_dag_2 = creation(N, 1)
 # a_1 = creation(N, 0).transpose()
@@ -89,8 +91,16 @@ def majorana(L, j, even):
 # c_2 = majorana(N, 1, True)
 
 # c_3 = majorana(N, 1, False)
-# # print(c_3.toarray())
+# print(c_3.toarray())
 
+vac = np.zeros(shape=(2**N, 1))
+vac[0] = 1
+
+print(vac)
+a_dag_2 = creation(N, 1).toarray()
+fock = np.matmul(a_dag_2, vac)
+print(fock)
+# print(a_dag_2)
 # # print(anti_commutator(c_2, c_3))
 
 
@@ -109,3 +119,6 @@ def majorana(L, j, even):
 # num_bits = 4  # L
 # num = 2  # Input number - i in my case
 # print(f'{num:0{num_bits}b}')  # output
+
+
+# print(unitary_group.rvs(2))
