@@ -1,0 +1,20 @@
+\contentsline {title}{A Review on Quantum Scrambling within Classically Simulable Circuit Models}{1}{section*.1}%
+\tocdepth@munge 
+\contentsline {section}{\numberline {}Contents}{1}{section*.2}%
+\tocdepth@restore 
+\contentsline {section}{\numberline {I}INTRODUCTION}{1}{section*.3}%
+\contentsline {section}{\numberline {II}Background Theory}{2}{section*.4}%
+\contentsline {subsection}{\numberline {A}Quantum Information and Computing}{2}{section*.5}%
+\contentsline {section}{\numberline {III}Classically Simulable Quantum Circuits}{3}{section*.8}%
+\contentsline {subsection}{\numberline {A}Clifford Circuits and Stabilizer Formalism}{3}{section*.9}%
+\contentsline {subsubsection}{\numberline {1}Stabilizer Formalism}{3}{section*.10}%
+\contentsline {subsection}{\numberline {B}Non-interacting Fermi Circuits}{4}{section*.12}%
+\contentsline {subsubsection}{\numberline {1}Fermionic Fock Space}{4}{section*.13}%
+\contentsline {subsubsection}{\numberline {2}Fermionic Circuits}{5}{section*.14}%
+\contentsline {section}{\numberline {IV}Operator Scrambling}{5}{section*.15}%
+\contentsline {subsection}{\numberline {A}Operator Spreading}{5}{section*.16}%
+\contentsline {subsection}{\numberline {B}Entanglement Growth in Operator Space}{6}{section*.17}%
+\contentsline {subsubsection}{\numberline {1}Blake and Linden's Construction}{6}{section*.18}%
+\contentsline {subsubsection}{\numberline {2}Scrambling in Free-Fermi Circuits}{6}{section*.19}%
+\contentsline {section}{\numberline {V}Further Direction}{6}{section*.20}%
+\contentsline {section}{\numberline {}References}{7}{section*.21}%

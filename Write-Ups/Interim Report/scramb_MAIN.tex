@@ -1,0 +1,68 @@
+\documentclass[twocolumn, aps, nobalancelastpage]{revtex4-2}
+
+% \usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
+%\usepackage{hyperref}
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{quantikz}
+\usepackage{amsmath, amsthm, amssymb, mathtools}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{bm}
+\usepackage{subfig}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{hyperref}
+\newtheorem{theorem}{Theorem}
+
+
+
+                      
+
+\fancyhf{}
+\fancyheadoffset{-0.001\textwidth}
+\pagestyle{fancy}
+\setlength{\textwidth}{7in}
+\setlength{\evensidemargin}{-0.2in}
+\setlength{\oddsidemargin}{-0.2in}
+\setlength{\headheight}{14pt}
+%\setlength{\headwidth}{6in}
+\setlength{\topmargin}{-0.5in}
+\setlength{\textheight}{8.4in}
+% \setlength{\baselineskip}{10pt}
+
+\begin{document}
+
+\title{A Review on Quantum Scrambling within Classically Simulable Circuit Models}
+
+\author{Samuel A. Hopkins$^{1*}$}
+\affiliation{$^1$H. H. Wills Physics Laboratory, University of Bristol, Bristol, BS8 1TL, UK}
+\date{\today}
+\thanks{Email: cn19407@bristol.ac.uk\\
+Supervisor: Stephen R. Clark\\
+Word Count: 2904
+}
+
+
+
+% \input{ch_files/scramb_abstract.tex}
+\maketitle
+
+\tableofcontents
+
+\fancyhead[L]{\textit{Samuel A. Hopkins}}
+\fancyhead[R]{Quantum Scrambling Review}
+\input{ch_files/scramb_intro.tex}
+
+\input{ch_files/scramb_background.tex}
+\input{ch_files/scramb_classicalcircuits.tex}
+\input{ch_files/scramb_literature.tex}
+
+
+
+\bibliographystyle{ieeetr}
+\bibliography{QuantumScrambling.bib}
+
+\end{document}
