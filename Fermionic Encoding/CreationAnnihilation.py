@@ -35,7 +35,7 @@ def creation(L: int, site: int):
     Method explained in code.
     """
     matrix = lil_matrix((2**L, 2**L))
-    input_basis = basis(L, True)
+    input_basis = basis(L, False)
     output_basis = np.zeros((2**L, L))
     c = np.zeros(L)
     c[site] = 1
@@ -83,7 +83,7 @@ def majorana(L, j, even):
     if even is True:
         c
 
-    return creation(L, j) + creation(L, j).transpose() if even is True else 1j*(creation(L, j).transpose() - creation(L, j))
+    return creation(L, j) + creation(L, j).transpose() if even is True else -1j*(creation(L, j).transpose() - creation(L, j))
 
 
 def gen_gate_hamil(L):
@@ -104,7 +104,7 @@ def gen_gate_hamil(L):
 # define some hamiltonians,
 ################
 # # Checking Commutation Relations
-N = 3
+N = 2
 # a_dag_1 = creation(N, 0)
 # a_dag_2 = creation(N, 1)
 # a_1 = creation(N, 0).transpose()
@@ -114,8 +114,8 @@ N = 3
 # c_3 = majorana(N, 1, False)
 # print(a_dag_1.toarray())
 
-vac = np.zeros(shape=(2**N, 1))
-vac[1] = 1
+# vac = np.zeros(shape=(2**N, 1))
+# vac[1] = 1
 
 # print(vac)
 # a_dag_2 = creation(N, 1).toarray()
@@ -124,9 +124,9 @@ vac[1] = 1
 # print(a_dag_2)
 # print(anti_commutator(c_2, c_3))
 
-VEV = vac.transpose() @ (anti_commutator(creation(N, 0).transpose(),
-                                         creation(N, 0).transpose(), False)) @ vac
-print(VEV)
+# VEV = vac.transpose() @ (anti_commutator(creation(N, 0).transpose(),
+#                                          creation(N, 0).transpose(), False)) @ vac
+# print(VEV)
 # # print(a_1.toarray())
 # # print(a_dag_1.toarray())
 # # doesnt give right anti commutation relation. I'm not sure why
@@ -135,6 +135,11 @@ print(VEV)
 
 #################
 
+x = creation(N, 0).toarray() @ creation(N, 0).toarray().transpose()
+y = 1/2 * (np.eye(2**N) + (1j * majorana(N, 0, True).toarray()@ majorana(N, 0, False).toarray()))
+
+print(x)
+print(y)
 
 # print(Data[str(basis(m)[2])])
 # idx = np.arange(2**L)
