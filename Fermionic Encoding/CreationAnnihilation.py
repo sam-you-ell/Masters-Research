@@ -104,7 +104,7 @@ def gen_gate_hamil(L):
 # define some hamiltonians,
 ################
 # # Checking Commutation Relations
-N = 2
+N = 3
 # a_dag_1 = creation(N, 0)
 # a_dag_2 = creation(N, 1)
 # a_1 = creation(N, 0).transpose()
@@ -114,8 +114,9 @@ N = 2
 # c_3 = majorana(N, 1, False)
 # print(a_dag_1.toarray())
 
-# vac = np.zeros(shape=(2**N, 1))
-# vac[1] = 1
+vac = np.zeros(shape=(2**N, 1))
+vac[1] = 1
+
 
 # print(vac)
 # a_dag_2 = creation(N, 1).toarray()
@@ -136,11 +137,13 @@ N = 2
 #################
 
 x = creation(N, 0).toarray() @ creation(N, 0).toarray().transpose()
-y = 1/2 * (np.eye(2**N) + (1j * majorana(N, 0, True).toarray()@ majorana(N, 0, False).toarray()))
+y = 1/2 * (np.eye(2**N) + (1j * majorana(N, 0, True).toarray()
+                           @ majorana(N, 0, False).toarray()))
 
-print(x)
-print(y)
+# print(x)
+# print(y)
 
+correlation_mat = vac.transpose() @ majorana(N, )
 # print(Data[str(basis(m)[2])])
 # idx = np.arange(2**L)
 # Data = {str(input_basis[i]): idx[i] for i in range(2**L)}

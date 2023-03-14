@@ -21,22 +21,23 @@ Function to determine R comes from the following,
 # Evolving the System
 
 To quantify the state of the system, such that the entanglement entropy can be calculated, we need
-to determine the correlation matrix, $$M_{ij} = \langle \psi | U^T c_i c_j U |\psi \rangle$$, where $U$ is our
+to determine the correlation matrix, $$M_{ij} = \frac{i}{2}\langle \psi | U^T [c_i, c_j] U |\psi \rangle,$$ where $U$ is our
 quantum circuit, and $\psi$ is taken to be the vacuum, denoted $|\underline{0}\rangle$. Then using
 the result from DiVencenzo, we can recast this to, 
-$$M_{ij} = \langle \psi | U^T c_i c_j U |\psi \rangle = \sum_{k l} R_{ik}R_{jl}\langle \underline{0} | c_i c_j  |
+$$M_{ij} = \frac{i}{2}\langle \psi | U^T [c_i, c_j] U |\psi \rangle = \sum_{k l} R_{ik}R_{jl}\langle \underline{0} | c_i c_j  |
 \underline{0} \rangle$$
 
 # Correlation matrix Form
 
-Correlation matrix, is given by
 
-$$C_{m, n} = \frac{\sin(q_F (m-n))}{\pi (m-n)}$$
+
 
 # Poster
 
 Introduction
-
+- Motivate the study
+    - What does this phenomenon tell us?
+    - Give some examples of questions it's solved or any information it can give us. 
 Stabilizer circuits
 Free Fermion CIrcuits
 
