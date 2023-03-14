@@ -18,18 +18,18 @@ def correlation_mat(L):
 
 def H1(site, L):
     H1 = np.zeros((2*L, 2*L), dtype=complex)
-    H1[site, site+1] = math.pi / 8
-    H1[site+1, site] = - math.pi / 8
+    H1[site, site+1] = math.pi / 2
+    H1[site+1, site] = - math.pi / 2
     return H1
 
 
 def H2(site, L):
     H2 = np.zeros((2*L, 2*L))
     smallh = np.zeros((4, 4))
-    smallh[0, 0] = math.pi / 2
-    smallh[3, 3] = -math.pi / 2
-    smallh[0+1, 0+2] = math.pi/2
-    smallh[0+2, 0+1] = math.pi / 2
+    smallh[0, 0] = math.pi/8
+    smallh[3, 3] = -math.pi/8
+    smallh[0+1, 0+2] = math.pi/8
+    smallh[0+2, 0+1] = -math.pi / 8
     H2[site:site+4, site:site+4] = smallh
     return H2
 
@@ -120,13 +120,11 @@ def random_circuit(L, timesteps):
     M = correlation_mat(L)
     for i in range(timesteps):
         q = random.sample(sites, 1)[0]
-        gate = random.sample(list(range(3)), 1)[0]
+        gate = random.sample(list(range(2)), 1)[0]
         if gate == 0:
             small_r = rot_matrix(H1(q, L))
         elif gate == 1:
-            small_r = rot_matrix(H2(q, L))
-        elif gate == 2:
-            small_r = rot_matrix(Had(q, L))
+            small_r = rot_matrix(H1(q, L))
         M = np.matmul(small_r, np.matmul(M, small_r.T))
 
         S_A.append(abs(entang_entropy(M, L)))
@@ -137,18 +135,18 @@ def random_circuit(L, timesteps):
 ####################################################
 
 
-N = 50
+N = 100
 tsteps = 5000
 # testgate = H1(0, N)
 # test_rotate = rot_matrix(testgate)
 
-# test_circ = random_circuit(N, tsteps)
-# # print(test_circ)
-# vacuum = correlation_mat(N)
-# vac_entropy = entang_entropy(vacuum, N)
-# print(vac_entropy)
-# plt.plot(range(tsteps), test_circ)
-# plt.show()
+test_circ = random_circuit(N, tsteps)
+# print(test_circ)
+vacuum = correlation_mat(N)
+vac_entropy = entang_entropy(vacuum, N)
+print(vac_entropy)
+plt.plot(range(tsteps), test_circ)
+plt.show()
 
 
 # evolve = test_rotate @ vacuum @ test_rotate.T
