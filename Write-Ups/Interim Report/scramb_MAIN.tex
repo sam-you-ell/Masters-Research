@@ -1,4 +1,4 @@
-\documentclass[twocolumn, aps, nobalancelastpage]{revtex4-2}
+\documentclass[aps, nobalancelastpage]{revtex4-2}
 
 % \usepackage[utf8]{inputenc}
 % \usepackage[T1]{fontenc}
@@ -49,7 +49,7 @@ Word Count: 2904
 
 % \input{ch_files/scramb_abstract.tex}
 \maketitle
-
+\clearpage
 \tableofcontents
 
 \fancyhead[L]{\textit{Samuel A. Hopkins}}
@@ -60,7 +60,9 @@ Word Count: 2904
 \input{ch_files/scramb_classicalcircuits.tex}
 \input{ch_files/scramb_literature.tex}
 
-
+\appendix
+\section{testing}
+texthere
 
 \bibliographystyle{ieeetr}
 \bibliography{QuantumScrambling.bib}

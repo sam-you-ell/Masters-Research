@@ -1,8 +1,11 @@
 import numpy as np
 from scipy.sparse import csr_matrix, identity, kron, lil_matrix
 from scipy.stats import unitary_group
+import scipy
+import math
 
 U = unitary_group.rvs(2)
+np.set_printoptions(precision=3, suppress=True)
 
 
 def basis(L: int, flip: bool):
@@ -96,7 +99,25 @@ def gen_gate_hamil(L):
             H_g += b[i, j] * creation(L, i) @ creation(L, j).transpose()
     return H_g
 
+# c1 c2 c3 c4
+# c0 c1 c2 c3
 
+
+def UH1():
+    H = -(math.pi/4) * (-majorana(2, 0, True) @ majorana(2, 1, False) + majorana(2, 0, False) @ majorana(2, 1,
+                                                                                                         True) + majorana(2, 0, True) @ majorana(2, 0, False) + majorana(2, 1, True) @ majorana(2, 1, False))
+    return H
+
+
+def ent():
+    H = -(math.pi/8) * (majorana(2, 0, True)@majorana(2, 0, False))
+    return scipy.linalg.expm(1j*H)
+
+
+c_0 = majorana(2, 0, True).toarray()
+print(c_0)
+print(UH1().toarray())
+print(ent().conj().transpose() @ c_0 @ ent())
 # print(gen_gate_hamil(2))
 # L = 12
 # print(majorana(L, 1, True))
@@ -136,14 +157,14 @@ vac[1] = 1
 
 #################
 
-x = creation(N, 0).toarray() @ creation(N, 0).toarray().transpose()
-y = 1/2 * (np.eye(2**N) + (1j * majorana(N, 0, True).toarray()
-                           @ majorana(N, 0, False).toarray()))
+# x = creation(N, 0).toarray() @ creation(N, 0).toarray().transpose()
+# y = 1/2 * (np.eye(2**N) + (1j * majorana(N, 0, True).toarray()
+#                            @ majorana(N, 0, False).toarray()))
 
 # print(x)
 # print(y)
 
-correlation_mat = vac.transpose() @ majorana(N, )
+# correlation_mat = vac.transpose() @ majorana(N, )
 # print(Data[str(basis(m)[2])])
 # idx = np.arange(2**L)
 # Data = {str(input_basis[i]): idx[i] for i in range(2**L)}

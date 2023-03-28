@@ -32,30 +32,30 @@ $$M_{ij} = \frac{i}{2}\langle \psi | U^T [c_i, c_j] U |\psi \rangle = \sum_{k l}
 
 
 
-# Poster
+# Data Collection
 
-Introduction
-- Motivate the study
-    - What does this phenomenon tell us?
-    - Give some examples of questions it's solved or any information it can give us. 
-Stabilizer circuits
-Free Fermion CIrcuits
+entropy against time 
+- various system sizes (20, 40, 60, 80) plot S against t/l^2
 
-Results
-- Stabilizer entang entropy
-- Free Fermion entang entropy
+OTOC pictures of light plots - both pictures
 
+investigate different gate sets
+show cnot, hadamard, p dont create entanglement in stabilizer circuit for operators
+show BAL do
 
-Conclusions
-
-
-What we want to explain, 
-
-What quantum scrambling
-Combination of operator scrambling and entanglement growth
+for fermions, ask stephen about any more gates and possibly investigate matchgates.
 
 
 
 
 
+
+
+##########
+Presentaion Notes 
+Jun Wei, 
+Pdfs of equations - too blurry 
+Might be worth adding glossary 
+what is modulus form
+what about the super conductor is gauga invariatn 
 

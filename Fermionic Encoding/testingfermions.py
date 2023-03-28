@@ -18,8 +18,8 @@ def correlation_mat(L):
 
 def H1(site, L):
     H1 = np.zeros((2*L, 2*L), dtype=complex)
-    H1[site, site+1] = math.pi / 2
-    H1[site+1, site] = - math.pi / 2
+    H1[site, site+1] = math.pi / 8
+    H1[site+1, site] = - math.pi / 8
     return H1
 
 
@@ -129,14 +129,14 @@ def random_circuit(L, timesteps):
 
         S_A.append(abs(entang_entropy(M, L)))
 
-    return S_A / np.max(S_A)
+    return S_A
 
 
 ####################################################
 
 
-N = 100
-tsteps = 5000
+N = 50
+tsteps = 1000
 # testgate = H1(0, N)
 # test_rotate = rot_matrix(testgate)
 
@@ -146,6 +146,9 @@ vacuum = correlation_mat(N)
 vac_entropy = entang_entropy(vacuum, N)
 print(vac_entropy)
 plt.plot(range(tsteps), test_circ)
+plt.xlabel(r"  t", rotation=0, loc='center')
+plt.ylabel(r" $S_{A}/S_{\infty}$      ", rotation=0, loc='center')
+# plt.savefig('Fermionic Entanglement Entropy_extended_75.pdf')
 plt.show()
 
 

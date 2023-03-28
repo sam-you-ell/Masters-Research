@@ -1,0 +1,8 @@
+\contentsline {title}{Scrambling Encoded Information}{1}{}
+\contentsline {abstract}{Abstract}{1}{}
+\tocdepth@munge 
+\contentsline {section}{\numberline {}Contents}{2}{}
+\tocdepth@restore 
+\contentsline {section}{\numberline {I}Introduction}{3}{}
+\contentsline {section}{\numberline {II}Theory*}{3}{}
+\contentsline {section}{\numberline {III}Results}{3}{}

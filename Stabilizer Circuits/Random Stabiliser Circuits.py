@@ -4,6 +4,8 @@ import random
 import sympy
 from numpy.linalg import matrix_rank
 import matplotlib.pyplot as plt
+import math
+import pandas as pd
 
 
 def checkmatrix(N):
@@ -36,12 +38,12 @@ def Tgate(matrix, q):
 def C3gate(matrix, q, control):
     N = len(matrix)
 
-    # if control == q:
-    #     pass
-    # elif control == q+1:
-    #     matrix[[q, q+1]] = matrix[[q+1, q]]
-    # elif control == q+2:
-    #     matrix[[q, q+2]] = matrix[[q+2, q]]
+    if control == q:
+        pass
+    elif control == q+1:
+        matrix[[q, q+1]] = matrix[[q+1, q]]
+    elif control == q+2:
+        matrix[[q, q+2]] = matrix[[q+2, q]]
 
     xvec = matrix[:, :N]
     zvec = matrix[:, N: 2*N]
@@ -55,12 +57,12 @@ def C3gate(matrix, q, control):
     matrix[:, :N] = xvec % 2
     matrix[:, N: 2*N] = zvec % 2
 
-    # if control == q:
-    #     pass
-    # elif control == q+1:
-    #     matrix[[q+1, q]] = matrix[[q, q+1]]
-    # elif control == q+2:
-    #     matrix[[q+2, q]] = matrix[[q, q+2]]
+    if control == q:
+        pass
+    elif control == q+1:
+        matrix[[q+1, q]] = matrix[[q, q+1]]
+    elif control == q+2:
+        matrix[[q+2, q]] = matrix[[q, q+2]]
 
     return matrix
 
@@ -93,11 +95,13 @@ def randomcircuit(matrix, timesteps):
         q = random.sample(qubits, 1)[0]
         Tgate(matrix, q)
         del qubits[N-2:N]
-        control, target = random.sample(qubits, 2)
+        target = random.sample(qubits, 1)[0]
+        control = random.sample([target, target + 1, target + 2], 1)[0]
         C3gate(matrix, target, control)
         submatrix = getCutStabilizers(matrix, round(N/2))
-        S_A[i] = matrix_rank(submatrix) - 60
-    return matrix, S_A
+        S_A[i] = matrix_rank(submatrix) - N/2
+    return S_A * math.log(2) / math.log(2**(N/2))
+    # return matrix, S_A
 
 
 def CNOT(q, matrix):
@@ -115,31 +119,53 @@ def CNOT(q, matrix):
     return matrix
 
 
-def randomclifford(matrix, timesteps):
-    N = len(matrix)
-    S_A = -1 * round(N/2) * np.ones(timesteps)
-    qubits = list(range(N))
-    for i in range(timesteps):
-        j = random.sample(qubits, 1)[0]
-        choice = random.sample([1, 2], 1)[0]
-        if choice == 1:
-            Tgate(matrix, j)
-        elif choice == 2:
-            del qubits[N-1:N]
-            CNOT(j, matrix)
-        S_A[i] += matrix_rank(matrix[:, N:])
-    return matrix, S_A
+# def randomclifford(matrix, timesteps):
+#     N = len(matrix)
+#     S_A = -1 * round(N/2) * np.ones(timesteps)
+#     qubits = list(range(N))
+#     for i in range(timesteps):
+#         j = random.sample(qubits, 1)[0]
+#         choice = random.sample([1, 2], 1)[0]
+#         if choice == 1:
+#             Tgate(matrix, j)
+#         elif choice == 2:
+#             del qubits[N-1:N]
+#             CNOT
+#         S_A[i] += matrix_rank(matrix[:, N:])
+#     return matrix, S_A
 
 
-L = 120
-timesteps = 10000
-testmatrix = checkmatrix(L)
+L = 100
+tsteps = 20000
+
+t = range(tsteps)
+
+
+Entropy = {
+    "Time": t,
+    "Ent1": randomcircuit(checkmatrix(L), tsteps),
+    "Ent2": randomcircuit(checkmatrix(L), tsteps),
+    "Ent3": randomcircuit(checkmatrix(L), tsteps),
+    "Ent4": randomcircuit(checkmatrix(L), tsteps),
+    "Ent5": randomcircuit(checkmatrix(L), tsteps),
+    "Ent6": randomcircuit(checkmatrix(L), tsteps),
+    "Ent7": randomcircuit(checkmatrix(L), tsteps),
+    "Ent8": randomcircuit(checkmatrix(L), tsteps),
+    "Ent9": randomcircuit(checkmatrix(L), tsteps),
+    "Ent10": randomcircuit(checkmatrix(L), tsteps),
+}
+df2 = pd.DataFrame(Entropy)
+with pd.ExcelWriter('StabilizerCircuits100.xlsx') as writer:
+    df2.to_excel(writer, sheet_name='Sheet_1')
+
+print('done')
 
 
 # output = randomcircuit(testmatrix, timesteps)[1]
 
 # print(testmatrix)
 # # print(matrix_rank(testmatrix[0:round(L/2), :]))
-output = randomcircuit(testmatrix, timesteps)[1]
-plt.plot(range(timesteps), output)
-plt.show()
+# output = randomcircuit(testmatrix, timesteps)[1]
+# print("Page Value:", math.log(2**(L/2)))
+# plt.plot(range(timesteps), output)
+# plt.show()
