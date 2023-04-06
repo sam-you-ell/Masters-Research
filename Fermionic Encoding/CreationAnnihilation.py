@@ -114,29 +114,35 @@ def ent():
     return scipy.linalg.expm(1j*H)
 
 
-c_0 = majorana(2, 0, True).toarray()
-print(c_0)
-print(UH1().toarray())
-print(ent().conj().transpose() @ c_0 @ ent())
-# print(gen_gate_hamil(2))
-# L = 12
-# print(majorana(L, 1, True))
-# print(-1j*np.matmul(majorana(2, 1, False).toarray(), majorana(2, 1, True).toarray()))
-# define some hamiltonians,
-################
-# # Checking Commutation Relations
-N = 3
-# a_dag_1 = creation(N, 0)
-# a_dag_2 = creation(N, 1)
-# a_1 = creation(N, 0).transpose()
+N = 2
+
+creation_0 = creation(N, 0)
+creation_1 = creation(N, 1)
+
+print((creation_0 @ creation_1).toarray())
+# c_0 = majorana(2, 0, True).toarray()
+# print(c_0)
+# print(UH1().toarray())
+# print(ent().conj().transpose() @ c_0 @ ent())
+# # print(gen_gate_hamil(2))
+# # L = 12
+# # print(majorana(L, 1, True))
+# # print(-1j*np.matmul(majorana(2, 1, False).toarray(), majorana(2, 1, True).toarray()))
+# # define some hamiltonians,
+# ################
+# # # Checking Commutation Relations
+# N = 3
+# # a_dag_1 = creation(N, 0)
+# # a_dag_2 = creation(N, 1)
+# # a_1 = creation(N, 0).transpose()
+# # # print(a_dag_1.toarray())
+# # c_2 = majorana(N, 1, True)
+
+# # c_3 = majorana(N, 1, False)
 # # print(a_dag_1.toarray())
-# c_2 = majorana(N, 1, True)
 
-# c_3 = majorana(N, 1, False)
-# print(a_dag_1.toarray())
-
-vac = np.zeros(shape=(2**N, 1))
-vac[1] = 1
+# vac = np.zeros(shape=(2**N, 1))
+# vac[1] = 1
 
 
 # print(vac)

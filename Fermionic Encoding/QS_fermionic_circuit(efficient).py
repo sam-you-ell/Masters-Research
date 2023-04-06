@@ -38,10 +38,10 @@ def Hodd(site, L):
 def H2(site, L):
     H2 = np.zeros((2*L, 2*L), dtype=complex)
     smallh = np.zeros((4, 4))
-    smallh[0, 3] = math.pi/8
-    smallh[3, 0] = -math.pi/8
-    smallh[1, 2] = math.pi/8
-    smallh[2, 1] = -math.pi / 8
+    smallh[1, 3] = math.pi/8
+    smallh[3, 1] = -math.pi/8
+    smallh[2, 3] = math.pi/2
+    smallh[3, 2] = -math.pi / 2
     H2[site:site+4, site:site+4] = smallh
     return H2
 
@@ -188,18 +188,25 @@ def random_circuit(L, timesteps):
     return S_A
 
 
+def commutator(matrix1, matrix2):
+    A = matrix1.toarray()
+    B = matrix2.toarray()
+    return A@B - B@A
 ####################################################
 
 
 # N = 50
 # tsteps = 4000
 
-N = 60
-tsteps = 10000
+N = 30
+tsteps = 2000
 
 S = random_circuit(N, tsteps)
 t = range(tsteps)
 
+# M = correlation_mat(N)
+
+# print(commutator(S, M))
 # Entropy = {
 #     "Time": t,
 #     "Ent1": random_circuit(N, tsteps),
@@ -215,10 +222,10 @@ t = range(tsteps)
 # print('done')
 
 # print("Page Value:", math.log(2**N))
-# plt.plot(range(tsteps), S)
-# plt.xlabel(r"  t", rotation=0, loc='center')
-# plt.ylabel(r" $S_{A}/S_{\infty}$      ", rotation=0, loc='center')
+plt.plot(range(tsteps), S)
+plt.xlabel(r"  t", rotation=0, loc='center')
+plt.ylabel(r" $S_{A}/S_{\infty}$      ", rotation=0, loc='center')
 
 
 # # plt.savefig('Fermionic Entanglement Entropy_extended_75.pdf')
-# plt.show()
+plt.show()
