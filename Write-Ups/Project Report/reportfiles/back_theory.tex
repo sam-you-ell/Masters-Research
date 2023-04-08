@@ -1,0 +1,57 @@
+\section{Qubit Systems}
+\subsection{Quantum Bits}
+An intuitive example of a quantum many-body system, is that of a quantum computer. In a similar fashion to how a `bit' is the basic unit of 
+information within classical computation and logic, the `qubit' (quantum-bit) forms the basic unit of information within quantum computation. 
+Drawing the analogy from classical computation, where a bit occupies a binary state of 0 or 1, a quantum bit is a quantum state, denoted $|0\rangle$ or $|1\rangle$. 
+These states form an orthonormal basis in $\mathbb{C}^2$ and are known as computational basis states. However, the analogy with classical computing ends here, as qubits can be in a linear superposition of states,
+$|\psi\rangle = \alpha |0\rangle + \beta |1\rangle$, where $\alpha, \beta$ are complex probability amplitudes. 
+
+To describe a system of many qubits, the use of the tensor product is required. The Hilbert space of an $n$ qubit system
+is constructed via the tensor product of subsystem Hilbert spaces for each qubit, 
+\begin{equation}
+    \mathcal{H} = \mathcal{H}^{\otimes n} \equiv \mathcal{H}_{1} \otimes \mathcal{H}_{2} \otimes \dots \otimes \mathcal{H}_{n}.
+\end{equation}
+The state of an $n$ qubit system is constructed identically, and is often expressed as a binary string, 
+
+\begin{equation}
+    |x_1\rangle \otimes |x_2\rangle \otimes \dots \otimes |x_n\rangle \equiv |x_1 x_2 \dots x_n\rangle.
+\end{equation}
+
+\subsection{Circuits}
+
+To evolve a many-body state, such as an $n$ qubit state, the time-evolution operator, $U$ is used in the following way, 
+
+
+The evolution and dynamics of many-body systems can be represented via quantum circuits, constructed from 
+a set of quantum logic gates acting upon the qubits of a system. Analogous to a classical computer which 
+is comprised of logic gates that act upon bit-strings of information.
+In contrast, quantum logic gates are linear operators acting on qubits. This allows for the decomposition 
+of a unitary evolution into a sequence of linear transformations, represented as matrices\footnote{Any linear map between two finite dimensional vector spaces, in this case finite dimensional Hilbert spaces, may be represented as a matrix. }. 
+Such evolutions are often represented as a circuit diagrams, with each time step in the unitary evolution corresponding to a gate action upon a set of qubits.
+Analogous to circuit diagrams in
+classical computation, each quantum logic gate has a specified gate symbol, allowing the creation of complicated quantum circuitry that can be directly
+mapped to a sequence of linear transformations acting on a finite set of qubits.
+Some example gate symbols can be seen in Fig. \ref{Paulis}.
+
+\input{reportimages/pauli_gates.tex}
+
+
+
+
+
+
+
+
+
+
+\subsection{Encoding Information}
+
+%can perform operations on qubits in a similar fashion to logical operations on bits, since maps are linear we can express them as matrices. introduce some operators. 
+%then explain how we may form a quantum circuit from these. 
+%then explain how we encode information
+
+\section{Fermionic Systems}
+
+\section{Efficient Quantum Circuits}
+
+\section{Quantum Scrambling}

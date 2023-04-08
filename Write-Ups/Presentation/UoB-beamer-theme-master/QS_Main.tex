@@ -1,0 +1,72 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University of Bristol presentation theme based on the PowerPoint template
+%
+% Copyright (c) 2012, 2020 David A.W. Barton (david.barton@bristol.ac.uk)
+% All rights reserved.
+%
+% The latest version of this theme can be found at
+%   https://github.com/db9052/UoB-beamer-theme
+% 
+
+\documentclass[aspectratio=169]{beamer}
+    % Possible aspect ratios are 16:9, 16:10, 14:9, 5:4, 4:3 (default) and 3:2
+    % (Remember to remove the colon, i.e., 16:9 becomes the option 169)
+    \usepackage{soul}
+
+
+\usetheme{UoB}
+
+
+\sethlcolor{BrightBlue}
+
+\title[Quantum Scrambling]{Scrambling Encoded Information}
+\subtitle{Physics Research Project}
+\author{Samuel A. Hopkins}
+\institute{Theoretical Physics MSci}
+\date{23rd March 2023}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Start of the slides
+
+\begin{document}
+\urltext{}
+\logo{logo}
+% [leftcolor=CoolGrey,rightcolor=BrightPurple,div=0.8\paperwidth]
+% Available frame options:
+%   leftcolor, rightcolor: set the colour of the left or right panel
+%   leftimage, rightimage: put a (cropped) image in the left or right panel
+%   div: set the location of the divider between left and right panels
+%   urlcolor: set the colour of the url
+
+% Other commands available:
+%   \logo{X}: choose the logo to display (logo, white logo, or black logo)
+%   \urltext{X}: change the url for each slide
+
+% All standard University of Bristol colours are available:
+%   UniversityRed, CoolGrey, BrightAqua, BrightBlue, BrightOrange, BrightPurple,
+%   BrightPink, BrightLime, DarkAqua, DarkBlue, DarkOrange, DarkPurple,
+%   DarkPink, DarkLime
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lecture{Lecture 1}{01}
+
+%Presentation Plan
+%Introduction to quantum scrambling
+%operator spreading + entanglement Entropy
+%Look at the two quantum circuit models, leave maths out -motivate the need
+%Results and the conclusions drawn from it
+
+\input{QS_Subfiles/QS_introduction.tex}
+\input{QS_Subfiles/QS_circuits.tex}
+\input{QS_Subfiles/QS_results.tex}
+\input{QS_Subfiles/QS_summary.tex}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+

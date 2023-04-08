@@ -1,0 +1,129 @@
+\documentclass[nofootinbib]{revtex4-2}
+
+\input{preamble.tex}
+
+
+% \fancyheadoffset{-0.001\textwidth}
+% \pagestyle{fancy}
+\setlength{\textwidth}{7in}
+\setlength{\evensidemargin}{-0.2in}
+\setlength{\oddsidemargin}{-0.2in}
+\setlength{\headheight}{14pt}
+%\setlength{\headwidth}{6in}
+\setlength{\topmargin}{-0.5in}
+\setlength{\textheight}{8.4in}
+% \setlength{\baselineskip}{10pt}
+
+
+\begin{document}
+
+\title{Quantum Scrambling}
+
+\author{Samuel A. Hopkins$^{1*}$}
+\affiliation{$^1$H. H. Wills Physics Laboratory, University of Bristol, Bristol, BS8 1TL, UK}
+\date{\today}
+\thanks{Email: cn19407@bristol.ac.uk\\
+Supervisor: Stephen R. Clark\\
+Word Count: TBA
+}
+\input{reportfiles/abstract.tex}
+\maketitle
+
+\clearpage
+\tableofcontents
+
+
+
+%%INTRODUCTION Outline:
+% Introduce quantum scrambling - short short description
+%where and why is it being studied 
+% 
+%
+\section{Report Plan}
+    \subsection{Introduction}
+        \begin{itemize}
+            \color{ForestGreen}
+            \item Introduce quantum scrambling with a short description
+            \item Where and why is this being studied
+            \item What are the uses and conclusions we can draw - state examples 
+            \item What are our aims
+            \item Outline the structure of the report
+        \end{itemize}
+
+
+    \subsection{Background Theory}
+        \subsubsection{Qubit Systems}
+            \begin{itemize}
+                \color{ForestGreen}
+                \item What are qubits?
+                \item Why do we use qubits?
+                \item Quantum operators + Quantum Circuits
+                \item Entanglement In qubit systems
+            \end{itemize}
+
+        \subsubsection{Fermionic Systems}
+        \begin{itemize}\color{ForestGreen}
+            \item What are fermions? - Introduce Building blocks
+            \item Fock space and states; creation and annihilation operators; anticommutation relations
+            \item Correlation Functions + Wicks theorem
+            \item Majorana Fermions 
+            \item Entanglement in Fermionic Systems
+        \end{itemize}
+        \subsubsection{Encoding Information}
+        \begin{itemize}\color{ForestGreen}
+            \item How do we encode information? Introduce Pauli strings and why they're a convinient way to encode information. 
+            \item Ask stephen about this. 
+        \end{itemize}
+        
+    \subsection{Quantum Scrambling}
+        \subsubsection{Operator Spreading}
+        \begin{itemize}\color{ForestGreen}
+            \item Detailed explanations
+            \item Introduce the picture of Spreading
+            \item How we measure spreading in full generality
+            \item Here we can focus on literature on spreading (since it is abundant)
+        \end{itemize}
+        \subsubsection{Entanglement Entropy}
+        \begin{itemize}\color{ForestGreen}
+            \item Explain how a system generates entanglement and how this looks in terms of Pauli strings
+            \item Start with shannon entropy as a measure for loss of information 
+            \item introduce von neumann entropy and the conditions for an entropy we want 
+            \item also introduce renyi but state not used.
+            \item 
+        \end{itemize}
+
+
+
+        \subsection{Appendix}
+        \begin{itemize}\color{ForestGreen}
+            \item Density Matrices
+            \item Wicks theorem
+            \item Schur Decomposition
+            \item Group Theory (Generators)
+            \item Clifford Group
+        \end{itemize}
+
+
+
+
+
+
+\cleardoublepage
+
+\input{reportfiles/introduction.tex}
+
+
+%Theory Outline
+%Qubit systems
+%- What are qubits and information about the system they occupy
+%- 
+\input{reportfiles/back_theory.tex}
+\input{reportfiles/results.tex}
+
+
+\bibliographystyle{ieeetr}
+\bibliography{report_bibliography.bib}
+
+
+
+\end{document}
