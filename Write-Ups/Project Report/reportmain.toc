@@ -3,22 +3,12 @@
 \tocdepth@munge 
 \contentsline {section}{\numberline {}Contents}{2}{section*.3}%
 \tocdepth@restore 
-\contentsline {section}{\numberline {I}Report Plan}{2}{section*.4}%
-\contentsline {subsection}{\numberline {A}Introduction}{2}{section*.5}%
-\contentsline {subsection}{\numberline {B}Background Theory}{2}{section*.6}%
-\contentsline {subsubsection}{\numberline {1}Qubit Systems}{2}{section*.7}%
-\contentsline {subsubsection}{\numberline {2}Fermionic Systems}{3}{section*.8}%
-\contentsline {subsubsection}{\numberline {3}Encoding Information}{3}{section*.9}%
-\contentsline {subsection}{\numberline {C}Quantum Scrambling}{3}{section*.10}%
-\contentsline {subsubsection}{\numberline {1}Operator Spreading}{3}{section*.11}%
-\contentsline {subsubsection}{\numberline {2}Entanglement Entropy}{3}{section*.12}%
-\contentsline {subsection}{\numberline {D}Appendix}{3}{section*.13}%
-\contentsline {section}{\numberline {II}Introduction}{4}{section*.14}%
-\contentsline {section}{\numberline {III}Qubit Systems}{4}{section*.15}%
-\contentsline {subsection}{\numberline {A}Quantum Bits}{4}{section*.16}%
-\contentsline {subsection}{\numberline {B}Circuits}{4}{section*.17}%
-\contentsline {subsection}{\numberline {C}Encoding Information}{5}{section*.19}%
-\contentsline {section}{\numberline {IV}Fermionic Systems}{5}{section*.20}%
-\contentsline {section}{\numberline {V}Efficient Quantum Circuits}{5}{section*.21}%
-\contentsline {section}{\numberline {VI}Quantum Scrambling}{5}{section*.22}%
-\contentsline {section}{\numberline {VII}Results}{5}{section*.23}%
+\contentsline {section}{\numberline {I}Introduction}{3}{section*.4}%
+\contentsline {section}{\numberline {II}Qubit Systems}{4}{section*.5}%
+\contentsline {subsection}{\numberline {A}Quantum Bits}{4}{section*.6}%
+\contentsline {subsection}{\numberline {B}Quantum Circuits}{4}{section*.7}%
+\contentsline {subsection}{\numberline {C}Entanglement in Qubit Systems}{5}{section*.9}%
+\contentsline {section}{\numberline {III}Fermionic Systems}{7}{section*.11}%
+\contentsline {subsection}{\numberline {A}Second Quantization and Indistinguishable Particles}{7}{section*.12}%
+\contentsline {subsection}{\numberline {B}Entanglement in Fermionic Systems}{7}{section*.13}%
+\contentsline {section}{\numberline {}References}{7}{section*.14}%

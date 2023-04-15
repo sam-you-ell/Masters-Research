@@ -1,23 +1,30 @@
 import numpy as np
 import scipy
-from scipy.sparse import lil_matrix, csr_matrix, kron, coo_matrix, linalg
+from scipy.sparse import lil_matrix, csc_matrix, kron, coo_matrix, linalg, csr_matrix
 import math
 import random
 import matplotlib.pyplot as plt
 import pandas as pd
-# np.set_printoptions(precision=2, suppress=True)
+np.set_printoptions(precision=2, suppress=True)
 
 
-def correlation_mat(L):
+def correlation_mat(L, fill):
     # correlation matrix
     # return sparse.diags([1j, 0, -1j], [-1, 0, 1], shape=(2*L, 2*L)).toarray()
+
     I = lil_matrix(np.eye(L))
-    pauli_y = np.array(([0, -1j], [1j, 0]))
-    sparse_y = lil_matrix(pauli_y)
+    pauli_y = np.array(([0, -1], [1, 0]))
+    sparse_y = csc_matrix(pauli_y)
+    if fill == 'vacuum':
+        return kron(I, sparse_y)
 
-    return kron(I, sparse_y)
-
-
+    elif fill == 'half':
+        M = kron(I, sparse_y).todense()
+        for _ in range(2*L):
+            for j in range(0, 2*L-1, 4):
+                M[j, j+1] = 1
+                M[j+1, j] = -1
+        return M
 # simple gate
 
 
@@ -25,48 +32,66 @@ def H1(site, L):
     H1 = np.zeros((2*L, 2*L), dtype=complex)
     H1[site, site+1] = math.pi/8
     H1[site+1, site] = -math.pi/8
-    return H1
+    return 1j*H1
 
 
-def Hodd(site, L):
-    H1 = np.zeros((2*L, 2*L), dtype=complex)
-    H1[site, site+2] = math.pi/8
-    H1[site+2, site] = -math.pi/8
-    return H1
-
-
-def H2(site, L):
+def numb(site, L):
     H2 = np.zeros((2*L, 2*L), dtype=complex)
-    smallh = np.zeros((4, 4))
-    smallh[1, 3] = math.pi/8
-    smallh[3, 1] = -math.pi/8
-    smallh[2, 3] = math.pi/2
-    smallh[3, 2] = -math.pi / 2
-    H2[site:site+4, site:site+4] = smallh
+    smallh = np.zeros((4, 4), dtype=complex)
+    smallh[0, 1] = 1
+    smallh[1, 0] = -1
+    smallh[2, 3] = 1
+    smallh[3, 2] = -1
+    H2[site:site+4, site:site+4] = 1j/2*smallh
     return H2
 
 
-# def Xf(site, L):
-#     X = np.zeros((2*L, 2*L))
-#     smallh = np.zeros((4, 4))
-#     smallh[0, 0] = 1
-#     smallh[3, 3] = -1
-#     smallh[0+1, 0+2] = -1
-#     smallh[0+2, 0+1] = 1
-#     X[site:site+4, site:site+4] = smallh
-#     return X
+def hop(site, L):
+    hop = np.zeros((2*L, 2*L), dtype=complex)
+    smallh = np.zeros((4, 4), dtype=complex)
+    smallh[0, 2] = 1
+    smallh[0, 3] = 1
+    smallh[1, 2] = -1
+    smallh[1, 3] = 1
+
+    smallh[2, 0] = -1
+    smallh[3, 0] = -1
+    smallh[2, 1] = 1
+    smallh[3, 1] = -1
+
+    # smallh[0, 1] = 1j
+    # smallh[1, 0] = -1j
+
+    # smallh[2, 3] = 1j
+    # smallh[3, 2] = -1j
+
+    hop[site:site+4, site:site+4] = 1j*smallh * math.pi/8
+    return hop
 
 
-def Had(site, L):
+def three_unitary(site, L):
     H = np.zeros((2*L, 2*L), dtype=complex)
-    smallh = np.zeros((4, 4))
-    smallh[0, 0] = 1
-    smallh[3, 3] = -1
-    smallh[1, 2] = 1/np.sqrt(2)
-    smallh[2, 1] = 1/np.sqrt(2)
-    smallh[1, 1] = 1/np.sqrt(2)
-    smallh[2, 2] = -1/np.sqrt(2)
-    H[site:site+4, site:site+4] = smallh
+    smallh = np.zeros((6, 6))
+    smallh[0, 1] = 1
+    smallh[1, 0] = -1
+    smallh[0, 3] = 1
+    smallh[3, 0] = -1
+    smallh[0, 5] = 1
+    smallh[5, 0] = -1
+    smallh[1, 2] = 1
+    smallh[2, 1] = -1
+    smallh[1, 4] = 1
+    smallh[4, 1] = -1
+    smallh[2, 3] = 1
+    smallh[3, 2] = -1
+    smallh[2, 5] = 1
+    smallh[5, 2] = -1
+    smallh[3, 4] = 1
+    smallh[4, 3] = -1
+    smallh[4, 5] = 1
+    smallh[5, 4] = -1
+
+    H[site:site+6, site:site+6] = smallh*math.pi/4
     return H
 
 
@@ -82,15 +107,15 @@ def swap(site, L):
     H = np.zeros((2*L, 2*L), dtype=complex)
 
     smallh = np.zeros((4, 4))
-    smallh[0, 3] = -1
-    smallh[3, 0] = 1
-    smallh[1, 2] = 1
-    smallh[2, 1] = -1
+    smallh[0, 3] = -1/2
+    smallh[3, 0] = 1/2
+    smallh[1, 2] = -1/2
+    smallh[2, 1] = -1/2
     smallh[0, 1] = 1
     smallh[1, 0] = -1
     smallh[2, 3] = 1
     smallh[3, 2] = -1
-    H[site:site+4, site:site+4] = smallh * math.pi/4
+    H[site:site+4, site:site+4] = 1j*smallh
     return H
 
 
@@ -132,7 +157,7 @@ def rot_matrix(matrix):
     return (W@trig_block@W.T)
 
 
-def entang_entropy(correlation_matrix, L):
+def entang_entropy(correlation_matrix, L, tag):
     """
     Function takes a correlation matrix, bipartitions the matrix, to form M_A. Block diagonalises
     M_A, via a Schur Decomposition. Then finds the eigenvalues of the 2x2 blocks within M_A. Then to
@@ -141,8 +166,10 @@ def entang_entropy(correlation_matrix, L):
     a simple formula.
     """
     Blocksize = round(L/2)
-    corr = correlation_matrix.toarray()
-    # Blocksize = round(L/2)
+    if tag == 'vacuum':
+        corr = correlation_matrix.todense()
+    elif tag == 'half':
+        corr = correlation_matrix
     submatrix = corr[:2*Blocksize, :2*Blocksize]
 
     # S, R = linalg.schur(submatrix, output='real')
@@ -167,44 +194,50 @@ def entang_entropy(correlation_matrix, L):
     return sum(entropy)
 
 
-def random_circuit(L, timesteps):
-    sites = list(range(0, L, 1))
-    M = correlation_mat(L)
-    S_A = [entang_entropy(M, L)]
-    for i in range(timesteps-1):
-        q = random.sample(sites, 1)[0]
+def random_circuit(L, timesteps, fill):
+    # sites = list(range(0, L-1, 2))
+    M = correlation_mat(L, fill)
+    S_A = [entang_entropy(M, L, fill)]
+    for _ in range(timesteps-1):
+        # q = random.sample(sites, 1)[0]
+        q = 4
         gate = random.sample(list(range(2)), 1)[0]
         if gate == 0:
-            small_r = csr_matrix(rot_matrix(H1(q, L)))
+            small_r = csr_matrix(rot_matrix(numb(0, L)))
         elif gate == 1:
-            small_r = csr_matrix(rot_matrix(H1(q, L)))
+            small_r = csr_matrix(rot_matrix(hop(0, L)))
 
         M = (small_r @ M @ small_r.T)
         # for i in range(2*L):
         #     M[i, i] = 0
 
-        S_A.append(abs(entang_entropy(M, L) * math.log(2)/math.log(2**L)))
+        S_A.append(abs(entang_entropy(M, L, fill)
+                       * math.log(2)/math.log(2**L)))
 
-    return S_A
-
-
-def commutator(matrix1, matrix2):
-    A = matrix1.toarray()
-    B = matrix2.toarray()
-    return A@B - B@A
-####################################################
+    return S_A, M
 
 
-# N = 50
-# tsteps = 4000
+# def commutator(matrix1, matrix2):
+#     A = matrix1.toarray()
+#     B = matrix2.toarray()
+#     return A@B - B@A
+# ####################################################
 
-N = 30
-tsteps = 2000
 
-S = random_circuit(N, tsteps)
+N = 3
+tsteps = 2
+
+
+S, M = random_circuit(N, tsteps, 'half')
+
 t = range(tsteps)
+print(S)
+print(M)
 
-# M = correlation_mat(N)
+# M = correlation_mat(N, 'half')
+# print(M)
+
+# print(three_unitary(2, N))
 
 # print(commutator(S, M))
 # Entropy = {
@@ -222,10 +255,10 @@ t = range(tsteps)
 # print('done')
 
 # print("Page Value:", math.log(2**N))
-plt.plot(range(tsteps), S)
-plt.xlabel(r"  t", rotation=0, loc='center')
-plt.ylabel(r" $S_{A}/S_{\infty}$      ", rotation=0, loc='center')
+# plt.plot(range(tsteps), S)
+# plt.xlabel(r"  t", rotation=0, loc='center')
+# plt.ylabel(r" $S_{A}/S_{\infty}$      ", rotation=0, loc='center')
 
 
-# # plt.savefig('Fermionic Entanglement Entropy_extended_75.pdf')
-plt.show()
+# # # # plt.savefig('Fermionic Entanglement Entropy_extended_75.pdf')
+# plt.show()

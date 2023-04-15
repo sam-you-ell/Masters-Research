@@ -1,0 +1,12 @@
+\begin{thebibliography}{1}
+
+\bibitem{Note1}
+Any linear map between two finite dimensional vector spaces, in this case
+  finite dimensional Hilbert spaces, may be represented as a matrix.
+
+\bibitem{nielsen_chuang_2010}
+M.~A. Nielsen and I.~L. Chuang, {\em Quantum Computation and Quantum
+  Information: 10th Anniversary Edition}.
+\newblock Cambridge University Press, 2010.
+
+\end{thebibliography}

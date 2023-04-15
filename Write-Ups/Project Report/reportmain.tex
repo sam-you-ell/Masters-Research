@@ -1,4 +1,4 @@
-\documentclass[nofootinbib]{revtex4-2}
+\documentclass[ aps]{revtex4-2}
 
 \input{preamble.tex}
 
@@ -39,70 +39,69 @@ Word Count: TBA
 %where and why is it being studied 
 % 
 %
-\section{Report Plan}
-    \subsection{Introduction}
-        \begin{itemize}
-            \color{ForestGreen}
-            \item Introduce quantum scrambling with a short description
-            \item Where and why is this being studied
-            \item What are the uses and conclusions we can draw - state examples 
-            \item What are our aims
-            \item Outline the structure of the report
-        \end{itemize}
+% \section{Report Plan}
+%     \subsection{Introduction}
+%         \begin{itemize}
+%             \color{ForestGreen}
+%             \item Introduce quantum scrambling with a short description
+%             \item Where and why is this being studied
+%             \item What are the uses and conclusions we can draw - state examples 
+%             \item What are our aims
+%             \item Outline the structure of the report
+%         \end{itemize}
 
 
-    \subsection{Background Theory}
-        \subsubsection{Qubit Systems}
-            \begin{itemize}
-                \color{ForestGreen}
-                \item What are qubits?
-                \item Why do we use qubits?
-                \item Quantum operators + Quantum Circuits
-                \item Entanglement In qubit systems
-            \end{itemize}
+%     \subsection{Background Theory}
+%         \subsubsection{Qubit Systems}
+%             \begin{itemize}
+%                 \color{ForestGreen}
+%                 \item What are qubits?
+%                 \item Why do we use qubits?
+%                 \item Quantum operators + Quantum Circuits
+%                 \item Entanglement In qubit systems
+%             \end{itemize}
 
-        \subsubsection{Fermionic Systems}
-        \begin{itemize}\color{ForestGreen}
-            \item What are fermions? - Introduce Building blocks
-            \item Fock space and states; creation and annihilation operators; anticommutation relations
-            \item Correlation Functions + Wicks theorem
-            \item Majorana Fermions 
-            \item Entanglement in Fermionic Systems
-        \end{itemize}
-        \subsubsection{Encoding Information}
-        \begin{itemize}\color{ForestGreen}
-            \item How do we encode information? Introduce Pauli strings and why they're a convinient way to encode information. 
-            \item Ask stephen about this. 
-        \end{itemize}
+%         \subsubsection{Fermionic Systems}
+%         \begin{itemize}\color{ForestGreen}
+%             \item What are fermions? - Introduce Building blocks
+%             \item Fock space and states; creation and annihilation operators; anticommutation relations
+%             \item Correlation Functions + Wicks theorem
+%             \item Majorana Fermions 
+%             \item Entanglement in Fermionic Systems
+%         \end{itemize}
+%         \subsubsection{Encoding Information}
+%         \begin{itemize}\color{ForestGreen}
+%             \item How do we encode information? Introduce Pauli strings and why they're a convinient way to encode information. 
+%             \item Ask stephen about this. 
+%         \end{itemize}
         
-    \subsection{Quantum Scrambling}
-        \subsubsection{Operator Spreading}
-        \begin{itemize}\color{ForestGreen}
-            \item Detailed explanations
-            \item Introduce the picture of Spreading
-            \item How we measure spreading in full generality
-            \item Here we can focus on literature on spreading (since it is abundant)
-        \end{itemize}
-        \subsubsection{Entanglement Entropy}
-        \begin{itemize}\color{ForestGreen}
-            \item Explain how a system generates entanglement and how this looks in terms of Pauli strings
-            \item Start with shannon entropy as a measure for loss of information 
-            \item introduce von neumann entropy and the conditions for an entropy we want 
-            \item also introduce renyi but state not used.
-            \item 
-        \end{itemize}
+%     \subsection{Quantum Scrambling}
+%         \subsubsection{Operator Spreading}
+%         \begin{itemize}\color{ForestGreen}
+%             \item Detailed explanations
+%             \item Introduce the picture of Spreading
+%             \item How we measure spreading in full generality
+%             \item Here we can focus on literature on spreading (since it is abundant)
+%         \end{itemize}
+%         \subsubsection{Entanglement Entropy}
+%         \begin{itemize}\color{ForestGreen}
+%             \item Explain how a system generates entanglement and how this looks in terms of Pauli strings
+%             \item Start with shannon entropy as a measure for loss of information 
+%             \item introduce von neumann entropy and the conditions for an entropy we want 
+%             \item also introduce renyi but state not used.
+%             \item 
+%         \end{itemize}
 
 
 
-        \subsection{Appendix}
-        \begin{itemize}\color{ForestGreen}
-            \item Density Matrices
-            \item Wicks theorem
-            \item Schur Decomposition
-            \item Group Theory (Generators)
-            \item Clifford Group
-        \end{itemize}
-
+%         \subsection{Appendix}
+%         \begin{itemize}\color{ForestGreen}
+%             \item Density Matrices
+%             \item Wicks theorem
+%             \item Schur Decomposition
+%             \item Group Theory (Generators)
+%             \item Clifford Group
+%         \end{itemize}
 
 
 
@@ -117,8 +116,10 @@ Word Count: TBA
 %Qubit systems
 %- What are qubits and information about the system they occupy
 %- 
-\input{reportfiles/back_theory.tex}
-\input{reportfiles/results.tex}
+\input{reportfiles/qubitsystems.tex}
+\input{reportfiles/fermionicsystems.tex}
+% \input{reportfiles/results.tex}
+
 
 
 \bibliographystyle{ieeetr}
