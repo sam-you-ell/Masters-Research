@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.6)  15 APR 2023 10:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.6)  18 APR 2023 12:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -509,7 +509,10 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 LaTeX Info: Redefining \frak on input line 111.
 LaTeX Info: Redefining \Bbb on input line 113.
-)) (/usr/local/texlive/2020/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/bbold/bbold.sty
+Package: bbold 1994/04/06 Bbold symbol package
+LaTeX Font Info:    Redeclaring math alphabet \mathbb on input line 42.
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
 \f@nch@headwidth=\skip65
 \f@nch@O@elh=\skip66
@@ -807,27 +810,91 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write6
 \openout6 = `reportmain.toc'.
 
- [2] (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportfiles/introduction.tex) (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportfiles/qubitsystems.tex [3] (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportimages/pauli_gates.tex) [4] (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportimages/bell_state.tex)) (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportfiles/fermionicsystems.tex [5] [6]) (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportmain.bbl) [7]
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 130.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 130.
+ [2] (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportfiles/introduction.tex
+
+Package natbib Warning: Citation `Polkovnikov_2011' on page 3 undefined on input line 11.
+
+
+Package natbib Warning: Citation `Calabrese_2009' on page 3 undefined on input line 21.
+
+
+Package natbib Warning: Citation `Jerusalem' on page 3 undefined on input line 21.
+
+
+Package natbib Warning: Citation `Jensen_2016' on page 3 undefined on input line 21.
+
+
+Package natbib Warning: Citation `https://doi.org/10.48550/arxiv.1802.01198' on page 3 undefined on input line 21.
+
+
+Package natbib Warning: Citation `Sekino_2008' on page 3 undefined on input line 21.
+
+
+Package natbib Warning: Citation `ShenkerBlackHolesButterfly2014' on page 3 undefined on input line 21.
+
+
+Package natbib Warning: Citation `Nozaki_2014' on page 3 undefined on input line 21.
+
+
+Package natbib Warning: Citation `Calabrese_2005' on page 3 undefined on input line 21.
+
+
+Package natbib Warning: Citation `Maldacena_2016' on page 3 undefined on input line 22.
+
+
+Package natbib Warning: Citation `https://doi.org/10.48550/arxiv.1412.6087' on page 3 undefined on input line 22.
+
+
+Package natbib Warning: Citation `PhysRevX.8.021013' on page 3 undefined on input line 22.
+
+
+Package natbib Warning: Citation `PhysRevX.8.031058' on page 3 undefined on input line 22.
+
+
+Package natbib Warning: Citation `Grozdanov_2018' on page 3 undefined on input line 22.
+
+
+Package natbib Warning: Citation `PhysRevB.98.205136' on page 3 undefined on input line 30.
+
+
+Package natbib Warning: Citation `https://doi.org/10.48550/arxiv.2110.02988' on page 3 undefined on input line 30.
+
+
+Package natbib Warning: Citation `https://doi.org/10.48550/arxiv.2210.10129' on page 3 undefined on input line 32.
+
+
+Package natbib Warning: Citation `Valiant2001QuantumCT' on page 3 undefined on input line 34.
+
+
+Package natbib Warning: Citation `Terhal2001' on page 3 undefined on input line 37.
+
+) (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportfiles/qubitsystems.tex
+LaTeX Font Info:    Trying to load font information for U+bbold on input line 9.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/bbold/Ubbold.fd) [3] (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportimages/pauli_gates.tex) [4]) (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportfiles/fermionicsystems.tex [5]) (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportfiles/quantumscrambling.tex [6] [7]) [8] (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportmain.bbl)
+
+Package natbib Warning: There were undefined citations.
+
+[9]
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 159.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 159.
  (/Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportmain.aux)
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 130.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 159.
 Package rerunfilecheck Info: File `reportmain.out' has not changed.
-(rerunfilecheck)             Checksum: 10FA295560E47F317BB4E06ED45F3148;778.
+(rerunfilecheck)             Checksum: 3062D04CBAD40F9BD286E39DD5E9D83C;2096.
  ) 
 Here is how much of TeX's memory you used:
- 25490 strings out of 480608
- 495306 string characters out of 5903631
- 787304 words of memory out of 5000000
- 40798 multiletter control sequences out of 15000+600000
- 545505 words of font info for 72 fonts, out of 8000000 for 9000
+ 25394 strings out of 480608
+ 492115 string characters out of 5903631
+ 790503 words of memory out of 5000000
+ 40655 multiletter control sequences out of 15000+600000
+ 546433 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,20n,112p,1281b,1413s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "/Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportmain.pdf" (7 pages, 252736 bytes).
+ 67i,20n,112p,1281b,1374s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on "/Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportmain.pdf" (9 pages, 271624 bytes).
 PDF statistics:
- 233 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 358 PDF objects out of 1000 (max. 8388607)
+ 317 compressed objects within 4 object streams
+ 72 named destinations out of 1000 (max. 500000)
+ 261 words of extra memory for PDF output out of 10000 (max. 10000000)
 

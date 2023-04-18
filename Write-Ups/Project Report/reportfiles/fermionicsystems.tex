@@ -1,35 +1,52 @@
-\newpage
-\section{Fermionic Systems}
+
+\subsection{Fermionic Systems}
 %Indistinguishibility. 
 
 The familiar qubit system may be mapped onto a system of identical particles (fermions), such that the 
 overall many body state describing the system, is invariant under particle exchange. This is 
 performed via a Jordan-Wigner transformation, which maps any local spin-model to a local fermionic model.
-To gain an understanding of how this can be carried out and why it is relevant, it will be useful to introduce 
-the core concepts and language from \textit{Second Quantization}.
+To gain an understanding of how this can be carried out and why it is relevant, it will be useful to introduce the core concepts and language from \textit{Second Quantization}.
 
-\subsection{Second Quantization and Indistinguishable Particles}
+\subsubsection{Second Quantization and Indistinguishable Particles}
 
-A key distinction between classical and quantum mechanics, lies in the notion of the indistinguishability of particles.
-In quantum mechanics, particles are treated as identical and the exhanging of particles leaves the quantum many-body state unchanged, as opposed to classical mechanics
-where permutations on the set of particles' position vectors results in a new many-body state. 
+
+The wave function for a system of $N$ identical particles is $\psi(x_1, x_2, \dots x_N)$, where a particle is specified by it's position vector, $\vec{x}$. For bosonic systems, the wavefunction is symmetric under particle exhchange, while fermionic systems present anti-symmetric wavefunctions under particle exchange. 
 
 % For a specified quantum many-body state, wherein the particles are identical, if two particles are exchanged the initial many-body state will remain unchanged.
 % (This is different) to classical mechanics, where if particles' position vectors are exchanged, the resulting many-body state is an entirely new configuration. 
 
 The construction of the $n$ particle state via the extension of the single particle wavefunction, as described in (\refeq{nqubit}), 
-leads to a redundancy in it's description of a many-body state and an unnecessarily large Hilbert space. Second quantization remedies this redundancy by only considering the number of particles in each state, resulting in an 
-efficient formalism to describe many-body systems. 
+leads to a redundancy in it's description of a many-body state and an unnecessarily large Hilbert space. 
 
-In second quantization, the state of a many-body system is represented in an occupancy number basis, known as Fock states. For a given configuration, a Fock state may be written as $|n_1, n_2, \dots, n_L\rangle$, where $n_i$ is the occupation number. For fermions (corresponding to wavefunctions that are anti-symmetric under particle exchange), the max occupancy of a given site, $i$ is $n_i = 1$. To preserve the symmetric properties of Fock states, second quantization introduces fermionic creation and annihilation operators. The creation operator, $a^{\dagger}_{i}$ creates a particle at site $i$ if unoccupied, and the annihilation operator, $a_i$, removes a particle at site $i$ if occupied. More formally, it's action on a Fock state may be written as, 
-\begin{align*}
+
+
+A more efficient appraoch to describing many-body states is the formalism of second quantisation.Instead of describing states with Slater determinants, a \textit{Fock state} presents an elegant and convinient basis in which to work in. The Fock state of a many-body system is represented in an occupancy number basis, written as $|n_1, n_2, \dots, n_L\rangle$, where $n_i$ is the occupation number. For wavefunctions that are symmetric under particle exchange, i.e bosonic systems, the occupancy can take any real non-negative integer. For wavefunctions that are anti-symmetric under particle exchange (fermionic systems), the occupancy number is either $0$ or $1$ such that the state satisfies the Pauli exclusion principle.
+
+To preserve the symmetric properties of Fock states, second quantization introduces fermionic creation and annihilation operators. The creation operator, $a^{\dagger}_{i}$ creates a particle at site $i$ if unoccupied, and the annihilation operator, $a_i$, removes a particle at site $i$ if occupied. More formally, it's action on a Fock state may be written as, 
+\begin{align}
     a_j^{\dagger} |n_0, \dots, n_j, \dots, n_{m-1}\rangle = {(-1)}^{\sum^{j-1}_{s=0}n_s} (1-n_j) |n_0, \dots, n_j - 1, \dots, n_{m-1}\rangle, \\
-    a_j |n_0, \dots, n_j, \dots, n_{m-1}\rangle = {(-1)}^{\sum^{j-1}_{s=0}n_s} n_j |n_0, \dots, n_j - 1, \dots, n_{m-1}\rangle,
-\end{align*}
+    a_j |n_0, \dots, n_j, \dots, n_{m-1}\rangle = {(-1)}^{\sum^{j-1}_{s=0}n_s} n_j |n_0, \dots, n_j - 1, \dots, n_{m-1}\rangle.
+\end{align}
+Using these operators, an arbitrary Fock state, $|\psi_{F}\rangle$ may be constructed from a set of creation operators acting on the vacuum, 
+\begin{equation}
+    |\psi_{f}\rangle = (a_{1}^{\dagger})^{n_1} (a_{2}^{\dagger})^{n_2} \dots (a_{L}^{\dagger})^{n_{L}}|{\mathbf 0}\rangle.
+\end{equation}
+The fermionic creation and annihilation operators obey crucial anti-commutation relations, constructed to 
+\begin{align}
+    \{a_j, a_k\} \equiv \{a_j^{\dagger}, a_k^{\dagger}\} = 0, && \{a_j, a_k^{\dagger}\} = \delta_{jk}I
+\end{align}
+As an alternative description, the the \textit{Majorana operators} may be defined as 
+$c_{2k} = a_k + a_k^{\dagger}$ and $c_{2k+1} = i(a_k^{\dagger} - a_{k})$ for $k =  1, \dots, N$ such that they satisfy $\{c_j, c_k\} = 2\delta_{jk}$. From this, the Jordan-Wigner transformation may be defined, which maps a system of $N$ spin-$\frac{1}{2}$ particles onto a system of $N$ `spinless' fermions as by defining the Majorana operators onto Pauli spin operators: 
+
+\begin{align}
+    c
+\end{align}
+Such a mapping allows the Hilbert space of $N$ qubits to be identified with the Hilbert space of $N$ local fermionic modes (LFM's). 
+%introduce majorana operators
+
 
 %possible appendix here 
 
 
 
 
-\subsection{Entanglement in Fermionic Systems}

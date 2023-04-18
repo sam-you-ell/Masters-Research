@@ -4,11 +4,30 @@
 \contentsline {section}{\numberline {}Contents}{2}{section*.3}%
 \tocdepth@restore 
 \contentsline {section}{\numberline {I}Introduction}{3}{section*.4}%
-\contentsline {section}{\numberline {II}Qubit Systems}{4}{section*.5}%
-\contentsline {subsection}{\numberline {A}Quantum Bits}{4}{section*.6}%
-\contentsline {subsection}{\numberline {B}Quantum Circuits}{4}{section*.7}%
-\contentsline {subsection}{\numberline {C}Entanglement in Qubit Systems}{5}{section*.9}%
-\contentsline {section}{\numberline {III}Fermionic Systems}{7}{section*.11}%
-\contentsline {subsection}{\numberline {A}Second Quantization and Indistinguishable Particles}{7}{section*.12}%
-\contentsline {subsection}{\numberline {B}Entanglement in Fermionic Systems}{7}{section*.13}%
-\contentsline {section}{\numberline {}References}{7}{section*.14}%
+\contentsline {section}{\numberline {II}INTRODUCTION}{3}{section*.5}%
+\contentsline {section}{\numberline {III}Qubit Systems}{3}{section*.6}%
+\contentsline {subsection}{\numberline {A}Qubit Systems}{3}{section*.7}%
+\contentsline {subsubsection}{\numberline {1}Quantum Bits}{3}{section*.8}%
+\contentsline {subsubsection}{\numberline {2}Quantum Circuits}{4}{section*.9}%
+\contentsline {section}{\numberline {IV}Fermionic Systems}{5}{section*.11}%
+\contentsline {subsection}{\numberline {A}Fermionic Systems}{5}{section*.12}%
+\contentsline {subsubsection}{\numberline {1}Second Quantization and Indistinguishable Particles}{5}{section*.13}%
+\contentsline {section}{\numberline {V}Scrambling Dynamics}{6}{section*.14}%
+\contentsline {subsection}{\numberline {A}Random Unitary Circuits}{6}{section*.15}%
+\contentsline {subsection}{\numberline {B}Operator Spreading}{7}{section*.16}%
+\contentsline {subsection}{\numberline {C}Operator Complexity and Entanglement Entropy}{7}{section*.17}%
+\contentsline {subsubsection}{\numberline {1}Entanglement In Qubit Systems}{7}{section*.18}%
+\contentsline {subsubsection}{\numberline {2}Entanglement In Fermionic Systems}{8}{section*.19}%
+\contentsline {subsubsection}{\numberline {3}Entanglement Measures}{8}{section*.20}%
+\contentsline {section}{\numberline {VI}Simulating a Quantum Circuit}{9}{section*.21}%
+\contentsline {subsection}{\numberline {A}Stabilizer Circuits}{9}{section*.22}%
+\contentsline {subsection}{\numberline {B}Blake and Linden's Construction}{9}{section*.23}%
+\contentsline {subsection}{\numberline {C}Free Fermion Circuits}{9}{section*.24}%
+\contentsline {section}{\numberline {VII}Results}{9}{section*.25}%
+\contentsline {subsection}{\numberline {A}Stabilizer Circuits}{9}{section*.26}%
+\contentsline {subsection}{\numberline {B}Non-interacting Fermion Circuits}{9}{section*.27}%
+\contentsline {subsubsection}{\numberline {1}Non-Number Conserving Gates}{9}{section*.28}%
+\contentsline {subsubsection}{\numberline {2}Number-Conserving Gates}{9}{section*.29}%
+\contentsline {section}{\numberline {VIII}Discussion}{9}{section*.30}%
+\contentsline {section}{\numberline {IX}Conclusion}{9}{section*.31}%
+\contentsline {section}{\numberline {}References}{9}{section*.32}%

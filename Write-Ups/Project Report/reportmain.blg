@@ -6,45 +6,65 @@ Database file #1: reportmainNotes.bib
 Warning--entry type for "Note1" isn't style-file defined
 --line 1 of file reportmainNotes.bib
 Database file #2: report_bibliography.bib
-You've used 2 entries,
+Warning--I didn't find a database entry for "Polkovnikov_2011"
+Warning--I didn't find a database entry for "Calabrese_2009"
+Warning--I didn't find a database entry for "Jerusalem"
+Warning--I didn't find a database entry for "Jensen_2016"
+Warning--I didn't find a database entry for "https://doi.org/10.48550/arxiv.1802.01198"
+Warning--I didn't find a database entry for "Sekino_2008"
+Warning--I didn't find a database entry for "ShenkerBlackHolesButterfly2014"
+Warning--I didn't find a database entry for "Nozaki_2014"
+Warning--I didn't find a database entry for "Calabrese_2005"
+Warning--I didn't find a database entry for "Maldacena_2016"
+Warning--I didn't find a database entry for "https://doi.org/10.48550/arxiv.1412.6087"
+Warning--I didn't find a database entry for "PhysRevX.8.021013"
+Warning--I didn't find a database entry for "PhysRevX.8.031058"
+Warning--I didn't find a database entry for "Grozdanov_2018"
+Warning--I didn't find a database entry for "PhysRevB.98.205136"
+Warning--I didn't find a database entry for "https://doi.org/10.48550/arxiv.2110.02988"
+Warning--I didn't find a database entry for "https://doi.org/10.48550/arxiv.2210.10129"
+Warning--I didn't find a database entry for "Valiant2001QuantumCT"
+Warning--I didn't find a database entry for "Terhal2001"
+Warning--empty journal in Xu2022
+You've used 9 entries,
             1876 wiz_defined-function locations,
-            486 strings with 3816 characters,
-and the built_in function-call counts, 265 in all, are:
-= -- 21
-> -- 9
+            559 strings with 5418 characters,
+and the built_in function-call counts, 1464 in all, are:
+= -- 125
+> -- 70
 < -- 0
-+ -- 4
-- -- 2
-* -- 9
-:= -- 40
-add.period$ -- 3
-call.type$ -- 2
-change.case$ -- 0
++ -- 27
+- -- 18
+* -- 98
+:= -- 226
+add.period$ -- 9
+call.type$ -- 9
+change.case$ -- 8
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 13
-empty$ -- 36
-format.name$ -- 2
-if$ -- 65
+cite$ -- 10
+duplicate$ -- 65
+empty$ -- 160
+format.name$ -- 18
+if$ -- 346
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 2
-newline$ -- 10
-num.names$ -- 1
-pop$ -- 14
+int.to.str$ -- 9
+missing$ -- 5
+newline$ -- 30
+num.names$ -- 8
+pop$ -- 42
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 6
+skip$ -- 42
 stack$ -- 0
-substring$ -- 0
-swap$ -- 1
+substring$ -- 32
+swap$ -- 12
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 1
-width$ -- 3
-write$ -- 16
-(There was 1 warning)
+warning$ -- 1
+while$ -- 11
+width$ -- 10
+write$ -- 72
+(There were 21 warnings)

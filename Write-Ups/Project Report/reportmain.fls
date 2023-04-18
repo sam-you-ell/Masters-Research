@@ -217,6 +217,8 @@ INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/bbold/bbold.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/bbold/bbold.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
@@ -365,24 +367,31 @@ INPUT /Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project R
 INPUT /Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportfiles/introduction.tex
 INPUT /Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportfiles/qubitsystems.tex
 INPUT /Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportfiles/qubitsystems.tex
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/bbold/Ubbold.fd
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/bbold/Ubbold.fd
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/bbold/bbold10.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/bbold/bbold7.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/bbold/bbold5.tfm
 INPUT /Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportimages/pauli_gates.tex
 INPUT /Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportimages/pauli_gates.tex
-INPUT /Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportimages/bell_state.tex
-INPUT /Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportimages/bell_state.tex
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/bbold/bbold9.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/bbold/bbold6.tfm
 INPUT /Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportfiles/fermionicsystems.tex
 INPUT /Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportfiles/fermionicsystems.tex
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT /Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportfiles/quantumscrambling.tex
+INPUT /Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportfiles/quantumscrambling.tex
 INPUT /Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportmain.bbl
 INPUT /Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportmain.bbl
 INPUT /Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportmain.aux
 INPUT /Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportmain.out
 INPUT /Users/samuelhopkins/Documents/GitHub/Masters-Research/Write-Ups/Project Report/reportmain.out
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
@@ -397,7 +406,5 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb

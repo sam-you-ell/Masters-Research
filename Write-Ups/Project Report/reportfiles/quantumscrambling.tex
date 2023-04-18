@@ -1,0 +1,82 @@
+\subsection{Random Unitary Circuits}
+To study the generic quantum many-body systems, random unitary circuits provide a minimally structured model that can emulate the required dynamics of generic or `chaotic' unitary evolutions. *Include some motivations and works, this section will focus on literature findings to motivate why we didnt feel the need to explore more circuit desgins and operator spreading* 
+
+In the study of operator hydrodynamics The set-up is a chain of $L$ spins, labelled as $q = 0, 1, \dots, L-1$ each with their respective local dimension $h$ and is subject to a random unitary circuit $\mathcal{U}$. The total circuit is constructed per timestep, by acting with a layer of 2-qubit unitaries on evenly-bonded spins, followed by a layer of unitaries applied to odd-bonded spins. More formally, each timestep in the circuit corresponds to an action by $U = U_{\text{even}} U_{\text{odd}}$, where $U_{\text{even}}$ is given by the tensor product of individual 2-qubit unitaries $U_{q, q+1}$ applied to all evenly bonded sites, $q, q+1$ for $q$ even,  and $U_{\text{odd}}$ is given by the tensor product of individual 2-qubit unitaries $U_{q, q+1}$ applied to all odd bonded sites, $q, q+1$ for $q$ odd. Each 2-qubit unitary acts on nearest neighbour spins, and is drawn from the uniform (Haar) probability distribution on the unitary group $U(4)$ or from a specific subgroup \cite{hunterjones2018operator}.
+
+% such as the Clifford group, $\mathcal{C} \equiv \{H, CNOT, R\}$.
+ 
+
+
+* Image* The structure of this model can be seen in FIG. 
+
+
+
+
+To extract solvable dynamics and utilise well-estabilished measures, information about the state of the system is encoded as strings of operators. A convinient basis to work with in qubit systems is found in the set of Pauli matrices. *insert weighted strings*
+For example, a system with $L = 5$ spins could be represented by the operator string $\mathcal{O} = \mathbb{1} \otimes \mathbb{1} \otimes \sigma_{i} \otimes \mathbb{1} \otimes \mathbb{1}$, where $\sigma_{i}$ is an arbitrary Pauli matrix.An operator of this form is \textit{local} operator, as it acts non-trivially on a single site. 
+For a system subject to generic unitary evolution , we expect that information encoded by an initially simple product operator to spread over the large number of degrees of freedom becoming highly complicated sum of global operators, such that they have support over the entire system. This process is known as Quantum Scrambling, and can be regarded as the combined notion of \textit{Operator Spreading} and a growth in \textit{Operator complexity}. 
+
+\subsection{Operator Spreading} 
+To give a picture of operator spreading, this section will primarily focus on the evolution of Pauli strings. Starting from some initially local product operator, such as 
+$\mathcal{O} = \mathbb{1} \otimes\dots \otimes \mathbb{1} \otimes \sigma_{x} \otimes \mathbb{1} \otimes \dots \otimes \mathbb{1}$. This system will evolve via $|\psi (t)\rangle = U |\psi_0\rangle$ and the operator string will evolve via the Heisenberg evolution of operators, 
+\begin{equation}\label{heisenberg_evolution}
+    \mathcal{O}(t) = U(t) \mathcal{O} U^{\dagger}(t).
+\end{equation}
+ * Relevant work* 
+
+ Following this evolution, the local operator with minimal support, $O_j$ has evolved to $O_j(t)$ with support over a
+large region of sites \cite{Khemani_2018}. Operators that grow in this way, will spread ballistically \cite{Roberts_2015, Lieb:1972wy, Schuster_2022} and are often
+characterised by the out-of-time ordered correlator (OTOC) \cite{Xu2022} and the square-commutator\cite{Blake_2018}. This also gives an
+intuitive picture of operator spreading, with the squared commutator defined as *Image here, sites, with support growing to overlap* 
+\begin{equation}
+  C(t) = \langle [O(t), W_i][O(t), W_i]^{\dagger}\rangle
+\end{equation}
+where $W_i$ is a static local operator at site $i$ \cite{https://doi.org/10.48550/arxiv.1804.08655}. Then at $t=0$, $O(t)$
+acts on a single site or a finite region of sites, such that it commutes with the static operator, $W_i$ and $C(t) = 0$.
+Once the operator spreads, and becomes more non-local, the commutator increases as it's support overlaps with $V_i$.
+
+
+\subsection{Operator Complexity and Entanglement Entropy}
+The key component in quantum supremacy lies in a quantum algorithm's ability to utilise the abudant \textit{entanglement} within a system. In simple bipartite systems, where $\mathcal{H}_{AB} = \mathcal{H}_{A}\otimes \mathcal{H}_{B}$, the state of this system, $|\Psi_{AB}\rangle \in \mathcal{H}_{AB}$ is 
+said to be entangled if and only if the state cannot be written in product form, $|\Psi_{AB}\rangle =  |\Psi_{A}\rangle \otimes |\Psi_{B}\rangle$, where $|\Psi_{A}\rangle$ and $|\Psi_{B}\rangle$ are the two vectors corresponding to the Hilbert spaces of each subsystem. If the state $|\Psi_{AB}\rangle$ is not entangled, then it is a product state and is said to be separable.
+
+
+\subsubsection{Entanglement In Qubit Systems}
+Qubit systems provide the simplest decription of entangled states in bipartite systems. For a system of two qubits, there exist 4 specific maximally entangled configurations, called Bell states: 
+
+\begin{align*}
+    |\Phi^{+}\rangle = \frac{|00\rangle + |11\rangle }{\sqrt{2}}, && |\Phi^{-}\rangle = \frac{|00\rangle - |11\rangle }{\sqrt{2}},
+    \\
+    |\Psi^{+}\rangle = \frac{|01\rangle + |10\rangle }{\sqrt{2}}, && |\Psi^{-}\rangle = \frac{|01\rangle - |10\rangle }{\sqrt{2}}.
+\end{align*}
+We can verify that the state, $|\Phi^{+}\rangle $ is an entangled state by writing, 
+\begin{align*}
+    |{\Phi}^+\rangle = & \left[ \alpha_0 |0\rangle + \beta_0|1\rangle\right] \otimes \left[\alpha_1 |0\rangle + \beta_1|1\rangle\right], \\
+    =                     & \alpha_0\beta_0 |00\rangle + \alpha_0\beta_1|01\rangle + \alpha_1\beta_0|10\rangle + \alpha_1\beta_1|11\rangle
+\end{align*}
+We require that the $\alpha_0$ or $\beta_1$ terms must be zero in order to ensure the $|01\rangle$, $|10\rangle$ vanish. However, this would make the coefficients of the $|00\rangle$ or $|11\rangle$ terms zero, breaking the equality. Thus, $|{\bm\Phi}^+\rangle$ cannot be written in product form and is said to be entangled.
+
+For bipartite systems with a greater number of particles, this definition cannot be used to detect entanglement between states. Instead,  entanglement measures provide a useful tool for detecting and verifying the entanglement between states and in the case of distinguishable particles, one such entanglement measure is the \textit{Schmidt Rank}, derived from the \textit{Schmidt Decomposition}. This measure provides a nice introduction to how entanglement measures are constructed in bipartite systems, but are not fit for the purposes of this project. A full description can be found in Appendix (X). 
+
+
+
+
+
+\subsubsection{Entanglement In Fermionic Systems}
+
+\subsubsection{Entanglement Measures}
+
+
+
+
+
+
+
+
+
+
+
+% \input{reportimages/randomcircuit.tex}
+% Quantum scrambling is the process in which local information encoded by a simple product operator is rapidly spread over a large number of degrees of freedom 
+
+% The information becomes highly non-local and the initial simple product operator becomes a complicated sum of product operators. 

@@ -34,6 +34,23 @@ def H2(site, L):
     return H2
 
 
+def U2(site, L):
+    H = np.zeros((2*L, 2*L), dtype=complex)
+
+    smallh = np.zeros((4, 4), dtype=complex)
+    smallh[0, 3] = 1
+    smallh[3, 0] = -1
+    smallh[1, 2] = -1
+    smallh[2, 1] = 1
+    smallh[0, 1] = 1
+    smallh[1, 0] = -1
+    smallh[2, 3] = 1
+    smallh[3, 2] = -1
+
+    H[site:site+4, site:site+4] = 1*(math.pi)*smallh
+    return H
+
+
 def Xf(site, L):
     X = np.zeros((2*L, 2*L))
     smallh = np.zeros((4, 4))
@@ -65,6 +82,29 @@ def MBlock(eigenval):
             [np.sin(eigenval), np.cos(eigenval)],
         ), dtype=complex
     )
+
+
+def hop(site, L):
+    hop = np.zeros((2*L, 2*L), dtype=complex)
+    smallh = np.zeros((4, 4), dtype=complex)
+    smallh[0, 2] = 1
+    smallh[0, 3] = 1
+    smallh[1, 2] = -1
+    smallh[1, 3] = 1
+
+    smallh[2, 0] = -1
+    smallh[3, 0] = -1
+    smallh[2, 1] = 1
+    smallh[3, 1] = -1
+
+    # smallh[0, 1] = 1
+    # smallh[1, 0] = -1
+
+    # smallh[2, 3] = 1
+    # smallh[3, 2] = -1
+
+    hop[site:site+4, site:site+4] = 2*smallh * math.pi
+    return hop
 
 
 def rot_matrix(matrix):
@@ -115,16 +155,16 @@ def entang_entropy(correlation_matrix, L):
 
 
 def random_circuit(L, timesteps):
-    sites = list(range(L))
+    sites = list(range(0, L, 2))
     S_A = []
     M = correlation_mat(L)
     for i in range(timesteps):
         q = random.sample(sites, 1)[0]
         gate = random.sample(list(range(2)), 1)[0]
         if gate == 0:
-            small_r = rot_matrix(H1(q, L))
+            small_r = rot_matrix(hop(q, L))
         elif gate == 1:
-            small_r = rot_matrix(H1(q, L))
+            small_r = rot_matrix(hop(q, L))
         M = np.matmul(small_r, np.matmul(M, small_r.T))
 
         S_A.append(abs(entang_entropy(M, L)))
@@ -135,7 +175,7 @@ def random_circuit(L, timesteps):
 ####################################################
 
 
-N = 50
+N = 20
 tsteps = 1000
 # testgate = H1(0, N)
 # test_rotate = rot_matrix(testgate)

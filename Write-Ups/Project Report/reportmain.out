@@ -2,11 +2,30 @@
 \BOOKMARK [1][-]{section*.1}{Abstract}{section*.2}% 1
 \BOOKMARK [1][-]{section*.3}{Contents}{section*.2}% 3
 \BOOKMARK [1][-]{section*.4}{Introduction}{section*.2}% 4
-\BOOKMARK [1][-]{section*.5}{Qubit Systems}{section*.2}% 5
-\BOOKMARK [2][-]{section*.6}{Quantum Bits}{section*.5}% 6
-\BOOKMARK [2][-]{section*.7}{Quantum Circuits}{section*.5}% 7
-\BOOKMARK [2][-]{section*.9}{Entanglement in Qubit Systems}{section*.5}% 8
-\BOOKMARK [1][-]{section*.11}{Fermionic Systems}{section*.2}% 9
-\BOOKMARK [2][-]{section*.12}{Second Quantization and Indistinguishable Particles}{section*.11}% 10
-\BOOKMARK [2][-]{section*.13}{Entanglement in Fermionic Systems}{section*.11}% 11
-\BOOKMARK [1][-]{section*.14}{References}{section*.2}% 12
+\BOOKMARK [1][-]{section*.5}{INTRODUCTION}{section*.2}% 5
+\BOOKMARK [1][-]{section*.6}{Qubit Systems}{section*.2}% 6
+\BOOKMARK [2][-]{section*.7}{Qubit Systems}{section*.6}% 7
+\BOOKMARK [3][-]{section*.8}{Quantum Bits}{section*.7}% 8
+\BOOKMARK [3][-]{section*.9}{Quantum Circuits}{section*.7}% 9
+\BOOKMARK [1][-]{section*.11}{Fermionic Systems}{section*.2}% 10
+\BOOKMARK [2][-]{section*.12}{Fermionic Systems}{section*.11}% 11
+\BOOKMARK [3][-]{section*.13}{Second Quantization and Indistinguishable Particles}{section*.12}% 12
+\BOOKMARK [1][-]{section*.14}{Scrambling Dynamics}{section*.2}% 13
+\BOOKMARK [2][-]{section*.15}{Random Unitary Circuits}{section*.14}% 14
+\BOOKMARK [2][-]{section*.16}{Operator Spreading}{section*.14}% 15
+\BOOKMARK [2][-]{section*.17}{Operator Complexity and Entanglement Entropy}{section*.14}% 16
+\BOOKMARK [3][-]{section*.18}{Entanglement In Qubit Systems}{section*.17}% 17
+\BOOKMARK [3][-]{section*.19}{Entanglement In Fermionic Systems}{section*.17}% 18
+\BOOKMARK [3][-]{section*.20}{Entanglement Measures}{section*.17}% 19
+\BOOKMARK [1][-]{section*.21}{Simulating a Quantum Circuit}{section*.2}% 20
+\BOOKMARK [2][-]{section*.22}{Stabilizer Circuits}{section*.21}% 21
+\BOOKMARK [2][-]{section*.23}{Blake and Linden's Construction}{section*.21}% 22
+\BOOKMARK [2][-]{section*.24}{Free Fermion Circuits}{section*.21}% 23
+\BOOKMARK [1][-]{section*.25}{Results}{section*.2}% 24
+\BOOKMARK [2][-]{section*.26}{Stabilizer Circuits}{section*.25}% 25
+\BOOKMARK [2][-]{section*.27}{Non-interacting Fermion Circuits}{section*.25}% 26
+\BOOKMARK [3][-]{section*.28}{Non-Number Conserving Gates}{section*.27}% 27
+\BOOKMARK [3][-]{section*.29}{Number-Conserving Gates}{section*.27}% 28
+\BOOKMARK [1][-]{section*.30}{Discussion}{section*.2}% 29
+\BOOKMARK [1][-]{section*.31}{Conclusion}{section*.2}% 30
+\BOOKMARK [1][-]{section*.32}{References}{section*.2}% 31
