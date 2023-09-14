@@ -1,0 +1,127 @@
+\documentclass[aps]{revtex4-2}
+
+\input{preamble.tex}
+
+
+% \fancyheadoffset{-0.001\textwidth}
+% \pagestyle{fancy}
+\setlength{\textwidth}{7in}
+\setlength{\evensidemargin}{-0.2in}
+\setlength{\oddsidemargin}{-0.2in}
+\setlength{\headheight}{14pt}
+%\setlength{\headwidth}{6in}
+\setlength{\topmargin}{-0.5in}
+\setlength{\textheight}{8.4in}
+% \setlength{\baselineskip}{10pt}
+
+
+\begin{document}
+\includegraphics[width = \textwidth]{preface.pdf}
+\includegraphics[width = \textwidth]{Report_Latex_template__1_.pdf}
+\includegraphics[width = \textwidth]{ackno.pdf}
+% \includepdf[pages=-]{preface.pdf}
+
+\title{Quantum Scrambling}
+
+\author{Samuel A. Hopkins$^{1*}$}
+\affiliation{$^1$H. H. Wills Physics Laboratory, University of Bristol, Bristol, BS8 1TL, UK}
+\date{\today}
+\thanks{Email: cn19407@bristol.ac.uk\\
+Supervisor: Stephen R. Clark\\
+Word Count: 5569
+}
+\input{reportfiles/abstract.tex}
+\maketitle
+
+
+
+% \clearpage
+% \tableofcontents
+
+
+
+%%INTRODUCTION Outline:
+% Introduce quantum scrambling - short short description
+%where and why is it being studied 
+% Explore the limitations
+%Collect key results to simulate dynamics
+% 
+% \section{Report Plan}
+%     \subsection{Introduction}
+%         \begin{itemize}
+%             \color{ForestGreen}
+%             \item Introduce quantum scrambling with a short description
+%             \item Where and why is this being studied
+%             \item What are the uses and conclusions we can draw - state examples 
+%             \item What are our aims
+%             \item Outline the structure of the report
+%         \end{itemize}
+
+
+
+
+
+
+%Images
+% Random UNitary circuit
+
+
+
+
+
+\input{reportfiles/introduction.tex}
+
+
+
+
+\section{Quantum Information and Computation}
+
+
+\input{reportfiles/qubitsystems.tex}
+
+\section{Fermionic Systems}
+\input{reportfiles/fermionicsystems.tex}
+\section{Scrambling Dynamics}
+\input{reportfiles/quantumscrambling.tex}
+
+\section{Simulating a Quantum Circuit}
+
+\input{reportfiles/simulatingcircuits.tex}
+
+
+\section{Results}
+\input{reportfiles/results.tex}
+
+
+\section{Discussion}
+
+A consistent theme within the entanglement entropy results for non-interacting fermion circuits, is systems of this nature, will not reach a maximally entangled state. We argue that this comes as a result of the heavily constrained set of  gates, outlined in \refeq{numberpreservinggate}. Since this class of circuits can only be simulated using gates that are both non-interacting (no higher order terms) and particle number conserving, for the sake of operator complexity, we cannot expect a higher entanglement entropy saturation given that we immediately forbid an entire subspace, ($\{|00\rangle, |11\rangle\}$). In our circuit, if we start with a configuration in the odd parity subspace, ($\{|01\rangle$, $|10\rangle\}$), and only act on this subspace with particle conserving gates, then we can never enter into the even parity subspace and generate states, such as $|00\rangle$ and $|11\rangle$. This drastically reduces the number of given configurations of a time-evolved system and proposes an explanation as to how fermionic systems of this nature weakly entangle \footnote{A more quantitative explanation may come in the form of a combinatorial argument on the given configurations of state vectors or density matrices, but this lies outside the time-scale of this project.}.
+
+Another prominant feature in our fermionic circuits, is the rate of entanglement. Intuitively we would expect that longer range gates, and initial configurations that can generate fast scrambling, exhibit saturation at significally lower timesteps than shorter range gates or more structured configurations. This is clearly shown in Fig. (\ref{comp}), where the random circuit constructed from $G(i, j, k)$, saturates at a lower timestep, $t$ than the random circuit built from $G(i, j)$. In addition to this, for an intitial Fock state configuration, such as $|1, \dots, 1, 0, \dots, 0$, it is expected that a significant time in the random circuit is spent generating no entanglement (you cannot mix or create superpositions from states such as $|111\rangle$). Instead, the random circuit has to slowly degrade the domain wall, or `surface' of the fermionic state, i.e it has to create superpositions directly at the halfway modes, $|\dots, 1, 0, \dots$ in order to create entanglement.
+
+Clifford circuits provided an intuitive introduction into exactly solvable circuit models. We successfully reproduced the results from Blake and Linden 2020 \cite{Blake2020}, with the exception of our circuit saturating at $t \sim 11000$ as opposed to Blake and Linden's result of $t\sim 18000$. After correspondance with the author's we determined that the circuit was extremely sensitive to intial configurations and conditions, but nevertheless exhibit identical properties and scaling of operator space entanglement entropy.
+
+
+
+\section{Conclusion}
+We have explored super Clifford and non-interacting fermion systems through the lens of operator complexity and quantum scrambling.
+We verify that the `super Clifford' circuits constructed by Blake and Linden \cite{Blake2020} generate maximal entanglement entropy up to the Page value, in the space of opeartors with the $\{\mathbf{Z.H}, \mathbf{C3}, \mathbf{SWAP}\}$ gate set and that initially local operators do not exhibit scrambling effects in super Clifford circuits. 
+
+In non-interacting fermion circuits, we find that fermionic systems weakly entangle and do not saturate the Page value, due to the restriction to particle number conserving gates. In addition to this, fermionic systems that generate high amounts of entanglement entropy require are large number of modes and that the saturation rate of entanglement entropy is highly dependent on the initial configuration and the range of gates being used.
+
+An obvious extension to free-fermion circuits, is when the restriction of particle number conservation is lifted. However, this makes any interpretation of operator complexity increasingly difficult as it blurs the lines between the state-level and operator space descriptions. Nevertheless, it would be insightful to investigate methods to increase the saturation value of the operator space entanglement entropy in non-interacting fermion circuits. One proposed method is to change the geometry of the circuit being simulated via a random unitary circuit comprised only of fermionic SWAP gates. It is known and we have shown that SWAP gates do not affect the entanglement within systems directly, however we have also shown that the entanglement dynamics are sensitive to initial configurations. Such an extreme change to the inital configuration of the system may yield some interesting results.
+
+
+Further directions into the study of quantum scrambling, may require new models and techniques. Tensor network methods have been shown to be extremely powerful in simulating one-dimensional quantum systems \cite{Xu_2019} and a more recently developed class of circuits, known as dual unitary circuits have been shown to be exactly solvable models of non-equilibrium physics\cite{Suzuki_2022}. 
+
+
+
+
+\bibliographystyle{ieeetr}
+\bibliography{report_bibliography.bib}
+
+
+\includegraphics[width = \textwidth]{certi.pdf}
+
+
+\end{document}

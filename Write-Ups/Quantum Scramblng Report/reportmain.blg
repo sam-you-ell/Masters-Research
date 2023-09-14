@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: reportmain.aux
+The style file: ieeetr.bst
+Database file #1: reportmainNotes.bib
+Warning--entry type for "Note1" isn't style-file defined
+--line 1 of file reportmainNotes.bib
+Warning--entry type for "Note2" isn't style-file defined
+--line 2 of file reportmainNotes.bib
+Database file #2: report_bibliography.bib
+Warning--empty institution in Terhal2001
+Warning--empty journal in Xu2022
+Warning--empty journal in knillGottesman
+Warning--empty journal in Jozsa2008
+Warning--empty journal in Blake2020
+Warning--empty institution in Bravyi2000
+You've used 44 entries,
+            1876 wiz_defined-function locations,
+            728 strings with 9950 characters,
+and the built_in function-call counts, 8931 in all, are:
+= -- 844
+> -- 391
+< -- 0
++ -- 148
+- -- 104
+* -- 608
+:= -- 1300
+add.period$ -- 48
+call.type$ -- 44
+change.case$ -- 40
+chr.to.int$ -- 0
+cite$ -- 50
+duplicate$ -- 450
+empty$ -- 870
+format.name$ -- 104
+if$ -- 2157
+int.to.chr$ -- 0
+int.to.str$ -- 44
+missing$ -- 36
+newline$ -- 139
+num.names$ -- 42
+pop$ -- 171
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 319
+stack$ -- 0
+substring$ -- 361
+swap$ -- 158
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 6
+while$ -- 74
+width$ -- 46
+write$ -- 376
+(There were 8 warnings)

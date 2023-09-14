@@ -1,0 +1,111 @@
+\subsection{Random Unitary Circuits}
+To study the generic quantum many-body systems, random unitary circuits provide a minimally structured model that can emulate the required dynamics of generic or `chaotic' unitary evolutions.\cite{https://doi.org/10.48550/arxiv.2210.10129}.
+In the study of operator hydrodynamics The set-up is a chain of $L$ spins, labelled as $q = 0, 1, \dots, L-1$ each with their respective local dimension $h$ and is subject to a random unitary circuit $\mathcal{U}$. The total circuit is constructed per timestep, by acting with a layer of 2-qubit unitaries on evenly-bonded spins, followed by a layer of unitaries applied to odd-bonded spins. More formally, each timestep in the circuit corresponds to an action by $U = U_{\text{even}} U_{\text{odd}}$, where $U_{\text{even}}$ is given by the tensor product of individual 2-qubit unitaries $U_{q, q+1}$ applied to all evenly bonded sites, $q, q+1$ for $q$ even,  and $U_{\text{odd}}$ is given by the tensor product of individual 2-qubit unitaries $U_{q, q+1}$ applied to all odd bonded sites, $q, q+1$ for $q$ odd. Each 2-qubit unitary acts on nearest neighbour spins, and is drawn from the uniform (Haar) probability distribution on the unitary group $U(4)$ or from a specific subgroup \cite{hunterjones2018operator}.
+For our purposes, we require a simpler model. For a system of $L$ qubits, each time step corresponds to a randomly drawn unitary acting on a randomly drawn qubit, $q_i$ and it's nearest neighbour, $q_{i+1}$.
+
+% such as the Clifford group, $\mathcal{C} \equiv \{H, CNOT, R\}$.
+
+To extract solvable dynamics and utilise well-estabilished measures, information about the state of the system is encoded as strings of operators. A convinient basis to work with in qubit systems is found in the set of Pauli matrices.
+For example, a system with $L = 5$ spins could be represented by the operator string $\mathcal{O} = I \otimes I \otimes P_i \otimes I \otimes I$, where $P_i$ is an arbitrary Pauli matrix. An operator of this form is a \textit{local} operator, as it only acts non-trivially on a single site. 
+For a system subject to generic unitary evolution , we expect that information encoded by an initially simple product operator to spread over the large number of degrees of freedom becoming highly complicated sum of global operators, such that they have support over the entire system. This process is known as Quantum Scrambling, and can be regarded as the combined notion of \textit{Operator Spreading} and a growth in \textit{Operator complexity}. 
+
+\subsection{Operator Spreading} 
+To give a picture of operator spreading, this section will primarily focus on the evolution of Pauli strings. Starting from some initially local product operator, such as 
+$\mathcal{O} = \mathbb{1} \otimes\dots \otimes \mathbb{1} \otimes \sigma_{x} \otimes \mathbb{1} \otimes \dots \otimes \mathbb{1}$. This system will evolve via $|\psi (t)\rangle = U |\psi_0\rangle$ and the operator string will evolve via the Heisenberg evolution of operators, 
+\begin{equation}\label{heisenberg_evolution}
+    \mathcal{O}(t) = U(t) \mathcal{O} U^{\dagger}(t).
+\end{equation}
+ Following this evolution, the local operator with minimal support, $O_j$ has evolved to $O_j(t)$ with support over a
+large region of sites \cite{Khemani_2018}. Operators that grow in this way, will spread ballistically \cite{Roberts_2015, Lieb:1972wy, Schuster_2022} and are often
+characterised by the out-of-time ordered correlator (OTOC) \cite{Xu2022} and the square-commutator\cite{Blake_2018}. This also gives an
+intuitive picture of operator spreading, with the squared commutator defined as 
+\begin{equation}
+  C(t) = \langle [O(t), V_i][O(t), V_i]^{\dagger}\rangle
+\end{equation}
+where $V_i$ is a static local operator at site $i$ \cite{https://doi.org/10.48550/arxiv.1804.08655}. Then at $t=0$, $O(t)$
+acts on a single site or a finite region of sites, such that it commutes with the static operator, $V_i$ and $C(t) = 0$.
+Once the operator spreads, and becomes more non-local, the commutator increases as it's support overlaps with $V_i$.
+
+
+\subsection{Operator Complexity and Entanglement Entropy}
+A key component in quantum supremacy lies in a quantum algorithm's ability to utilise the abudant \textit{entanglement} within a system. In simple bipartite systems, where $\mathcal{H}_{AB} = \mathcal{H}_{A}\otimes \mathcal{H}_{B}$, the state of this system, $|\Psi_{AB}\rangle \in \mathcal{H}_{AB}$ is 
+said to be entangled if and only if the state cannot be written in product form, $|\Psi_{AB}\rangle =  |\Psi_{A}\rangle \otimes |\Psi_{B}\rangle$, where $|\Psi_{A}\rangle$ and $|\Psi_{B}\rangle$ are the two vectors corresponding to the Hilbert spaces of each subsystem. If the state $|\Psi_{AB}\rangle$ is not entangled, then it is a product state and is said to be separable \cite{Horodecki_2009}.
+ 
+
+\subsubsection{Entanglement In Qubit Systems}
+Qubit systems provide the simplest decription of entangled states in bipartite systems. For a system of two qubits, there exist 4 specific maximally entangled configurations, called Bell states: 
+
+\begin{align}\label{bellpair}
+    |\Phi^{+}\rangle = \frac{|00\rangle + |11\rangle }{\sqrt{2}}, && |\Phi^{-}\rangle = \frac{|00\rangle - |11\rangle }{\sqrt{2}},
+    \\
+    |\Psi^{+}\rangle = \frac{|01\rangle + |10\rangle }{\sqrt{2}}, && |\Psi^{-}\rangle = \frac{|01\rangle - |10\rangle }{\sqrt{2}}.
+\end{align}
+We can verify that the state, $|\Phi^{+}\rangle $ is an entangled state by writing, 
+\begin{align}\label{entangle}
+    |{\Phi}^+\rangle &=  \left[ \alpha_0 |0\rangle + \beta_0|1\rangle\right] \otimes \left[\alpha_1 |0\rangle + \beta_1|1\rangle\right], \\
+    &=                      \alpha_0\beta_0 |00\rangle + \alpha_0\beta_1|01\rangle + \alpha_1\beta_0|10\rangle + \alpha_1\beta_1|11\rangle.
+\end{align}
+We require that the $\alpha_0$ or $\beta_1$ terms must be zero in order to ensure the $|01\rangle$, $|10\rangle$ vanish. However, this would make the coefficients of the $|00\rangle$ or $|11\rangle$ terms zero, breaking the equality. Thus, $|{\bm\Phi}^+\rangle$ cannot be written in product form and is said to be entangled.
+
+\subsubsection{Entanglement In Fermionic Systems}
+
+For a system of indistinguishable particles, each with only one spin degree of freedom (effectively spinless), entanglement can emerge as states analgous to a Bell state (\refeq{bellpair}). Considering a system of 2 modes, occupied by a single indistinguishable particle, a fermion. The state of this system can be expressed as, 
+\begin{equation}
+    |\psi_{f}\rangle = \frac{|0_{A}\rangle |{1_{B}}\rangle + |1_{A}\rangle |0_{B}\rangle}{\sqrt{2}}.
+\end{equation}
+Where $A, B$ `label' the two respective modes, and are included to express the state of this system intuitively.
+One can easily verify that this state is entangled, as outlined in (\refeq{entangle}), as it cannot be expressed in product form.  However, this definition of entanglement is of little use when working with larger multi-fermion systems. We require entanglement measures to make qualitative statements on the complexity of operators and the systems they represent \cite{Eckert_2002}.
+
+\subsubsection{Entanglement Measures}
+
+For many-body systems, the definition of entanglement cannot be directly used to detect entanglement between states. Instead, entanglement measures provide a useful tool for detecting and analysing entanglement dynamics. In the case of distinguishable particles, one such entanglement measure is the \textit{Schmidt Rank}, derived from the \textit{Schmidt Decomposition}. The Schmidt decomposition states for any state vector, $|\Psi\rangle \in \mathcal{H}$ where $\mathcal{H} = \mathcal{H}_{A} \otimes \mathcal{H}_{B}$, there exists an orthonormal basis $\{|a_i\rangle \otimes |b_j\rangle\}$ such that,
+\begin{equation}\label{Schmidt}
+    |\Psi\rangle = \sum_{i = 1}^{d_A} \sum_{j = 1}^{d_B} D_{ij} |a_i\rangle \otimes |b_j\rangle.
+\end{equation}
+Where $d_A$ and $d_B$ are the dimensions of the respective subsystems, $A$ and $B$. The matrix $D$ is a matrix of coefficients with the rank being the Schmidt rank. If the Schmidt rank is of rank one, then the state $|\Psi\rangle$ is a product state \cite{Horodecki_2009}. 
+
+In systems of indistinguishable particles, a similar measure exists in the form of the \textit{Slater Rank criterion}. The Slater Decomposition states that for a system of two fermions, in a $N$-dimensional  space specified by the state vector,
+\begin{equation}\label{Slater}
+    |\Psi\rangle = \sum_{i, j = 1}^N \omega_{ij} a^{\dagger}_{i}a^{\dagger}_j|\Omega\rangle.
+\end{equation}
+There exists a unitary transformation, $U$ that block diagonalises the coefficient matrix $\omega$. More explicitly,
+\begin{align*}
+    \omega' = U\omega U^{T} = \text{diag}[Z_0, Z_1, \dots, Z_r], && Z_i = 
+    \begin{bmatrix}
+        0 & z_i \\
+        -z_i & 0
+    \end{bmatrix}.
+\end{align*}
+Where $z_i >0$ $ \forall i \in 1, \dots, r$ and $Z_0$ is an all-zero matrix of size $(N \times 2r) \times (N - 2r)$. The Slater rank is then the number of non-vanishing block matrices \cite{Schliemann_2001}.
+
+Entanglement measures such as the Schmidt and Slater rank, provide useful criterion for entanglement amongst state vectors. However, our aim is to analyse operator complexity signified by the entanglement in operator space. Thus, entanglement measures such as (\refeq{Schmidt}) and (\refeq{Schmidt}), do not provide the adequate tools to analyse the dynamics operator complexity in exactly solvable models. Instead we utilise an entropy entanglement measure, known as the Von Neumann entropy. For a quantum system described by the density matrix, $\rho$, the the Von Neumann entropy, $S$, is defined in general as, 
+\begin{equation}
+    S = -\text{Tr}(\rho \ln \rho).
+\end{equation}
+To determine the entanglement entropy, a bipartition is introduced into the system, so that the entanglement entropy describes to which degree the two subsystems that have been partition are entangled. The entanglement entropy is then, 
+\begin{equation}\label{entrop}
+    S_A = -\text{Tr}(\rho_A \ln \rho_A) = -\text{Tr}(\rho_B \ln \rho_B).
+\end{equation}
+Where $\rho_A$ , $\rho_B$ describe the subsystems, $A, B$ \cite{PhysRevA.51.2738}.
+
+
+
+
+
+% This measure provides a nice introduction to how entanglement measures are constructed in bipartite systems, but are not fit for the purposes of this project. A full description can be found in Appendix (X). 
+% For bipartite systems of distinguishable particles, the Schmidt rank, derived from the Schmidt decomposition provides a method in determining whether a many-body state is entangled. 
+
+
+
+
+
+
+
+
+
+
+
+% \input{reportimages/randomcircuit.tex}
+% Quantum scrambling is the process in which local information encoded by a simple product operator is rapidly spread over a large number of degrees of freedom 
+
+% The information becomes highly non-local and the initial simple product operator becomes a complicated sum of product operators. 

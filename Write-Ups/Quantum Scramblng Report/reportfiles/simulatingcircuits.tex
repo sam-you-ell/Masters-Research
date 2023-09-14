@@ -1,0 +1,249 @@
+
+%Computational complexity
+
+The size of quantum systems presents computational challenges due to the exponential size of the Hilbert space. A system of $L$ particles 
+would have a $2^L$ dimensional Hilbert space. Simulating a quantum circuit of this size, requires the construction of this exponentially large 
+Hilbert space, and since quantum dynamics typically utilize the full $2^L$ dimensional space, a classical computer can typically only simulate 
+$L = 10-20$ particles in a given system. Thus, circuits that emulate quantum dynamics and can be simulated efficiently on a classical computer, provide
+immensely useful tools in the study of quantum systems. In one dimensional systems, there are three known classically simulable or exactly solvable models; 
+Clifford circuits \cite{knillGottesman}; matchgates \cite{Jozsa2008} or non-interacting fermion circuits\cite{Terhal2001}; and dual-unitary circuits \cite{Suzuki_2022}. We pin our focus on the first two, Clifford circuits and non-interacting or free fermion circuits.
+
+\subsection{Clifford Circuits}
+
+The main aim of a classically simulable circuit, is to reduce the total size of the system. Clifford circuits achieve this feat by 
+abandoning the state-level description in favour of the operators that \textit{stabilize} them. More explicitly, for an arbitrary quantum 
+state vector, $|\psi\rangle$, this state is \textit{stabilized} by an operator $S$ if $|\psi\rangle$ is an eigenvector of $S$ with eigenvalue 1: $S |\psi\rangle = |\psi\rangle$ \cite{stabilizercodes}.
+Where $S$ is an $L$ qubit string of tensored Pauli operators. To simulate the time evolution of this system, only the Heisenberg evolution of stabilizers, $U(t)SU(t)^{T} \to S(t) $ needs to be simulated which can be achieved in polynomial time if $U(t)$ consists solely of gates from the Clifford group. This comes as a result of the structure of the Clifford group, as any product Pauli operator under conjugation by a Clifford unitary will always be mapped to another product of Pauli operators, by definition.
+%Clifford map pauli prods to pauli prods
+
+To implement this numerically, a $(L \times 2L)$ check matrix or stabilizer tableau is created, to encode the stabilizers and their dynamics. The stabilizer tableau, $\mathcal{M}$ is constructed for $L$ stabilizers, which act stabilize a state vector for $L$ qubits, ordered as $q_1, \dots, q_i, \dots, q_L$. The $ith$ row is constructed as follows: if the stabilizer $S_i$ acts with the identity on the $j$th qubit, it's value in the stabilizer tableau is 0. If $S_i$ acts with $\sigma_{x}$, on the $j$th qubit, the $[i,j]$ value in $\mathcal{M}$ is 1, if $S_i$ acts with $\sigma_{y}$, on the $j$th qubit, the $[i,j]$ and $[i, j+L]$ values in $\mathcal{M}$ are 1. If $S_i$ acts with $\sigma_{z}$, on the $j$th qubit, the $[i,j+L]$ value in $\mathcal{M}$ is 1. As an example, consider the Pauli string $ \mathbb{1} \otimes \sigma_{y} \otimes \sigma_{x} \otimes \sigma_{z}$, which will be encoded in a stabilizer tableau as, 
+\begin{align*}
+     \mathbb{1} \otimes \sigma_{y} \otimes \sigma_{x} \otimes \sigma_{z} \to [0 1 1 0| 0 1 0 1].
+\end{align*}  
+While Clifford circuits offer no constraint on the amount of entanglement within a system at a state-level description, we cannot expect the same for an operator-level description.  
+Since gates from the Clifford group only map products of Pauli operators to products of Pauli operators, we can expect no operator complexity and hence no entanglement in operator space within Clifford circuits.
+
+\subsection{Blake and Linden's Construction}
+
+Blake and Linden \cite{Blake2020} introduce a family of circuits that recover operator complexity on the space spanned by Pauli operators.
+They present a gate-set of 'super-Clifford operators' that generate a near-maximal amount of operator entanglement
+within the Pauli operator space, called super-Clifford circuits, when under time-evolution. These super-Clifford operators
+remain classically simulable, via an extension of stabilisers to operator space, called 'super-stabilisers'.
+Super-Clifford operators 'act' on Pauli operators, via conjugation in the Heisenberg picture.
+The first super-Clifford operator in the gate set is denoted as ${\bf Z.H}$, which is identified with a on Pauli operators
+conjugation by a Phase gate, $T$:
+\begin{align}\label{phasegate}
+  T^{\dagger} X T = \frac{X - Y}{\sqrt{2}}, &  & T^{\dagger} Y T = \frac{X + Y}{\sqrt{2}}.
+\end{align}
+Following this, the operators, $X$ and $Y$ can be changed to a state-like representation, with
+$X$ denoted as $[{\mathbf 0}\rangle$ and $Y$ denoted as $[{\mathbf 1}\rangle$. Then the action of $\bf Z.H$
+can be written as,
+\begin{align}
+  {\bf Z.H}[{\bf 0}\rangle = \frac{[{\bf 0}\rangle - [{\bf 1}\rangle}{\sqrt{2}}, \\
+  {\bf Z.H}[{\bf 1}\rangle = \frac{[{\bf 0}\rangle + [{\bf 1}\rangle}{\sqrt{2}}.
+\end{align}
+The second gate in the set of super-Clifford operators, is the {\bf SWAP} gate,
+\begin{equation}
+  \text{\bf SWAP} [{\bf 01}\rangle = [{\bf 10}\rangle,
+\end{equation}
+formed from the regular 2-qubit SWAP gate, that swaps two nearest neighbour qubits. It conjugates
+Pauli operators in the following way
+\begin{equation}
+  \text{SWAP}^{\dagger} X_1Y_2 \text{SWAP} = Y_1X_2.
+\end{equation}
+The third gate, denoted $\bf C3$, acts as a combination of controlled-$\text{\bf Y}$ super-operators,
+\begin{align}
+  {\bf C3} [{\bf 000}\rangle=  {\bf CY}_{12}{\bf CY}_{13} [{\bf000}\rangle = [{\bf 000}\rangle, \\
+  {\bf C3} [{\bf 100}\rangle=  {\bf CY}_{12}{\bf CY}_{13} [{\bf100}\rangle = -[{\bf 111}\rangle.
+\end{align}
+These three super-operators form the gate set $\{ {\bf SWAP}, {\bf Z.H}, {\bf C3}\}$, which generates entanglement
+through unitary evolution in operator space, as this gate set maps Pauli strings to a linear superposition of Pauli strings.
+Despite the fact a simple string of Pauli operators can evolve into a sum of potentially exponential operator strings,
+the dynamics can be computed classically by extending the formalism of stabilizer states to operator space. 
+
+To calculate the entanglement entropy from the stabilizer tableau, a submatrix, $\mathcal{M}_A$ must be formed by keeping the first $2p$ rows in $\mathcal{M}$, where $p$ is the number of qubits in $\mathcal{M}_A$. The entanglement entropy is then given as, 
+\begin{equation}
+    S_A = I_A - p.
+\end{equation}
+Where $I_A$ is the rank of the submatrix $\mathcal{M}_A$.
+
+Following this, Blake and Linden showed that the gate set was capable of generating near-maximal amounts
+of entanglement (slightly less than the Page value \cite{Page_1993}) among Pauli strings on a chain of 120 qubits,
+quantified by the von Neumann entropy. This was only shown for operators with global support, and therefore
+shows no notion of operator spreading or entanglement growth in local operators. 
+
+
+
+
+\subsection{Non-Interacting Fermion Circuits}
+
+The second class of classically simulable circuits first appeared as Matchgate circuits \cite{Valiant2001QuantumCT}, which consist solely of 2-qubit gates, $U_{M}$, of the form, 
+\begin{align}\label{matchgate}
+    U_M = \begin{pmatrix}
+        p & 0 & 0 & q \\
+        0 & w & x & 0 \\
+        0 & y & z & 0 \\
+        r & 0 & 0 & s
+    \end{pmatrix}, 
+    &&
+    U^1_M =\begin{pmatrix}
+        p & q \\
+        r & s
+    \end{pmatrix},
+    &&
+    U^2_M =\begin{pmatrix}
+        w & x \\
+        y & z
+    \end{pmatrix}
+\end{align}
+Where $U^1_M$, $U^2_M$ are elements of the special unitary group, $SU(2)$ and act on the even parity subspace ($\{|00\rangle, |11\rangle\}$) and the odd parity subspace ($\{|01\rangle$, $|10\rangle\}$).
+Systems that evolve via unitary evolution constructed from gates as in(\refeq{matchgate}),  are originally known as Matchgate circuits, and have been shown to be simulated efficiently on a classical computer \cite{Jozsa_2008}. Work by Terhal and DiVincenzo \cite{Terhal2001} related matchgate circuits to a model of non-interacting fermions in one dimension by mapping a system of $n$ qubits, to a system of $n$ local fermionic modes via the Jordan-Wigner transformation. This system is said to be \textit{non-interacting}, if the Hamiltonian that mediates nearest-neighbour interactions is quadratic in the fermionic creation and annihilation operators. 
+
+\subsubsection{A Fermionic Circuit}
+To preserve the number of fermions, such that elementary gates cannot create or annihilate on a fermionic mode, the circuit must act on the vacuum as, $U|\Omega\rangle = |\Omega\rangle$. Hence, a circuit that acts on $L$ local fermionic modes, must consist solely of elementary gates $U = \exp(iH_g)$, where the gate Hamiltonian is written as,
+\begin{equation}
+    H_g = \alpha_{i i} a^{\dagger}_i a_i + \alpha_{j j} a^{\dagger}_j a_j  + \alpha_{i j} a^{\dagger}_i a_j + \alpha^{*}_{i j} a^{\dagger}_j a_i
+\end{equation}
+The coefficients $\alpha_{i i}, \alpha_{j j}, \alpha_{i j}$ are considered to form an $L\times L $ matrix, $\mathbf{\alpha}$ which is non-zero for the $2\times 2$ subblock involving modes $i$ and $j$. When expressed in matrix form as in(\refeq{matchgate}), is of the form, 
+\begin{equation}\label{numberpreservinggate}
+    U_M = \begin{pmatrix}
+        p & 0 & 0 & 0 \\
+        0 & w & x & 0 \\
+        0 & y & z & 0 \\
+        0 & 0 & 0 & s
+    \end{pmatrix}.
+\end{equation}
+A circuit, $U_C$ that is polynomial in the number of gates, acts on an arbitrary mode as, 
+\begin{equation}
+    U a_i^{\dagger} |\Omega\rangle = U a_i^{\dagger}U^{\dagger} U |\Omega\rangle  = U a_i^{\dagger}U^{\dagger} |\Omega\rangle 
+\end{equation}
+To simulate this circuit, we switch to the alternative and more general description offered by Majorana fermions, $c_i$. An elementary gate in this description is of the form, 
+\begin{equation}\label{majorana}
+    H_g = \frac{i}{4} \sum_{jk} \alpha_{jk} c_k c_l
+\end{equation}  
+Again, the coefficients $\alpha_{jk}$ form a $2*L \times 2*L$ matrix, which is non zero for a $4\times 4$ subblock that mediates interactions between modes $j$ and $k$. Then an elementary gate formed from  acts by conjugations on mode $j$ as 
+\begin{equation}\label{majaction}
+    U c_j U^\dagger = \sum_{j} R_{jk} c_k
+\end{equation}
+where $R$ is a special orthogonal matrix, with determinant $+1$, ($R \in SO(2L)$). Then, the total circuit, is determined by the matrix multiplication of the rotation matrices constructed from each individual gate, reducing the system size from $2^L \times 2^L$ to $2L \times 2L$ in the number of qubits, $L$. Simulations of such a circuit require only polynomial effort and may be efficiently simulated given that the circuit, $U$, contains a polynomial number of gates. 
+
+
+\subsubsection{Determination of the Rotation Matrices}
+To determine the rotation matrix from some initial gate Hamiltonian, these steps must be followed:
+\begin{itemize}
+    \item[I.] Construct the $2L\times 2L$ real antisymmetric matrix, $\alpha$ is constructed from a given gate Hamiltonian.
+    \item[II.] Block diagonalise $\alpha$ via the real Schur decompostion \cite{horn_johnson_1985}, which states for any real anti-symmetric matrix, there exists an orthogonal matrix $W$, such that, 
+    \begin{align}
+        W^{T} \alpha W = \begin{pmatrix}
+            0 & \lambda_1 & &&\\
+            - \lambda & 0 &&&\\
+            && \ddots&&&\\
+            &&& 0 & \lambda_1 \\
+            &&& - \lambda & 0 
+        \end{pmatrix}
+    \end{align}
+    Where $\pm \lambda$ are the eigenvalues of the matrix $i\alpha$. 
+    \item[III.] Construct the matrix, $S$ from the eigenvalues of $\alpha$:
+    \begin{equation}
+    {\renewcommand{\arraystretch}{1.2}
+        S =\begin{pmatrix}
+            \cos\lambda_1 & -\sin\lambda_1 \\
+            \sin\lambda_1 & \cos\lambda_1 \\
+            && \ddots&&&\\
+            &&&  \cos\lambda_L & -\sin\lambda_L \\
+            &&& \sin\lambda_L & \cos\lambda_L
+        \end{pmatrix}}
+    \end{equation}
+
+    \item[IV.] The rotation matrix, $R$, is then given by, $R = W^{T} S W$.
+\end{itemize}
+
+\subsubsection{Correlation Matrices}
+To determine the entanglement entropy of a bipartite fermionic system, the correlation matrix, $M$ needs to be constructed from the ground state. For two Majorana operators, $c_j$ and $c_k$, the correlation matrix, $M$, is
+\begin{equation}
+    M_{jk} \equiv \frac{i}{2}\langle\psi_{GS} | [c_j, c_k] |\psi_{GS}\rangle
+\end{equation}
+Where $|\psi_{GS}\rangle$ is the ground state of the system and depends on the initial configuration of modes.
+By expressing the Majorana operators in terms of the canonical fermionic creation and annihiliation operators, we can deduce the form of the correlation matrix from the action of these operators on a given Fock state. For a system with all modes unoccupied, $|\psi_{GS}\rangle$ is the vacuum state, $|\Omega\rangle$ and results in a correlation matrix of the form, 
+\begin{equation}\label{vac}
+    M^{\text{vac}} = 
+            \begin{pmatrix}
+            & -\sigma_z &  &\\
+             && -\sigma_z &\\
+           & && \ddots&\\
+           & &&& -\sigma_z  \ \
+        \end{pmatrix}
+\end{equation}
+Written concisely in terms of Pauli matrices and the $n\times n$ Identity matrix as, $M^{\text{vac}} = -(I_n \otimes \sigma_{z})$. For a system with $L$ modes occupied on every other site, e.g a Fock state of $|1, 0, 1, 0 \dots \rangle$, which we will call a half filled state,  the correlation matrix takes the form, 
+\begin{align}\label{half}
+        M^{\text{half}} = 
+        \begin{pmatrix}
+            & \sigma_z &  &\\
+             && -\sigma_z &\\
+           & && \sigma_z&\\
+           & &&& \ddots  \ \
+        \end{pmatrix}
+    \end{align}
+
+For a system with $L$ modes all occupied until the $L/2 $th mode, that corresponds to the initial fock state of $|1, \dots, 1, 0, \dots, 0 \rangle$, which we will call the `Block' state,  the correlation matrix, $M^{\text{block}}$, takes the form, 
+\begin{align}\label{block}
+        M^{\text{block}} = 
+        \begin{pmatrix}
+            & \sigma_z &  &\\
+             && \ddots &\\
+           & && \sigma_z&\\
+           & &&& -\sigma_z & \\
+           & &&&& \ddots & \\
+           &&&&&&-\sigma_z
+        \end{pmatrix}
+    \end{align}
+The correlation matrix for an evolved system, $M = \langle U^{\dagger} c_j c_k U\rangle$ may be transformed via Eq. (\refeq{majaction}). Then to simulate a quantum circuit, we construct a correlation matrix to evolve via a random unitary circuit which has been transformed into a rotation matrix, 
+\begin{align}
+    M_{ij} &=  \frac{i}{2}\langle\psi_{GS} |U^{\dagger} [c_j, c_k] U|\psi_{GS}\rangle \\
+    &= \sum_{r s} R_{jr}R_{ks}\langle \psi_{GS} | [c_r, c_s]| \psi_{GS} \rangle.
+\end{align}
+
+\subsubsection{Calculating the Entanglement Entropy}
+
+The entanglement entropy is computed from the correlation matrix, by taking the submatrix, $M_A$ that bipartitions the system. Then $M_A$ must be block-diagonalised, such that the eigenvalues, $\mu_i$ of the $2\times 2$ blocks within $M_A$ relate to the eigenvalues, $p_i$,  of the reduced density matrix (\refeq{entrop}) via, 
+\begin{equation}
+    p_i = \frac{|\mu_i| + 1}{2}.
+\end{equation}
+The entanglement entropy may be calculated via the formula for the Shannon entropy, 
+\begin{equation}
+    S_A = \sum_{i} -p_i \log_2p_i - (1-p_i) \log_2(1-p_i).
+\end{equation}
+
+
+\subsubsection{Fermionic Gates}
+To create non-trivial gates from creation and annihilition operators, it is useful to look at specific mappings from states to some superposition of states. 
+The non-interacting fermion circuits are constructed from the gates, $G(i, j)$ and $G(i, j, k)$. These are particle number conserving gates, such that they do not create or annihilate particles within the system and are of the form, (\refeq{numberpreservinggate}). The action of $G(i, j)$ on two modes, can be expressed as, 
+\begin{align*}
+    G(i, j) |0, 1 \rangle \to |0, 1\rangle + |1, 0\rangle. \\
+    G(i, j) |1, 0 \rangle \to |1, 0\rangle + |0, 1\rangle.
+\end{align*}
+We restrict $G(i, j)$ to only act on nearest neighbour (n.n) modes, such that it can be expressed in terms of fermionic operators as,
+\begin{equation}
+    G(i, i+1) = \frac{\pi}{2}(a^{\dagger}_{i}a_{i} + a^{\dagger}_{i+1}a_{i+1} + a^{\dagger}_{i}a_{i+1} + a^{\dagger}_{i+1}a_{i})
+\end{equation}
+The 3-site gate, $G(i, j, k)$ is also restricted to only act on next nearest-neighbour modes. It's action can be expressed as, 
+\begin{align*}
+    G(i, j, k) |001\rangle\to |001\rangle + | 010\rangle + |100\rangle, \\
+    G(i, j, k) |010\rangle\to |001\rangle + | 010\rangle + |100\rangle, \\
+    G(i, j, k) |100\rangle\to |001\rangle + | 010\rangle + |100\rangle.
+\end{align*}
+In terms of fermionic operators(up to some coefficient), 
+\begin{align*}
+    G(i, i+1, i+2) = &a^{\dagger}_{i}a_{i} + a^{\dagger}_{i+1}a_{i+1} + a^{\dagger}_{i+2}a_{i+2} \\
+    + &a^{\dagger}_{i}a_{i+1} +  a^{\dagger}_{i}a_{i+2} + a^{\dagger}_{i+1}a_{i}\\  + & a^{\dagger}_{i+2}a_{i} + a^{\dagger}_{i+2}a_{i+1} a^{\dagger}_{i+1}a_{i+2}. 
+\end{align*}
+The fermionic swap gate from Bravyi and Kiteav \cite{Bravyi2000} also served as a testbed for building the simulated circuit, but similar to the super-clifford circuits, it provided no entanglement within the system and is omitted from the simulations. For completeness, it's definition is given as, 
+\begin{equation}
+    SWAP_{F} = I - a^{\dagger}_{i}a_{i} - a^{\dagger}_{i+1}a_{i+1} + a^{\dagger}_{i+1}a_{i} + a^{\dagger}_{i}a_{i+1}.
+\end{equation}
+
+% How is it classically simulable
+% How can we construct the R matrix
+% Some examples of familiar and non-trivial gates with their mappings
+% Map to majorana system for simulation, what do the gates look like now?
+

@@ -1,0 +1,30 @@
+\BOOKMARK [0][-]{section*.2}{Quantum Scrambling}{}% 2
+\BOOKMARK [1][-]{section*.1}{Abstract}{section*.2}% 1
+\BOOKMARK [1][-]{section*.3}{Introduction}{section*.2}% 3
+\BOOKMARK [1][-]{section*.4}{Quantum Information and Computation}{section*.2}% 4
+\BOOKMARK [2][-]{section*.5}{Qubit Systems}{section*.4}% 5
+\BOOKMARK [3][-]{section*.6}{Quantum Bits}{section*.5}% 6
+\BOOKMARK [3][-]{section*.7}{Quantum Circuits}{section*.5}% 7
+\BOOKMARK [1][-]{section*.9}{Fermionic Systems}{section*.2}% 8
+\BOOKMARK [2][-]{section*.10}{Second Quantization and Indistinguishable Particles}{section*.9}% 9
+\BOOKMARK [3][-]{section*.11}{Jordan-Wigner Transformation}{section*.10}% 10
+\BOOKMARK [1][-]{section*.12}{Scrambling Dynamics}{section*.2}% 11
+\BOOKMARK [2][-]{section*.13}{Random Unitary Circuits}{section*.12}% 12
+\BOOKMARK [2][-]{section*.14}{Operator Spreading}{section*.12}% 13
+\BOOKMARK [2][-]{section*.15}{Operator Complexity and Entanglement Entropy}{section*.12}% 14
+\BOOKMARK [3][-]{section*.16}{Entanglement In Qubit Systems}{section*.15}% 15
+\BOOKMARK [3][-]{section*.17}{Entanglement In Fermionic Systems}{section*.15}% 16
+\BOOKMARK [3][-]{section*.18}{Entanglement Measures}{section*.15}% 17
+\BOOKMARK [1][-]{section*.19}{Simulating a Quantum Circuit}{section*.2}% 18
+\BOOKMARK [2][-]{section*.20}{Clifford Circuits}{section*.19}% 19
+\BOOKMARK [2][-]{section*.21}{Blake and Linden's Construction}{section*.19}% 20
+\BOOKMARK [2][-]{section*.22}{Non-Interacting Fermion Circuits}{section*.19}% 21
+\BOOKMARK [3][-]{section*.23}{A Fermionic Circuit}{section*.22}% 22
+\BOOKMARK [3][-]{section*.24}{Determination of the Rotation Matrices}{section*.22}% 23
+\BOOKMARK [3][-]{section*.25}{Correlation Matrices}{section*.22}% 24
+\BOOKMARK [3][-]{section*.26}{Calculating the Entanglement Entropy}{section*.22}% 25
+\BOOKMARK [3][-]{section*.27}{Fermionic Gates}{section*.22}% 26
+\BOOKMARK [1][-]{section*.28}{Results}{section*.2}% 27
+\BOOKMARK [1][-]{section*.34}{Discussion}{section*.2}% 28
+\BOOKMARK [1][-]{section*.35}{Conclusion}{section*.2}% 29
+\BOOKMARK [1][-]{section*.36}{References}{section*.2}% 30
