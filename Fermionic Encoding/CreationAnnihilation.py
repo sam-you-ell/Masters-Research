@@ -82,10 +82,7 @@ def majorana(L, j, even):
     sector is indexed by 2j+1
     """
     m = 2*L
-    c = matrix = lil_matrix((2**m, 2**m))
-    if even is True:
-        c
-
+    c = lil_matrix((2**m, 2**m))
     return creation(L, j) + creation(L, j).transpose() if even is True else -1j*(creation(L, j).transpose() - creation(L, j))
 
 
@@ -103,10 +100,10 @@ def gen_gate_hamil(L):
 # c0 c1 c2 c3
 
 
-def UH1():
-    H = -(math.pi/4) * (-majorana(2, 0, True) @ majorana(2, 1, False) + majorana(2, 0, False) @ majorana(2, 1,
-                                                                                                         True) + majorana(2, 0, True) @ majorana(2, 0, False) + majorana(2, 1, True) @ majorana(2, 1, False))
-    return H
+# def UH1():
+#     H = -(math.pi/4) * (-majorana(2, 0, True) @ majorana(2, 1, False) + majorana(2, 0, False) @ majorana(2, 1,
+#                                                                                                          True) + majorana(2, 0, True) @ majorana(2, 0, False) + majorana(2, 1, True) @ majorana(2, 1, False))
+#     return H
 
 
 def ent():
@@ -114,12 +111,32 @@ def ent():
     return scipy.linalg.expm(1j*H)
 
 
-N = 2
+def correlation(L):
+    m = 2*L
+    M = lil_matrix((L, L))
+    vac = np.zeros(shape=(2**L, 1))
+    vac[1] = 1
 
-creation_0 = creation(N, 0)
-creation_1 = creation(N, 1)
+    for i in range(L):
+        for j in range(L):
 
-print((creation_0 @ creation_1).toarray())
+            M[i, j] = 1j*(vac.transpose() @ majorana(L, i, True) @ majorana(L, j, False) @ vac + vac.transpose() @ majorana(L, i, True) @ majorana(L, j, False) @ vac +
+                          vac.transpose() @ majorana(L, i, False) @ majorana(L, j, True) @ vac +
+                          vac.transpose() @ majorana(L, i, False) @ majorana(L, j, False) @ vac - vac.transpose() @ majorana(L, j, True) @ majorana(L, i, False) @ vac + vac.transpose() @ majorana(L, j, True) @ majorana(L, i, False) @ vac +
+                          vac.transpose() @ majorana(L, j, False) @ majorana(L, i, True) @ vac +
+                          vac.transpose() @ majorana(L, j, False) @ majorana(L, i, False) @ vac
+                          )
+    return M.todense()
+
+
+N = 4
+
+
+print(correlation(N))
+
+
+# creation_0 = creation(N, 0)
+# creation_1 = creation(N, 1)
 # c_0 = majorana(2, 0, True).toarray()
 # print(c_0)
 # print(UH1().toarray())
