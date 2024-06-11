@@ -1,0 +1,47 @@
+
+
+%Indistinguishibility. 
+
+The familiar qubit system may be mapped onto a system of identical particles (fermions), such that the 
+overall many body state describing the system, is invariant under particle exchange. This is 
+performed via a Jordan-Wigner transformation, which maps any local spin-model to a local fermionic model \cite{10.1093/acprof:oso/9780199573127.001.0001}.
+To gain an understanding of how this can be carried out and why it is relevant, it will be useful to introduce the core concepts and language from \textit{Second Quantization}.
+\subsubsection{Second Quantization and Indistinguishable Particles}
+The wave function for a system of $N$ identical particles is $\psi(x_1, x_2, \dots x_N)$, where a particle is specified by it's position vector, $\vec{x}$. For bosonic systems, the wavefunction is symmetric under particle exhchange, while fermionic systems present anti-symmetric wavefunctions under particle exchange called Slater determinants. 
+
+The construction of the $n$ particle state via the extension of the single particle wavefunction, as described in (\refeq{nqubit}), 
+leads to a redundancy in it's description of a many-body state and an unnecessarily large Hilbert space.
+A more efficient appraoch to describing many-body states is found in the formalism of second quantisation. Instead of describing states with Slater determinants, a \textit{Fock state} presents an elegant and convinient basis in which to work in. The Fock state of a many-body system is represented in an occupancy number basis, written as $|n_1, n_2, \dots, n_L\rangle$, where $n_i$ is the occupation number of a given local fermionic mode (LFM). For systems of bosonic particles,  the occupancy can take any real non-negative integer. For systems of many fermionic particles, the occupancy number is either $0$ or $1$ with no two fermions ever occupying the same mode.
+
+To preserve the symmetric properties of Fock states, second quantization introduces fermionic creation and annihilation operators. The creation operator, $a^{\dagger}_{i}$ creates a particle at site $i$ if unoccupied, and the annihilation operator, $a_i$, removes a particle at site $i$ if occupied. More formally, it's action on a Fock state may be written as, 
+\begin{align}
+    a_j^{\dagger} |n_0, \dots, n_j, \dots, n_{m-1}\rangle = {(-1)}^{\sum^{j-1}_{s=0}n_s} (1-n_j) |n_0, \dots, n_j - 1, \dots, n_{m-1}\rangle, \\
+    a_j |n_0, \dots, n_j, \dots, n_{m-1}\rangle = {(-1)}^{\sum^{j-1}_{s=0}n_s} n_j |n_0, \dots, n_j - 1, \dots, n_{m-1}\rangle.
+\end{align}
+With the fermionic creation and annihilation operators obeying crucial anti-commutation relations:
+\begin{align}
+    \{a_j, a_k\} \equiv \{a_j^{\dagger}, a_k^{\dagger}\} = 0, && \{a_j, a_k^{\dagger}\} = \delta_{jk}I.
+\end{align}
+
+Using these operators, an arbitrary Fock state, $|\psi_{F}\rangle$ of $L$ modes, may be prepared from a set of creation operators acting on the vacuum, $|\Omega\rangle = |0, 0 \dots, 0\rangle$, 
+\begin{equation}
+    |\psi_{f}\rangle = (a_{1}^{\dagger})^{n_1} (a_{2}^{\dagger})^{n_2} \dots (a_{L}^{\dagger})^{n_{L}}|{\Omega}\rangle.
+\end{equation}
+
+\subsubsection{Jordan-Wigner Transformation}
+
+Using the fermionic operators, the Jordan-Wigner transformation may be defined, which maps a system of $N$ spin-$\frac{1}{2}$ particles onto a system of $N$ `spinless' fermions by defining the fermionic operators in terms of the Pauli spin operators \cite{landahl2023logical}, 
+\begin{align}
+    a^{\dagger}_i = \left(\prod^{i-1}_{k = 1} Z_k\right) \sigma^{-}_{i}, &&
+    a_i = \left(\prod^{i-1}_{k = 1} Z_k\right) \sigma^{+}_{i}.
+\end{align}
+Where $\sigma^{\pm}_{j} = (X_j \pm i Y_j)/2$.
+Such a mapping allows the Hilbert space of $N$ qubits to be identified with the Hilbert space of $N$ local fermionic modes (LFM's). However this transformation is non-local, with fermionic operators having support over the almost the entire Hilbert space of $N$ qubits \cite{ Ba_uls_2007}. 
+
+
+As an alternative description, the \textit{Majorana operators} may be defined as 
+$c_{2k} = a_k + a_k^{\dagger}$ and $c_{2k+1} = i(a_k^{\dagger} - a_{k})$ for $k =  1, \dots, N$ such that they satisfy $\{c_j, c_k\} = 2\delta_{jk}$. This description splits each LFM in two, increasing the number of modes to $2N$. 
+
+
+
+

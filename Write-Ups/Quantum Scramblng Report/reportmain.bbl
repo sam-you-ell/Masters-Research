@@ -1,0 +1,190 @@
+\begin{thebibliography}{10}
+
+\bibitem{Polkovnikov_2011}
+A.~Polkovnikov, K.~Sengupta, A.~Silva, and M.~Vengalattore, ``Nonequilibrium
+  dynamics of closed interacting quantum systems,'' {\em Reviews of Modern
+  Physics}, vol.~83, pp.~863--883, aug 2011.
+
+\bibitem{Calabrese_2009}
+P.~Calabrese and J.~Cardy, ``Entanglement entropy and conformal field theory,''
+  {\em Journal of Physics A: Mathematical and Theoretical}, vol.~42, p.~504005,
+  dec 2009.
+
+\bibitem{Jensen_2016}
+K.~Jensen, ``Chaos in ${\mathrm{ads}}_{2}$ holography,'' {\em Physical Review
+  Letters}, vol.~117, sep 2016.
+
+\bibitem{Sekino_2008}
+Y.~Sekino and L.~Susskind, ``Fast scramblers,'' {\em Journal of High Energy
+  Physics}, vol.~2008, pp.~065--065, oct 2008.
+
+\bibitem{ShenkerBlackHolesButterfly2014}
+S.~H. Shenker and D.~Stanford, ``Black holes and the butterfly effect,'' {\em
+  Journal of High Energy Physics}, 2014.
+
+\bibitem{Maldacena_2016}
+J.~Maldacena, S.~H. Shenker, and D.~Stanford, ``A bound on chaos,'' {\em
+  Journal of High Energy Physics}, vol.~2016, aug 2016.
+
+\bibitem{https://doi.org/10.48550/arxiv.1412.6087}
+S.~H. Shenker and D.~Stanford, ``Stringy effects in scrambling,'' 2014.
+
+\bibitem{Khemani_2018}
+V.~Khemani, A.~Vishwanath, and D.~A. Huse, ``Operator spreading and the
+  emergence of dissipative hydrodynamics under unitary evolution with
+  conservation laws,'' {\em Physical Review X}, vol.~8, sep 2018.
+
+\bibitem{PhysRevX.8.021013}
+C.~W. von Keyserlingk, T.~Rakovszky, F.~Pollmann, and S.~L. Sondhi, ``Operator
+  hydrodynamics, otocs, and entanglement growth in systems without conservation
+  laws,'' {\em Phys. Rev. X}, vol.~8, p.~021013, Apr 2018.
+
+\bibitem{PhysRevX.8.031058}
+T.~Rakovszky, F.~Pollmann, and C.~W. von Keyserlingk, ``Diffusive hydrodynamics
+  of out-of-time-ordered correlators with charge conservation,'' {\em Phys.
+  Rev. X}, vol.~8, p.~031058, Sep 2018.
+
+\bibitem{Grozdanov_2018}
+S.~Grozdanov, K.~Schalm, and V.~Scopelliti, ``Black hole scrambling from
+  hydrodynamics,'' {\em Physical Review Letters}, vol.~120, jun 2018.
+
+\bibitem{PhysRevB.98.205136}
+Y.~Li, X.~Chen, and M.~P.~A. Fisher, ``Quantum zeno effect and the many-body
+  entanglement transition,'' {\em Phys. Rev. B}, vol.~98, p.~205136, Nov 2018.
+
+\bibitem{https://doi.org/10.48550/arxiv.2110.02988}
+Y.~Li, R.~Vasseur, M.~P.~A. Fisher, and A.~W.~W. Ludwig, ``Statistical
+  mechanics model for clifford random tensor networks and monitored quantum
+  circuits,'' 2021.
+
+\bibitem{https://doi.org/10.48550/arxiv.2210.10129}
+T.~Farshi, J.~Richter, D.~Toniolo, A.~Pal, and L.~Masanes, ``Absence of
+  localization in two-dimensional clifford circuits,'' 2022.
+
+\bibitem{Valiant2001QuantumCT}
+L.~G. Valiant, ``Quantum computers that can be simulated classically in
+  polynomial time,'' in {\em STOC '01}, 2001.
+
+\bibitem{Terhal2001}
+B.~M. Terhal and D.~P. Divincenzo, ``{Classical simulation of
+  noninteracting-fermion quantum circuits},'' tech. rep., 2001.
+
+\bibitem{schumacher_westmoreland_2010}
+B.~Schumacher and M.~Westmoreland, {\em Quantum Processes Systems, and
+  Information}.
+\newblock Cambridge University Press, 2010.
+
+\bibitem{Note1}
+Any linear map between two finite dimensional vector spaces, in this case
+  finite dimensional Hilbert spaces, may be represented as a matrix.
+
+\bibitem{nielsen_chuang_2010}
+M.~A. Nielsen and I.~L. Chuang, {\em Quantum Computation and Quantum
+  Information: 10th Anniversary Edition}.
+\newblock Cambridge University Press, 2010.
+
+\bibitem{10.1093/acprof:oso/9780199573127.001.0001}
+M.~Lewenstein, A.~Sanpera, and V.~Ahufinger, {\em {Ultracold Atoms in Optical
+  Lattices: Simulating quantum many-body systems}}.
+\newblock Oxford University Press, 03 2012.
+
+\bibitem{landahl2023logical}
+A.~J. Landahl and B.~C.~A. Morrison, ``Logical majorana fermions for
+  fault-tolerant quantum simulation,'' 2023.
+
+\bibitem{Ba_uls_2007}
+M.-C. Ba{\~{n} }uls, J.~I. Cirac, and M.~M. Wolf, ``Entanglement in fermionic
+  systems,'' {\em Physical Review A}, vol.~76, aug 2007.
+
+\bibitem{hunterjones2018operator}
+N.~Hunter-Jones, ``Operator growth in random quantum circuits with symmetry,''
+  2018.
+
+\bibitem{Roberts_2015}
+D.~A. Roberts, D.~Stanford, and L.~Susskind, ``Localized shocks,'' {\em Journal
+  of High Energy Physics}, vol.~2015, mar 2015.
+
+\bibitem{Lieb:1972wy}
+E.~H. Lieb and D.~W. Robinson, ``{The finite group velocity of quantum spin
+  systems},'' {\em Commun. Math. Phys.}, vol.~28, pp.~251--257, 1972.
+
+\bibitem{Schuster_2022}
+T.~Schuster and N.~Y. Yao, ``Operator growth in open quantum systems,'' 2022.
+
+\bibitem{Xu2022}
+S.~Xu and B.~Swingle, ``{Scrambling Dynamics and Out-of-Time Ordered
+  Correlators in Quantum Many-Body Systems: a Tutorial},'' feb 2022.
+
+\bibitem{Blake_2018}
+M.~Blake, H.~Lee, and H.~Liu, ``A quantum hydrodynamical description for
+  scrambling and many-body chaos,'' {\em Journal of High Energy Physics},
+  vol.~2018, oct 2018.
+
+\bibitem{https://doi.org/10.48550/arxiv.1804.08655}
+X.~Chen and T.~Zhou, ``Operator scrambling and quantum chaos,'' 2018.
+
+\bibitem{Horodecki_2009}
+R.~Horodecki, P.~Horodecki, M.~Horodecki, and K.~Horodecki, ``Quantum
+  entanglement,'' {\em Reviews of Modern Physics}, vol.~81, pp.~865--942, jun
+  2009.
+
+\bibitem{Eckert_2002}
+K.~Eckert, J.~Schliemann, D.~Bru{\ss}, and M.~Lewenstein, ``Quantum
+  correlations in systems of indistinguishable particles,'' {\em Annals of
+  Physics}, vol.~299, pp.~88--127, jul 2002.
+
+\bibitem{Schliemann_2001}
+J.~Schliemann, J.~I. Cirac, M.~Ku{\'{s} }, M.~Lewenstein, and D.~Loss,
+  ``Quantum correlations in two-fermion systems,'' {\em Physical Review A},
+  vol.~64, jul 2001.
+
+\bibitem{PhysRevA.51.2738}
+B.~Schumacher, ``Quantum coding,'' {\em Phys. Rev. A}, vol.~51, pp.~2738--2747,
+  Apr 1995.
+
+\bibitem{knillGottesman}
+D.~Gottesman, ``The heisenberg representation of quantum computers,'' 1998.
+
+\bibitem{Jozsa2008}
+R.~Jozsa and A.~Miyake, ``{Matchgates and classical simulation of quantum
+  circuits},'' apr 2008.
+
+\bibitem{Suzuki_2022}
+R.~Suzuki, K.~Mitarai, and K.~Fujii, ``Computational power of one- and
+  two-dimensional dual-unitary quantum circuits,'' {\em Quantum}, vol.~6,
+  p.~631, jan 2022.
+
+\bibitem{stabilizercodes}
+D.~Gottesman, ``Stabilizer codes and quantum error correction,'' 1997.
+
+\bibitem{Blake2020}
+M.~Blake and N.~Linden, ``{Quantum circuits with classically simulable operator
+  scrambling},'' feb 2020.
+
+\bibitem{Page_1993}
+D.~N. Page, ``Average entropy of a subsystem,'' {\em Physical Review Letters},
+  vol.~71, pp.~1291--1294, aug 1993.
+
+\bibitem{Jozsa_2008}
+R.~Jozsa and A.~Miyake, ``Matchgates and classical simulation of quantum
+  circuits,'' {\em Proceedings of the Royal Society A: Mathematical, Physical
+  and Engineering Sciences}, vol.~464, pp.~3089--3106, jul 2008.
+
+\bibitem{horn_johnson_1985}
+R.~A. Horn and C.~R. Johnson, {\em Matrix Analysis}.
+\newblock Cambridge University Press, 1985.
+
+\bibitem{Bravyi2000}
+S.~B. Bravyi, L.~D. Landau, and A.~Y. Kitaev, ``{Fermionic quantum
+  computation},'' tech. rep., 2000.
+
+\bibitem{Note2}
+A more quantitative explanation may come in the form of a combinatorial
+  argument on the given configurations of state vectors or density matrices,
+  but this lies outside the time-scale of this project.
+
+\bibitem{Xu_2019}
+S.~Xu and B.~Swingle, ``Accessing scrambling using matrix product operators,''
+  {\em Nature Physics}, vol.~16, pp.~199--204, nov 2019.
+
+\end{thebibliography}
